@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
+import { Route, Switch } from 'react-router-dom'
 import ApptrackrContext from './ApptrackrContext'
+import Header from './Components/Header/Header'
+import LandingPage from './Components/LandingPage/LandingPage'
 import DATA from './DATA'
 
 class App extends Component {
@@ -16,8 +19,15 @@ class App extends Component {
     }
     return (
       <div className='App'>
+        <Header/>
         <ApptrackrContext.Provider value={contextValue}>
-          <p>Hello!</p>
+          <Switch>
+            <Route 
+              exact
+              path={'/'}
+              component={LandingPage}
+            />
+          </Switch>
         </ApptrackrContext.Provider>
       </div>
     )

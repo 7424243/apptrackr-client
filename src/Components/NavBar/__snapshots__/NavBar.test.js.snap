@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar Component renders the UI as expected 1`] = `
+<nav>
+  <a
+    href="/jobapps"
+    onClick={[Function]}
+  >
+    Summary 
+  </a>
+  <a
+    href="/resources"
+    onClick={[Function]}
+  >
+    Resources
+  </a>
+  <a
+    href="/jobapps"
+    onClick={[Function]}
+  >
+    Logout
+  </a>
+</nav>
+`;
