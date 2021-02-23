@@ -1,13 +1,15 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import './NavBar.css'
+
+//NavLink = activeStyle attribute
 
 function NavBar() {
     return (
         <nav>
-            <Link to='/jobapps'>Summary </Link>
-            <Link to='resources'>Resources</Link>
-            <Link to='/jobapps'>Logout</Link>
+            <NavLink to='/jobapps'>Summary </NavLink>
+            <NavLink to='resources'>Resources</NavLink>
+            <NavLink to='/login'>Login</NavLink>
         </nav>
     )
 }

@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import ApptrackrContext from './ApptrackrContext'
 import Header from './Components/Header/Header'
 import LandingPage from './Components/LandingPage/LandingPage'
+import LoginForm from './Components/LoginForm/LoginForm'
 import DATA from './DATA'
 
 class App extends Component {
@@ -26,6 +27,10 @@ class App extends Component {
               exact
               path={'/'}
               component={LandingPage}
+            />
+            <Route 
+              path={'/login'}
+              component={LoginForm}
             />
           </Switch>
         </ApptrackrContext.Provider>

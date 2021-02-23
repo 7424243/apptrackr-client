@@ -12,22 +12,25 @@ exports[`Header Component renders the UI as expected 1`] = `
   </a>
   <nav>
     <a
+      aria-current={null}
       href="/jobapps"
       onClick={[Function]}
     >
       Summary 
     </a>
     <a
+      aria-current={null}
       href="/resources"
       onClick={[Function]}
     >
       Resources
     </a>
     <a
-      href="/jobapps"
+      aria-current={null}
+      href="/login"
       onClick={[Function]}
     >
-      Logout
+      Login
     </a>
   </nav>
 </div>
