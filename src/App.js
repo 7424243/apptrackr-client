@@ -1,11 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react'
+import DATA from './DATA'
 
-function App() {
-  return (
-    <main className='App'>
-      {/* content goes here */}
-    </main>
-  );
+class App extends Component {
+  state = {
+    apps: []
+  }
+  componentDidMount() {
+    this.setState({apps: DATA.apps})
+    
+  }
+  render() {
+    return (
+      <main className='App'>
+      </main>
+    )
+  }
 }
 
-export default App;
+export default App
