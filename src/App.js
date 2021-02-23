@@ -29,6 +29,7 @@ class App extends Component {
             />
           </Switch>
         </ApptrackrContext.Provider>
+        <footer>© Samantha Sheets, 2021</footer>
       </div>
     )
   }

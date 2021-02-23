@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LandingPage Component renders the UI as expected 1`] = `
+<div>
+  <section>
+    <div>
+      <ul>
+        <li>
+          Easily keep track of job applications!
+        </li>
+        <li>
+          Quickly access notes regarding specific applications!
+        </li>
+        <li>
+          Save frequented job boards for convenient access!
+        </li>
+        <li>
+          Streamline the job search process!
+        </li>
+      </ul>
+      <img
+        alt="img of an example table"
+        src=""
+      />
+    </div>
+  </section>
+  <section>
+    <div>
+      <img
+        alt="img of resources page"
+        src=""
+      />
+      <p>
+        Sign in with these credentials to take a peak!
+      </p>
+      <p>
+        Username: username
+      </p>
+      <p>
+        Password: password
+      </p>
+    </div>
+  </section>
+</div>
+`;
