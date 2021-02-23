@@ -4,6 +4,7 @@ import ApptrackrContext from './ApptrackrContext'
 import Header from './Components/Header/Header'
 import LandingPage from './Components/LandingPage/LandingPage'
 import LoginForm from './Components/LoginForm/LoginForm'
+import SignUpForm from './Components/SignUpForm/SignUpForm'
 import DATA from './DATA'
 
 class App extends Component {
@@ -31,6 +32,10 @@ class App extends Component {
             <Route 
               path={'/login'}
               component={LoginForm}
+            />
+            <Route
+              path={'/signup'}
+              component={SignUpForm}
             />
           </Switch>
         </ApptrackrContext.Provider>
