@@ -4,7 +4,7 @@ import './RecButton.css'
 
 function RecButton(props) {
     return (
-        <Link to={props.path}><button>{props.content}</button></Link>
+        <Link className='recbutton_content' to={props.path}><button className='recbutton'>{props.content}</button></Link>
     )
 }
 

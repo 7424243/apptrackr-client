@@ -1,0 +1,20 @@
+/* Classes */
+
+.recbutton {
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 8px;
+    border: gray;
+    width: 100px;
+    display: block;
+    margin-top: 7px;
+}
+
+.recbutton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.recbutton_content {
+    text-decoration: none;
+    font-weight: bold;
+}
