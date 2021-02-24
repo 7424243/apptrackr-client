@@ -23,6 +23,7 @@ class MainPage extends Component {
                         />
                         <label>Filter By: </label>
                         <select>
+                            <option>All</option>
                             <option>Interested</option>
                             <option>Active</option>
                             <option>Closed</option>
