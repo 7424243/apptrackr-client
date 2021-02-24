@@ -1,0 +1,27 @@
+h1 {
+    margin-left: 15px;
+    margin-top: 15px;
+    color: black;
+}
+
+/* Classes */
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header_navlink {
+    text-decoration: none;
+}
+
+
+/* @media */
+
+@media screen and (min-width: 711px) {
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

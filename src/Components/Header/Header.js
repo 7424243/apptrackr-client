@@ -5,8 +5,8 @@ import './Header.css'
 
 function Header() {
     return (
-        <div>
-            <Link to='/'><h1>apptrackr</h1></Link>
+        <div className='header_container'>
+            <Link className='header_navlink' to='/'><h1>apptrackr</h1></Link>
             <NavBar/>
         </div>
     )

@@ -7,9 +7,9 @@ import './NavBar.css'
 function NavBar() {
     return (
         <nav>
-            <NavLink to='/jobapps'>Summary </NavLink>
-            <NavLink to='resources'>Resources</NavLink>
-            <NavLink to='/login'>Login</NavLink>
+            <NavLink className='header_navlink' to='/jobapps'>Summary</NavLink>
+            <NavLink className='header_navlink' to='resources'>Resources</NavLink>
+            <NavLink className='header_navlink' to='/login'>Login</NavLink>
         </nav>
     )
 }
