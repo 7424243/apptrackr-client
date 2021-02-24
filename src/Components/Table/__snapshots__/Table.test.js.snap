@@ -42,8 +42,7 @@ exports[`Table Component renders the UI as expected 1`] = `
   <div>
     <span>
       <a
-        aria-current={null}
-        href="/jobapps/1"
+        href="/jobapp/1"
         onClick={[Function]}
       >
         React Front End Engineer
@@ -65,8 +64,7 @@ exports[`Table Component renders the UI as expected 1`] = `
   <div>
     <span>
       <a
-        aria-current={null}
-        href="/jobapps/3"
+        href="/jobapp/3"
         onClick={[Function]}
       >
         Software Engineer Intern
@@ -88,8 +86,7 @@ exports[`Table Component renders the UI as expected 1`] = `
   <div>
     <span>
       <a
-        aria-current={null}
-        href="/jobapps/4"
+        href="/jobapp/4"
         onClick={[Function]}
       >
         EDU Software Engineer
@@ -111,8 +108,7 @@ exports[`Table Component renders the UI as expected 1`] = `
   <div>
     <span>
       <a
-        aria-current={null}
-        href="/jobapps/2"
+        href="/jobapp/2"
         onClick={[Function]}
       >
         Software Engineer

@@ -1,11 +1,12 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import './TableItem.css'
 
 function TableItem(props) {
+
     return (
         <div>
-            <span><NavLink to={`/jobapps/${props.id}`}>{props.job}</NavLink></span>
+            <span><Link to={`/jobapp/${props.id}`}>{props.job}</Link></span>
             <span>{props.company}</span>
             <span>{props.dateApplied}</span>
             <span>{props.interviewDate}</span>

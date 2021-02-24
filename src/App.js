@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { Route, Switch } from 'react-router-dom'
 import ApptrackrContext from './ApptrackrContext'
+import AppDetails from './Components/AppDetails/AppDetails'
 import Header from './Components/Header/Header'
 import LandingPage from './Components/LandingPage/LandingPage'
 import LoginForm from './Components/LoginForm/LoginForm'
@@ -16,7 +17,6 @@ class App extends Component {
   }
   componentDidMount() {
     this.setState({apps: DATA.apps})
-    
   }
   render() {
     const contextValue = {
@@ -44,10 +44,10 @@ class App extends Component {
               path={'/jobapps'}
               component={MainPage}
             />
-            {/* <Route
-              path={'/jobapps/:id'}
-              component={}
-            /> */}
+            <Route
+              path={'/jobapp/:id'}
+              component={AppDetails}
+            />
             <Route
               path={'/resources'}
               component={ResourcesList}

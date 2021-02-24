@@ -4,8 +4,7 @@ exports[`TableItem Component renders the UI as expected 1`] = `
 <div>
   <span>
     <a
-      aria-current={null}
-      href="/jobapps/1"
+      href="/jobapp/1"
       onClick={[Function]}
     />
   </span>
