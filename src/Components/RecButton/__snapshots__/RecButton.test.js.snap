@@ -5,6 +5,8 @@ exports[`RecButton Component renders the UI as expected 1`] = `
   href="/"
   onClick={[Function]}
 >
-  <button />
+  <button>
+    test
+  </button>
 </a>
 `;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResourceItem Component renders the UI as expected 1`] = `
+<li>
+  <a
+    href="https://www.google.com"
+    rel="noreferrer"
+    target="_blank"
+  >
+    test
+  </a>
+</li>
+`;
