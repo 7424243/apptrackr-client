@@ -12,6 +12,7 @@ import NewResourceForm from './Components/NewResourceForm/NewResourceForm'
 import ResourcesList from './Components/ResourcesList/ResourcesList'
 import SignUpForm from './Components/SignUpForm/SignUpForm'
 import DATA from './DATA'
+import './App.css'
 
 class App extends Component {
   state = {

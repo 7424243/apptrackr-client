@@ -1,0 +1,46 @@
+/* Classes */
+
+.landing {
+    margin: auto;
+    width: 70%;
+}
+
+.landing-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    flex: 2
+}
+
+.landing_list {
+    list-style-position: inside;
+    text-align: left;
+}
+
+.landing_section1_content {
+    margin: 15px;
+    text-align: center;
+}
+
+.landing_section1, .landing_section2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.landing_section2_content {
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+/* Media Query */
+
+/* @media screen and (min-width: 550px) {
+    .landing-img {
+        width: 40%;
+    }
+} */
