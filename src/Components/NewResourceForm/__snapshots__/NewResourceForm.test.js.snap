@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewResourceForm Component renders the UI as expected 1`] = `
+<div>
+  <form>
+    <h2>
+      New Resource
+    </h2>
+    <section>
+      <input
+        placeholder="Resource Name"
+      />
+    </section>
+    <section>
+      <input
+        placeholder="Resource Link"
+      />
+    </section>
+  </form>
+  <div>
+    <a
+      href="/resources"
+      onClick={[Function]}
+    >
+      <button>
+        +
+      </button>
+    </a>
+  </div>
+</div>
+`;
