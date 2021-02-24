@@ -4,6 +4,7 @@ import ApptrackrContext from './ApptrackrContext'
 import Header from './Components/Header/Header'
 import LandingPage from './Components/LandingPage/LandingPage'
 import LoginForm from './Components/LoginForm/LoginForm'
+import MainPage from './Components/MainPage/MainPage'
 import NewResourceForm from './Components/NewResourceForm/NewResourceForm'
 import ResourcesList from './Components/ResourcesList/ResourcesList'
 import SignUpForm from './Components/SignUpForm/SignUpForm'
@@ -39,6 +40,14 @@ class App extends Component {
               path={'/signup'}
               component={SignUpForm}
             />
+            <Route
+              path={'/jobapps'}
+              component={MainPage}
+            />
+            {/* <Route
+              path={'/jobapps/:id'}
+              component={}
+            /> */}
             <Route
               path={'/resources'}
               component={ResourcesList}

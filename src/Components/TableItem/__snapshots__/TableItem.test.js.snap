@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableItem Component renders the UI as expected 1`] = `
+<div>
+  <span>
+    <a
+      aria-current={null}
+      href="/jobapps/1"
+      onClick={[Function]}
+    />
+  </span>
+  <span>
+    test
+  </span>
+  <span>
+    test
+  </span>
+  <span>
+    test
+  </span>
+  <span>
+    test
+  </span>
+</div>
+`;

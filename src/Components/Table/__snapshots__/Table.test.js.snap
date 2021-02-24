@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table Component renders the UI as expected 1`] = `
+<div
+  className="grid"
+>
+  <span>
+    <strong>
+      Job
+    </strong>
+  </span>
+  <span>
+    <strong>
+      Company
+    </strong>
+  </span>
+  <span>
+    <strong>
+      Date Applied
+    </strong>
+  </span>
+  <span>
+    <strong>
+      Contact
+    </strong>
+  </span>
+  <span>
+    <strong>
+      Interview Date
+    </strong>
+  </span>
+  <span>
+    <strong>
+      Follow-Up
+    </strong>
+  </span>
+  <span>
+    <strong>
+      Status
+    </strong>
+  </span>
+  <div>
+    <span>
+      <a
+        aria-current={null}
+        href="/jobapps/1"
+        onClick={[Function]}
+      >
+        React Front End Engineer
+      </a>
+    </span>
+    <span>
+      Madwire
+    </span>
+    <span>
+      
+    </span>
+    <span>
+      
+    </span>
+    <span>
+      Interested
+    </span>
+  </div>
+  <div>
+    <span>
+      <a
+        aria-current={null}
+        href="/jobapps/3"
+        onClick={[Function]}
+      >
+        Software Engineer Intern
+      </a>
+    </span>
+    <span>
+      Hewlett Packard Enterprise
+    </span>
+    <span>
+      2/1/21
+    </span>
+    <span>
+      2/15/21
+    </span>
+    <span>
+      Active
+    </span>
+  </div>
+  <div>
+    <span>
+      <a
+        aria-current={null}
+        href="/jobapps/4"
+        onClick={[Function]}
+      >
+        EDU Software Engineer
+      </a>
+    </span>
+    <span>
+      Splunk
+    </span>
+    <span>
+      2/3/21
+    </span>
+    <span>
+      2/10/21
+    </span>
+    <span>
+      Active
+    </span>
+  </div>
+  <div>
+    <span>
+      <a
+        aria-current={null}
+        href="/jobapps/2"
+        onClick={[Function]}
+      >
+        Software Engineer
+      </a>
+    </span>
+    <span>
+      Colorado State University
+    </span>
+    <span>
+      2/5/21
+    </span>
+    <span>
+      2/16/21
+    </span>
+    <span>
+      Closed
+    </span>
+  </div>
+</div>
+`;
