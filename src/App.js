@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import { Route, Switch } from 'react-router-dom'
 import ApptrackrContext from './ApptrackrContext'
 import AppDetails from './Components/AppDetails/AppDetails'
+import AppForm from './Components/AppForm/AppForm'
 import Header from './Components/Header/Header'
 import LandingPage from './Components/LandingPage/LandingPage'
 import LoginForm from './Components/LoginForm/LoginForm'
@@ -45,8 +46,16 @@ class App extends Component {
               component={MainPage}
             />
             <Route
+              path={'/newapp'}
+              component={AppForm}
+            />
+            <Route
               path={'/jobapp/:id'}
               component={AppDetails}
+            />
+            <Route
+              path={'/edit/:id'}
+              component={AppForm}
             />
             <Route
               path={'/resources'}

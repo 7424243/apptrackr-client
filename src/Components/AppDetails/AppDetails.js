@@ -31,7 +31,7 @@ class AppDetails extends Component {
                         content={<FontAwesomeIcon icon={faBackward}/>}
                     />
                     <SquareButton
-                        path={`/jobapp/:id/edit`}
+                        path={`/edit/${appId}`}
                         content={<FontAwesomeIcon icon={faEdit}/>}
                     />
                     <SquareButton
