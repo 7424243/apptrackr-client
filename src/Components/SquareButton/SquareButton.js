@@ -5,7 +5,12 @@ import './SquareButton.css'
 function SquareButton(props) {
     return (
         <div>
-            <Link to={props.path}><button>{props.content}</button></Link>
+            <Link 
+                className='squarebutton_content' 
+                to={props.path}
+            >
+                <button className='squarebutton'>{props.content}</button>
+            </Link>
         </div>
         
     )
