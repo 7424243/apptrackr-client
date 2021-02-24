@@ -79,7 +79,7 @@ class AppForm extends Component {
                             <section>
                                 <label htmlFor='status'>Status: </label>
                                 <select>
-                                    <option value=''></option>
+                                    <option value='' disabled>Choose here</option>
                                     <option value='Interested'>Interested</option>
                                     <option value='Active'>Active</option>
                                     <option value='Closed'>Closed</option>
