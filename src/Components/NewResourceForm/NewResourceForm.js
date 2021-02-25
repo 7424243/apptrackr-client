@@ -5,20 +5,20 @@ import './NewResourceForm.css'
 class NewResourceForm extends Component {
     render() {
         return (
-            <div>
-                <form>
-                    <h2>New Resource</h2>
-                    <section>
+            <div className='resourceform_container'>
+                <h2 className='resourceform_header'>New Resource</h2>
+                <form className='resourceform_form'>
+                    <section className='resourceform_input'>
                         <input placeholder="Resource Name"/>
                     </section>
-                    <section>
+                    <section className='resourceform_input'>
                         <input placeholder="Resource Link"/>
                     </section>
+                    <SquareButton 
+                        content={'+'}
+                        path={'/resources'}
+                    />
                 </form>
-                <SquareButton 
-                    content={'+'}
-                    path={'/resources'}
-                />
             </div>
         )
     }
