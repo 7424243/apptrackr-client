@@ -27,7 +27,7 @@ class Table extends Component {
                     company={'Hewlett Packard Enterprise'}
                     dateApplied={'2/1/21'}
                     interviewDate={'2/15/21'}
-                    status={'Active'}
+                    status={'Applied'}
                 />
                 <TableItem
                     id={4}
@@ -35,7 +35,7 @@ class Table extends Component {
                     company={'Splunk'}
                     dateApplied={'2/3/21'}
                     interviewDate={'2/10/21'}
-                    status={'Active'}
+                    status={'Applied'}
                 />
                 <TableItem
                     id={2}

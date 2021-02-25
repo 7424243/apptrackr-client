@@ -38,7 +38,7 @@ const DATA = {
             contact_email: 'bill@hp.com',
             contact_phone: '(970)432-5634',
             interview_date: '2/15/21',
-            status: 'Active',
+            status: 'Applied',
             notes: 'Fort Collins, CO. Waiting on their response to schedule next interview',
             user_id: 1
         },
@@ -52,7 +52,7 @@ const DATA = {
             contact_email: 'sam@splunk.com',
             contact_phone: '(576)372-3728',
             interview_date: '2/10/21',
-            status: 'Active',
+            status: 'Applied',
             notes: 'San Diego, CA. Remote. Waiting on their response to schedule next interview',
             user_id: 1
         }

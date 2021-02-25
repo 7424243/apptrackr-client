@@ -16,7 +16,7 @@ class AppForm extends Component {
         const appDetails = getApp(apps, appId)
         return (
             <div className='appform_container'>
-                <h2 className='appform_header'>New Job Application</h2>
+                <h2 className='appform_header'>{appDetails ? 'Edit Job Application' : 'New Job Application'}</h2>
                 <ErrorBoundary>
                     <form className='appform_form'>
                         <section className='appform_input'>
@@ -80,7 +80,7 @@ class AppForm extends Component {
                             <select>
                                 <option value='' disabled>Choose here</option>
                                 <option value='Interested'>Interested</option>
-                                <option value='Active'>Active</option>
+                                <option value='Applied'>Applied</option>
                                 <option value='Closed'>Closed</option>
                             </select>
                         </section>
@@ -92,11 +92,14 @@ class AppForm extends Component {
                         </section>
                             <SquareButton
                             content={<FontAwesomeIcon icon={faSave}/>}
-                            path={'/jobapps'}
+                            path={appDetails ? `/jobapp/${appDetails.id}` : '/jobapps'}
+                            />
+                            <SquareButton
+                                content={'X'}
+                                path={appDetails ? `/jobapp/${appDetails.id}` : '/jobapps'}
                             />
                     </form>
                 </ErrorBoundary>
-
             </div>
         )
     }

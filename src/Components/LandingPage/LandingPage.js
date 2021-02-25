@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './LandingPage.css'
 
 function LandingPage() {
@@ -20,7 +21,7 @@ function LandingPage() {
             <section className='landing_section2'>
                 <div className='landing_section2_content'>
                     <img className='landing-img' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARYAAAC1CAMAAACtbCCJAAAACVBMVEVjY2NeXl65ubnV9x57AAAATUlEQVR4nO3BMQEAAAgDoGn/0BZYAA8gAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4J+hyFIcuuEDQ5L8dNwAAAAASUVORK5CYII=' alt='img of resources page'/>
-                    <p>Sign in with these credentials to take a peak!</p>
+                    <p><Link to={'/login'}>Login</Link> with these credentials to take a peak!</p>
                     <p>Username: username</p>
                     <p>Password: password</p>
                 </div>

@@ -27,7 +27,7 @@ class MainPage extends Component {
                             <select>
                                 <option>All</option>
                                 <option>Interested</option>
-                                <option>Active</option>
+                                <option>Applied</option>
                                 <option>Closed</option>
                             </select>
                         </div>
