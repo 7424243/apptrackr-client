@@ -89,7 +89,13 @@ exports[`App Component renders the UI as expected 1`] = `
           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARYAAAC1CAMAAACtbCCJAAAACVBMVEVjY2NeXl65ubnV9x57AAAATUlEQVR4nO3BMQEAAAgDoGn/0BZYAA8gAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4J+hyFIcuuEDQ5L8dNwAAAAASUVORK5CYII="
         />
         <p>
-          Sign in with these credentials to take a peak!
+          <a
+            href="/login"
+            onClick={[Function]}
+          >
+            Login
+          </a>
+           with these credentials to take a peak!
         </p>
         <p>
           Username: username

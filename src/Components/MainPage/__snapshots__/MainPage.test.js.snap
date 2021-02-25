@@ -51,7 +51,7 @@ exports[`MainPage Component renders the UI as expected 1`] = `
             Interested
           </option>
           <option>
-            Active
+            Applied
           </option>
           <option>
             Closed
@@ -128,7 +128,7 @@ exports[`MainPage Component renders the UI as expected 1`] = `
         <td
           className="last_td"
         >
-          Active
+          Applied
         </td>
       </tr>
       <tr>
@@ -152,7 +152,7 @@ exports[`MainPage Component renders the UI as expected 1`] = `
         <td
           className="last_td"
         >
-          Active
+          Applied
         </td>
       </tr>
       <tr>

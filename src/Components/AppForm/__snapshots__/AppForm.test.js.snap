@@ -105,9 +105,9 @@ exports[`AppForm Component renders the UI as expected 1`] = `
           Interested
         </option>
         <option
-          value="Active"
+          value="Applied"
         >
-          Active
+          Applied
         </option>
         <option
           value="Closed"
@@ -150,6 +150,19 @@ exports[`AppForm Component renders the UI as expected 1`] = `
               style={Object {}}
             />
           </svg>
+        </button>
+      </a>
+    </div>
+    <div>
+      <a
+        className="squarebutton_content"
+        href="/jobapps"
+        onClick={[Function]}
+      >
+        <button
+          className="squarebutton"
+        >
+          X
         </button>
       </a>
     </div>
