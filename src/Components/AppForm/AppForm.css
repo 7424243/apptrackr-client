@@ -4,7 +4,7 @@
     flex-direction: column;
 }
 
-.appform_form, .appform_header {
+.appform_form {
     margin-left: 20px;
     max-width: 80%;
     text-align: left;
@@ -16,5 +16,8 @@
 }
 
 .appform_header {
+    margin-left: 20px;
+    max-width: 80%;
+    text-align: left;
     padding-top: 20px;
 }

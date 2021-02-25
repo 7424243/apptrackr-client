@@ -14,18 +14,18 @@ class AppDetails extends Component {
             apps.find(app => app.id === appId)
         const appDetails = getApp(apps, appId)
         return (
-            <section>
-                <div>
-                    <h3>{appDetails ? appDetails.job_name : null}</h3>
-                    <p>Company: {appDetails ? appDetails.company_name : null}</p>
-                    <p>Website: <a href={appDetails ? appDetails.website : null} target='_blank' rel='noreferrer'>Click Here</a></p>
-                    <p>Date Applied: {appDetails ? appDetails.date_applied : null}</p>
-                    <p>Contact: {appDetails ? appDetails.contact_name : null}</p>
-                    <p>Contact Email: {appDetails ? appDetails.contact_email : null}</p>
-                    <p>Contact Phone: {appDetails ? appDetails.contact_phone : null}</p>
-                    <p>Interview Date: {appDetails ? appDetails.interview_date : null}</p>
-                    <p>Status: {appDetails ? appDetails.status : null}</p>
-                    <p>Additional Notes: {appDetails ? appDetails.notes : null}</p>
+            <div className='appdetails_container'>
+                <h2 className='appdetails_header'>{appDetails ? appDetails.job_name : null}</h2>
+                <p className='appdetails'><strong>Company:</strong> {appDetails ? appDetails.company_name : null}</p>
+                <p className='appdetails'><strong>Website:</strong> <a href={appDetails ? appDetails.website : null} target='_blank' rel='noreferrer'>Click Here</a></p>
+                <p className='appdetails'><strong>Date Applied:</strong> {appDetails ? appDetails.date_applied : null}</p>
+                <p className='appdetails'><strong>Contact:</strong> {appDetails ? appDetails.contact_name : null}</p>
+                <p className='appdetails'><strong>Contact Email:</strong> {appDetails ? appDetails.contact_email : null}</p>
+                <p className='appdetails'><strong>Contact Phone:</strong> {appDetails ? appDetails.contact_phone : null}</p>
+                <p className='appdetails'><strong>Interview Date:</strong> {appDetails ? appDetails.interview_date : null}</p>
+                <p className='appdetails'><strong>Status:</strong> {appDetails ? appDetails.status : null}</p>
+                <p className='appdetails'><strong>Additional Notes:</strong> {appDetails ? appDetails.notes : null}</p>
+                <div className='appdetails_buttons'>
                     <SquareButton
                         path={'/jobapps'}
                         content={<FontAwesomeIcon icon={faBackward}/>}
@@ -39,7 +39,7 @@ class AppDetails extends Component {
                         content={<FontAwesomeIcon icon={faTrashAlt}/>}
                     />
                 </div>
-            </section>
+            </div>
         )
     }
 }
