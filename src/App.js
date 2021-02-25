@@ -73,7 +73,7 @@ class App extends Component {
             </Switch>
           </ErrorBoundary>
         </ApptrackrContext.Provider>
-        <footer>©2021 by Samantha Sheets</footer>
+        {/* <footer>©2021 by Samantha Sheets</footer> */}
       </div>
     )
   }

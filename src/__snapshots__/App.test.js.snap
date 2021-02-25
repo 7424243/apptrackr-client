@@ -100,8 +100,5 @@ exports[`App Component renders the UI as expected 1`] = `
       </div>
     </section>
   </div>
-  <footer>
-    ©2021 by Samantha Sheets
-  </footer>
 </div>
 `;
