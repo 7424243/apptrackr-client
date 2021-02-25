@@ -1,0 +1,20 @@
+.appform_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.appform_form, .appform_header {
+    margin-left: 20px;
+    max-width: 80%;
+    text-align: left;
+    padding-bottom: 40px;
+}
+
+.appform_input {
+    margin-bottom: 10px;
+}
+
+.appform_header {
+    padding-top: 20px;
+}
