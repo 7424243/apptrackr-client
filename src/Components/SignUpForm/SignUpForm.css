@@ -1,0 +1,16 @@
+.signup_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.signup_form {
+    margin: 0 auto;
+    padding: 40px 0;
+    max-width: 80%;
+    text-align: left;
+}
+
+.signup_input {
+    margin-bottom: 10px;
+}

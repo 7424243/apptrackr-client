@@ -20,7 +20,7 @@ class LoginForm extends Component {
                             placeholder="password"
                         />
                     </section>
-                    <RecButton className='login_recbutton' content={'Login'} path={'/jobapps'} />
+                    <RecButton content={'Login'} path={'/jobapps'} />
                     <RecButton content={'Sign Up'} path={'/signup'} />
                 </form>
                 <div className='demo_creds'>

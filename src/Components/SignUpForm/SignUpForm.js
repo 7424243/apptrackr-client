@@ -6,29 +6,38 @@ import './SignUpForm.css'
 class SignUpForm extends Component {
     render() {
         return (
-            <div>
+            <div className='signup_container'>
                 <ErrorBoundary>
-                    <form>
+                    <form className='signup_form'>
                         <h2>Sign Up Form</h2>
-                        <input 
-                            type="text" 
-                            placeholder="First Name"
-                        />
-                        <input 
-                            type="text"
-                            placeholder="Last Name"
-                        />
-                        <input 
-                            type="text" 
-                            placeholder="Username"
-                        />
-                        <input 
-                            type="password" 
-                            placeholder="Password"
-                        />
+                        <section className='signup_input'>
+                            <input 
+                                type="text" 
+                                placeholder="First Name"
+                            />
+                        </section>
+                        <section className='signup_input'>
+                            <input 
+                                type="text"
+                                placeholder="Last Name"
+                            />                            
+                        </section>
+                        <section className='signup_input'>
+                            <input 
+                                type="text" 
+                                placeholder="Username"
+                            />                        
+                        </section>
+                        <section className='signup_input'>
+                            <input 
+                                type="password" 
+                                placeholder="Password"
+                            />                        
+                        </section>
+                            <RecButton content={'Sign Up'} path={'/jobapps'} />
                     </form>
                 </ErrorBoundary>
-                <RecButton content={'Sign Up'} path={'/jobapps'} />
+                
             </div>
         )
     }
