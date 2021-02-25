@@ -8,19 +8,23 @@ class LoginForm extends Component {
             <div className='login_container'>
                 <form className='login_form'>
                     <h2>Login Form</h2>
-                    <input 
-                        type="text" 
-                        placeholder="username"
-                    />
-                    <input 
-                        type="text" 
-                        placeholder="password"
-                    />
+                    <section className='login_input'>
+                        <input 
+                            type="text" 
+                            placeholder="username"
+                        />
+                    </section>
+                    <section className='login_input'>
+                        <input 
+                            type="text" 
+                            placeholder="password"
+                        />
+                    </section>
+                    <RecButton className='login_recbutton' content={'Login'} path={'/jobapps'} />
+                    <RecButton content={'Sign Up'} path={'/signup'} />
                 </form>
-                <RecButton content={'Login'} path={'/jobapps'} />
-                <RecButton content={'Sign Up'} path={'/signup'} />
-                <div>
-                    <p>Demo Credentials:</p>
+                <div className='demo_creds'>
+                    <p>**Demo Credentials:</p>
                     <p>Username: username</p>
                     <p>Password: password</p>
                 </div>
