@@ -4,13 +4,15 @@ exports[`NavBar Component renders the UI as expected 1`] = `
 <nav>
   <a
     aria-current={null}
+    className="header_navlink"
     href="/jobapps"
     onClick={[Function]}
   >
-    Summary 
+    Summary
   </a>
   <a
     aria-current={null}
+    className="header_navlink"
     href="/resources"
     onClick={[Function]}
   >
@@ -18,6 +20,7 @@ exports[`NavBar Component renders the UI as expected 1`] = `
   </a>
   <a
     aria-current={null}
+    className="header_navlink"
     href="/login"
     onClick={[Function]}
   >

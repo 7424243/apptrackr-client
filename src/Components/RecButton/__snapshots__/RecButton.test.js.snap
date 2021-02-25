@@ -2,10 +2,13 @@
 
 exports[`RecButton Component renders the UI as expected 1`] = `
 <a
+  className="recbutton_content"
   href="/"
   onClick={[Function]}
 >
-  <button>
+  <button
+    className="recbutton"
+  >
     test
   </button>
 </a>

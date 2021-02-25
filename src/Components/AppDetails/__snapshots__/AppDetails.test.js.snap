@@ -1,49 +1,103 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppDetails Component renders the UI as expected 1`] = `
-<section>
-  <div>
-    <h3 />
-    <p>
-      Company: 
-    </p>
-    <p>
-      Website: 
-      <a
-        href={null}
-        rel="noreferrer"
-        target="_blank"
-      >
-        Click Here
-      </a>
-    </p>
-    <p>
-      Date Applied: 
-    </p>
-    <p>
-      Contact: 
-    </p>
-    <p>
-      Contact Email: 
-    </p>
-    <p>
-      Contact Phone: 
-    </p>
-    <p>
-      Interview Date: 
-    </p>
-    <p>
-      Status: 
-    </p>
-    <p>
-      Additional Notes: 
-    </p>
+<div
+  className="appdetails_container"
+>
+  <h2
+    className="appdetails_header"
+  />
+  <p
+    className="appdetails"
+  >
+    <strong>
+      Company:
+    </strong>
+     
+  </p>
+  <p
+    className="appdetails"
+  >
+    <strong>
+      Website:
+    </strong>
+     
+    <a
+      href={null}
+      rel="noreferrer"
+      target="_blank"
+    >
+      Click Here
+    </a>
+  </p>
+  <p
+    className="appdetails"
+  >
+    <strong>
+      Date Applied:
+    </strong>
+     
+  </p>
+  <p
+    className="appdetails"
+  >
+    <strong>
+      Contact:
+    </strong>
+     
+  </p>
+  <p
+    className="appdetails"
+  >
+    <strong>
+      Contact Email:
+    </strong>
+     
+  </p>
+  <p
+    className="appdetails"
+  >
+    <strong>
+      Contact Phone:
+    </strong>
+     
+  </p>
+  <p
+    className="appdetails"
+  >
+    <strong>
+      Interview Date:
+    </strong>
+     
+  </p>
+  <p
+    className="appdetails"
+  >
+    <strong>
+      Status:
+    </strong>
+     
+  </p>
+  <p
+    className="appdetails"
+  >
+    <strong>
+      Additional Notes:
+    </strong>
+     
+  </p>
+  <div
+    className="appdetails_buttons"
+  >
     <div>
       <a
+        className="squarebutton_content"
         href="/jobapps"
         onClick={[Function]}
       >
-        <button>
+        <button
+          className="squarebutton"
+        >
           <svg
             aria-hidden="true"
             className="svg-inline--fa fa-backward fa-w-16 "
@@ -66,10 +120,13 @@ exports[`AppDetails Component renders the UI as expected 1`] = `
     </div>
     <div>
       <a
+        className="squarebutton_content"
         href="/edit/2"
         onClick={[Function]}
       >
-        <button>
+        <button
+          className="squarebutton"
+        >
           <svg
             aria-hidden="true"
             className="svg-inline--fa fa-edit fa-w-18 "
@@ -92,10 +149,13 @@ exports[`AppDetails Component renders the UI as expected 1`] = `
     </div>
     <div>
       <a
+        className="squarebutton_content"
         href="/jobapps"
         onClick={[Function]}
       >
-        <button>
+        <button
+          className="squarebutton"
+        >
           <svg
             aria-hidden="true"
             className="svg-inline--fa fa-trash-alt fa-w-14 "
@@ -117,5 +177,5 @@ exports[`AppDetails Component renders the UI as expected 1`] = `
       </a>
     </div>
   </div>
-</section>
+</div>
 `;

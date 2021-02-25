@@ -3,10 +3,13 @@
 exports[`SquareButton Component renders the UI as expected 1`] = `
 <div>
   <a
+    className="squarebutton_content"
     href="/"
     onClick={[Function]}
   >
-    <button>
+    <button
+      className="squarebutton"
+    >
       test
     </button>
   </a>

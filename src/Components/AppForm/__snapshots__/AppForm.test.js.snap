@@ -1,111 +1,138 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppForm Component renders the UI as expected 1`] = `
-<section>
-  <div>
-    <h3>
-      New Job Application
-    </h3>
-    <form>
-      <section>
-        <input
-          defaultValue={null}
-          name="job"
-          placeholder="Job Title"
-        />
-      </section>
-      <section>
-        <input
-          defaultValue={null}
-          name="company"
-          placeholder="Company Name"
-        />
-      </section>
-      <section>
-        <input
-          defaultValue={null}
-          name="website"
-          placeholder="Website"
-        />
-      </section>
-      <section>
-        <input
-          defaultValue={null}
-          name="date-applied"
-          placeholder="Date Applied"
-        />
-      </section>
-      <section>
-        <input
-          defaultValue={null}
-          name="contact"
-          placeholder="Contact Name"
-        />
-      </section>
-      <section>
-        <input
-          defaultValue={null}
-          name="contact_email"
-          placeholder="Contact Email"
-        />
-      </section>
-      <section>
-        <input
-          defaultValue={null}
-          name="contact_phone"
-          placeholder="Contact Phone"
-        />
-      </section>
-      <section>
-        <input
-          defaultValue={null}
-          name="interview_date"
-          placeholder="Interview Date"
-        />
-      </section>
-      <section>
-        <label
-          htmlFor="status"
+<div
+  className="appform_container"
+>
+  <h2
+    className="appform_header"
+  >
+    New Job Application
+  </h2>
+  <form
+    className="appform_form"
+  >
+    <section
+      className="appform_input"
+    >
+      <input
+        defaultValue={null}
+        name="job"
+        placeholder="Job Title"
+      />
+    </section>
+    <section
+      className="appform_input"
+    >
+      <input
+        defaultValue={null}
+        name="company"
+        placeholder="Company Name"
+      />
+    </section>
+    <section
+      className="appform_input"
+    >
+      <input
+        defaultValue={null}
+        name="website"
+        placeholder="Website"
+      />
+    </section>
+    <section
+      className="appform_input"
+    >
+      <input
+        defaultValue={null}
+        name="date-applied"
+        placeholder="Date Applied"
+      />
+    </section>
+    <section
+      className="appform_input"
+    >
+      <input
+        defaultValue={null}
+        name="contact"
+        placeholder="Contact Name"
+      />
+    </section>
+    <section
+      className="appform_input"
+    >
+      <input
+        defaultValue={null}
+        name="contact_email"
+        placeholder="Contact Email"
+      />
+    </section>
+    <section
+      className="appform_input"
+    >
+      <input
+        defaultValue={null}
+        name="contact_phone"
+        placeholder="Contact Phone"
+      />
+    </section>
+    <section
+      className="appform_input"
+    >
+      <input
+        defaultValue={null}
+        name="interview_date"
+        placeholder="Interview Date"
+      />
+    </section>
+    <section
+      className="appform_input"
+    >
+      <label
+        htmlFor="status"
+      >
+        Status: 
+      </label>
+      <select>
+        <option
+          disabled={true}
+          value=""
         >
-          Status: 
-        </label>
-        <select>
-          <option
-            disabled={true}
-            value=""
-          >
-            Choose here
-          </option>
-          <option
-            value="Interested"
-          >
-            Interested
-          </option>
-          <option
-            value="Active"
-          >
-            Active
-          </option>
-          <option
-            value="Closed"
-          >
-            Closed
-          </option>
-        </select>
-      </section>
-      <section>
-        <textarea
-          defaultValue={null}
-          placeholder="Additional Notes..."
-        />
-      </section>
-    </form>
+          Choose here
+        </option>
+        <option
+          value="Interested"
+        >
+          Interested
+        </option>
+        <option
+          value="Active"
+        >
+          Active
+        </option>
+        <option
+          value="Closed"
+        >
+          Closed
+        </option>
+      </select>
+    </section>
+    <section
+      className="appform_input appform_textarea"
+    >
+      <textarea
+        defaultValue={null}
+        placeholder="Additional Notes..."
+      />
+    </section>
     <div>
       <a
+        className="squarebutton_content"
         href="/jobapps"
         onClick={[Function]}
       >
-        <button>
+        <button
+          className="squarebutton"
+        >
           <svg
             aria-hidden="true"
             className="svg-inline--fa fa-save fa-w-14 "
@@ -126,6 +153,6 @@ exports[`AppForm Component renders the UI as expected 1`] = `
         </button>
       </a>
     </div>
-  </div>
-</section>
+  </form>
+</div>
 `;

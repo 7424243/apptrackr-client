@@ -1,35 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoginForm Component renders the UI as expected 1`] = `
-<div>
-  <form>
+<div
+  className="login_container"
+>
+  <form
+    className="login_form"
+  >
     <h2>
       Login Form
     </h2>
-    <input
-      placeholder="username"
-      type="text"
-    />
-    <input
-      placeholder="password"
-      type="text"
-    />
+    <section
+      className="login_input"
+    >
+      <input
+        placeholder="username"
+        type="text"
+      />
+    </section>
+    <section
+      className="login_input"
+    >
+      <input
+        placeholder="password"
+        type="text"
+      />
+    </section>
+    <a
+      className="recbutton_content"
+      href="/jobapps"
+      onClick={[Function]}
+    >
+      <button
+        className="recbutton"
+      >
+        Login
+      </button>
+    </a>
+    <a
+      className="recbutton_content"
+      href="/signup"
+      onClick={[Function]}
+    >
+      <button
+        className="recbutton"
+      >
+        Sign Up
+      </button>
+    </a>
   </form>
-  <a
-    href="/jobapps"
-    onClick={[Function]}
+  <div
+    className="demo_creds"
   >
-    <button>
-      Login
-    </button>
-  </a>
-  <a
-    href="/signup"
-    onClick={[Function]}
-  >
-    <button>
-      Sign Up
-    </button>
-  </a>
+    <p>
+      **Demo Credentials:
+    </p>
+    <p>
+      Username: username
+    </p>
+    <p>
+      Password: password
+    </p>
+  </div>
 </div>
 `;

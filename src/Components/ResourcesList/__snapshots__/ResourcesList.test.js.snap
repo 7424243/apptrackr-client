@@ -2,14 +2,22 @@
 
 exports[`ResourcesList Component renders the UI as expected 1`] = `
 <div>
-  <section>
-    <div>
+  <section
+    className="resources_section1"
+  >
+    <div
+      className="resources_section1_content"
+    >
       <h2>
         Job Boards
       </h2>
       <ul>
-        <div>
-          <li>
+        <div
+          className="resource_item"
+        >
+          <li
+            className="resource_item_content"
+          >
             <a
               href="https://www.indeed.com/"
               rel="noreferrer"
@@ -20,10 +28,13 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
           </li>
           <div>
             <a
+              className="squarebutton_content"
               href="/resources"
               onClick={[Function]}
             >
-              <button>
+              <button
+                className="squarebutton"
+              >
                 <svg
                   aria-hidden="true"
                   className="svg-inline--fa fa-trash-alt fa-w-14 "
@@ -45,8 +56,12 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
             </a>
           </div>
         </div>
-        <div>
-          <li>
+        <div
+          className="resource_item"
+        >
+          <li
+            className="resource_item_content"
+          >
             <a
               href="https://www.linkedin.com/jobs/?trk=li_sem_namer_careers_jobsgtm_Careers_NAMER_T1_USCA_Search_Google-Brand_DR-PRS_Multiple_Brand-LinkedIn-Jobs-Exact_Desktop_English_Core_network=g_campaign=11602008719_keyword=linkedin%20jobs&src=go-pa&veh=Careers_NAMER_T1_USCA_Search_Google-Brand_DR-PRS_Multiple_Brand-LinkedIn-Jobs-Exact_Desktop_English_Core_479259659412_linkedin%20jobs_c__kwd-1528692947_11602008719&mcid=&cname=Careers_NAMER_T1_USCA_Search_Google-Brand_DR-PRS_Multiple_Brand-LinkedIn-Jobs-Exact_Desktop_English_Core&camid=11602008719&asid=113158397036&keyword=linkedin%20jobs&targetid=kwd-1528692947&crid=479259659412&placement=&dev=c&gclid=Cj0KCQiA7NKBBhDBARIsAHbXCB7OLVWs8pYmpW31PIvUl-AppU9qdI8QLsUKJMSsiLifTs41no_v3aYaAhwZEALw_wcB"
               rel="noreferrer"
@@ -57,10 +72,13 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
           </li>
           <div>
             <a
+              className="squarebutton_content"
               href="/resources"
               onClick={[Function]}
             >
-              <button>
+              <button
+                className="squarebutton"
+              >
                 <svg
                   aria-hidden="true"
                   className="svg-inline--fa fa-trash-alt fa-w-14 "
@@ -82,8 +100,12 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
             </a>
           </div>
         </div>
-        <div>
-          <li>
+        <div
+          className="resource_item"
+        >
+          <li
+            className="resource_item_content"
+          >
             <a
               href="https://apprentice.at/"
               rel="noreferrer"
@@ -94,10 +116,13 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
           </li>
           <div>
             <a
+              className="squarebutton_content"
               href="/resources"
               onClick={[Function]}
             >
-              <button>
+              <button
+                className="squarebutton"
+              >
                 <svg
                   aria-hidden="true"
                   className="svg-inline--fa fa-trash-alt fa-w-14 "
@@ -122,10 +147,13 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
       </ul>
       <div>
         <a
+          className="squarebutton_content"
           href="/newresource"
           onClick={[Function]}
         >
-          <button>
+          <button
+            className="squarebutton"
+          >
             +
           </button>
         </a>
@@ -133,14 +161,22 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
     </div>
   </section>
   <hr />
-  <section>
-    <div>
+  <section
+    className="resources_section2"
+  >
+    <div
+      className="resources_section2_content"
+    >
       <h2>
-        Resume & Cover Letter Resources
+        Resume & Other Resources
       </h2>
       <ul>
-        <div>
-          <li>
+        <div
+          className="resource_item"
+        >
+          <li
+            className="resource_item_content"
+          >
             <a
               href="https://resumekraft.com/wp-content/uploads/2019/12/teacher-resume-example.jpg"
               rel="noreferrer"
@@ -151,10 +187,13 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
           </li>
           <div>
             <a
+              className="squarebutton_content"
               href="/resources"
               onClick={[Function]}
             >
-              <button>
+              <button
+                className="squarebutton"
+              >
                 <svg
                   aria-hidden="true"
                   className="svg-inline--fa fa-trash-alt fa-w-14 "
@@ -176,8 +215,12 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
             </a>
           </div>
         </div>
-        <div>
-          <li>
+        <div
+          className="resource_item"
+        >
+          <li
+            className="resource_item_content"
+          >
             <a
               href="https://www.thebalancecareers.com/thmb/IC37LV1es8xHWzy2TdJi5sFvIbg=/1650x1275/filters:no_upscale():max_bytes(150000):strip_icc()/The_Balance_Cover_2060250Aug-edddc2451f264a6eb1c94cf627cb77ff.jpg"
               rel="noreferrer"
@@ -188,10 +231,13 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
           </li>
           <div>
             <a
+              className="squarebutton_content"
               href="/resources"
               onClick={[Function]}
             >
-              <button>
+              <button
+                className="squarebutton"
+              >
                 <svg
                   aria-hidden="true"
                   className="svg-inline--fa fa-trash-alt fa-w-14 "
@@ -213,8 +259,12 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
             </a>
           </div>
         </div>
-        <div>
-          <li>
+        <div
+          className="resource_item"
+        >
+          <li
+            className="resource_item_content"
+          >
             <a
               href="https://skillsyncer.com/"
               rel="noreferrer"
@@ -225,10 +275,13 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
           </li>
           <div>
             <a
+              className="squarebutton_content"
               href="/resources"
               onClick={[Function]}
             >
-              <button>
+              <button
+                className="squarebutton"
+              >
                 <svg
                   aria-hidden="true"
                   className="svg-inline--fa fa-trash-alt fa-w-14 "
@@ -253,10 +306,13 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
       </ul>
       <div>
         <a
+          className="squarebutton_content"
           href="/newresource"
           onClick={[Function]}
         >
-          <button>
+          <button
+            className="squarebutton"
+          >
             +
           </button>
         </a>
