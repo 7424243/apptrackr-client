@@ -5,13 +5,13 @@ import './TableItem.css'
 function TableItem(props) {
 
     return (
-        <div>
-            <span><Link to={`/jobapp/${props.id}`}>{props.job}</Link></span>
-            <span>{props.company}</span>
-            <span>{props.dateApplied}</span>
-            <span>{props.interviewDate}</span>
-            <span>{props.status}</span>
-        </div>
+        <tr>
+            <td><Link to={`/jobapp/${props.id}`}>{props.job}</Link></td>
+            <td>{props.company}</td>
+            <td>{props.dateApplied}</td>
+            <td>{props.interviewDate}</td>
+            <td className='last_td'>{props.status}</td>
+        </tr>
     )
 }
 

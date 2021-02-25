@@ -1,0 +1,28 @@
+.section1 {
+    text-align: center;
+}
+
+.section1_content {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 15px;
+}
+
+.section2_content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 15px;
+}
+
+.section3 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.main_header {
+    text-align: center;
+}

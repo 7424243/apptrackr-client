@@ -5,28 +5,14 @@ import './Table.css'
 class Table extends Component {
     render() {
         return (
-            <div className="grid">
-                <span>
-                    <strong>Job</strong>
-                </span>
-                <span>
-                    <strong>Company</strong>
-                </span>
-                <span>
-                    <strong>Date Applied</strong>
-                </span>
-                <span>
-                    <strong>Contact</strong>
-                </span>
-                <span>
-                    <strong>Interview Date</strong>
-                </span>
-                <span>
-                    <strong>Follow-Up</strong>
-                </span>
-                <span>
-                    <strong>Status</strong>
-                </span>
+            <table>
+                <tr>
+                    <th>Job</th>
+                    <th>Company</th>
+                    <th>Date Applied</th>
+                    <th>Interview Date</th>
+                    <th className='last_th'>Status</th>
+                </tr>
                 <TableItem 
                     id={1}
                     job={'React Front End Engineer'}
@@ -59,7 +45,7 @@ class Table extends Component {
                     interviewDate={'2/16/21'}
                     status={'Closed'}
                 />
-            </div>
+            </table>
         )
     }
 }

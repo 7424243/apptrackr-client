@@ -6,7 +6,7 @@ import './MainPage.css'
 class MainPage extends Component {
     render() {
         return (
-            <>
+            <div className='main_container'>
                 <section className='section1'>
                     <div className='section1_content'>
                         <p>"If one advances confidently in the direction of his dreams,
@@ -16,24 +16,27 @@ class MainPage extends Component {
                     </div>
                 </section>
                 <section className='section2'>
+                    <h2 className='main_header'>Job Applications</h2>
                     <div className='section2_content'>
                         <SquareButton 
                             content={'+'}
                             path={'/newapp'}
                         />
-                        <label>Filter By: </label>
-                        <select>
-                            <option>All</option>
-                            <option>Interested</option>
-                            <option>Active</option>
-                            <option>Closed</option>
-                        </select>
+                        <div>
+                            <label>Filter By: </label>
+                            <select>
+                                <option>All</option>
+                                <option>Interested</option>
+                                <option>Active</option>
+                                <option>Closed</option>
+                            </select>
+                        </div>
                     </div>
                 </section>
                 <section className='section3'>
                     <Table />
                 </section>
-            </>
+            </div>
         )
     }
 }
