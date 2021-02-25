@@ -8,9 +8,9 @@ function LandingPage() {
             <div className='landing_section1_content'>
                 <div className='landing'>
                     <ul className='landing_list'>
-                        <li>Easily keep track of job applications!</li>
-                        <li>Quickly access notes regarding specific applications!</li>
-                        <li>Save frequented job boards for convenient access!</li>
+                        <li>Organize job applications!</li>
+                        <li>Create notes for specific applications!</li>
+                        <li>Save frequented resources for convenient access!</li>
                         <li>Streamline the job search process!</li>
                     </ul>
                 </div>
