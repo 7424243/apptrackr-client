@@ -16,7 +16,12 @@ import './App.css'
 class App extends Component {
 
   state = {
+    applications: [],
     loginStatus: false
+  }
+
+  getUserApplications = (applications) => {
+    this.setState({applications})
   }
 
   onLoginSuccess = () => {
@@ -25,6 +30,8 @@ class App extends Component {
 
   render() {
     const contextValue = {
+      applications: this.state.applications,
+      getUserApplications: this.getUserApplications,
       onLoginSuccess: this.onLoginSuccess
     }
     return (
