@@ -26,19 +26,20 @@ exports[`MainPage Component renders the UI as expected 1`] = `
     <div
       className="section2_content"
     >
-      <div>
-        <a
+      <a
+        href="/newapp"
+        onClick={[Function]}
+      >
+        <div
           className="squarebutton_content"
-          href="/newapp"
-          onClick={[Function]}
         >
           <button
             className="squarebutton"
           >
             +
           </button>
-        </a>
-      </div>
+        </div>
+      </a>
       <div>
         <label>
           Filter By: 
@@ -64,121 +65,27 @@ exports[`MainPage Component renders the UI as expected 1`] = `
     className="section3"
   >
     <table>
-      <tr>
-        <th>
-          Job
-        </th>
-        <th>
-          Company
-        </th>
-        <th>
-          Date Applied
-        </th>
-        <th>
-          Interview Date
-        </th>
-        <th
-          className="last_th"
-        >
-          Status
-        </th>
-      </tr>
-      <tr>
-        <td>
-          <a
-            href="/jobapp/1"
-            onClick={[Function]}
+      <tbody>
+        <tr>
+          <th>
+            Job
+          </th>
+          <th>
+            Company
+          </th>
+          <th>
+            Date Applied
+          </th>
+          <th>
+            Interview Date
+          </th>
+          <th
+            className="last_th"
           >
-            React Front End Engineer
-          </a>
-        </td>
-        <td>
-          Madwire
-        </td>
-        <td>
-          
-        </td>
-        <td>
-          
-        </td>
-        <td
-          className="last_td"
-        >
-          Interested
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a
-            href="/jobapp/3"
-            onClick={[Function]}
-          >
-            Software Engineer Intern
-          </a>
-        </td>
-        <td>
-          Hewlett Packard Enterprise
-        </td>
-        <td>
-          2/1/21
-        </td>
-        <td>
-          2/15/21
-        </td>
-        <td
-          className="last_td"
-        >
-          Applied
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a
-            href="/jobapp/4"
-            onClick={[Function]}
-          >
-            EDU Software Engineer
-          </a>
-        </td>
-        <td>
-          Splunk
-        </td>
-        <td>
-          2/3/21
-        </td>
-        <td>
-          2/10/21
-        </td>
-        <td
-          className="last_td"
-        >
-          Applied
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a
-            href="/jobapp/2"
-            onClick={[Function]}
-          >
-            Software Engineer
-          </a>
-        </td>
-        <td>
-          Colorado State University
-        </td>
-        <td>
-          2/5/21
-        </td>
-        <td>
-          2/16/21
-        </td>
-        <td
-          className="last_td"
-        >
-          Closed
-        </td>
-      </tr>
+            Status
+          </th>
+        </tr>
+      </tbody>
     </table>
   </section>
 </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import SquareButton from '../SquareButton/SquareButton'
+import {Link} from 'react-router-dom'
 import Table from '../Table/Table'
 import './MainPage.css'
 
@@ -18,10 +19,9 @@ function MainPage() {
             <section className='section2'>
                 <h2 className='main_header'>Job Applications</h2>
                 <div className='section2_content'>
-                    <SquareButton 
-                        content={'+'}
-                        path={'/newapp'}
-                    />
+                    <Link to='/newapp'>
+                        <SquareButton>+</SquareButton> 
+                    </Link>
                     <div>
                         <label>Filter By: </label>
                         <select>

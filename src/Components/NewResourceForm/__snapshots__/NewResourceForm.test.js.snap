@@ -26,18 +26,14 @@ exports[`NewResourceForm Component renders the UI as expected 1`] = `
         placeholder="Resource Link"
       />
     </section>
-    <div>
-      <a
-        className="squarebutton_content"
-        href="/resources"
-        onClick={[Function]}
-      >
-        <button
-          className="squarebutton"
-        >
-          +
-        </button>
-      </a>
+    <div
+      className="squarebutton_content"
+    >
+      <button
+        className="squarebutton"
+        content="+"
+        path="/resources"
+      />
     </div>
   </form>
 </div>

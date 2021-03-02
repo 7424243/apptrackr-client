@@ -8,6 +8,7 @@ import ErrorBoundary from '../ErrorBoundary/ErrorBoundary'
 import TokenService from '../../services/token-service'
 import {isWebUri} from 'valid-url'
 import config from '../../config'
+import ValidationError from '../ValidationError/ValidationError'
 
 class AppForm extends Component {
 
@@ -157,6 +158,7 @@ class AppForm extends Component {
                                 required
                                 onChange={this.addJobName}
                             />
+                            {this.state.job_name && <ValidationError message={this.validateJobName()}/>}
                         </section>
                         <section className='appform_input'>
                             <input 
@@ -168,6 +170,7 @@ class AppForm extends Component {
                                 required
                                 onChange={this.addCompanyName}
                             />
+                            {this.state.company_name && <ValidationError message={this.validateCompanyName()}/>}
                         </section>
                         <section className='appform_input'>
                             <input 
@@ -178,6 +181,7 @@ class AppForm extends Component {
                                 placeholder='Website'
                                 onChange={this.addWebsiteUrl}
                             />
+                            {this.state.website_url && <ValidationError message={this.validateWebsiteUrl()}/>} 
                         </section>
                         <section className='appform_input'>
                             <input 
@@ -237,6 +241,7 @@ class AppForm extends Component {
                                 <option value='Applied'>Applied</option>
                                 <option value='Closed'>Closed</option>
                             </select>
+                            {this.state.status && <ValidationError message={this.validateStatus()}/>}
                         </section>
                         <section className='appform_input appform_textarea'>
                             <textarea 

@@ -1,17 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SquareButton Component renders the UI as expected 1`] = `
-<div>
-  <a
-    className="squarebutton_content"
-    href="/"
-    onClick={[Function]}
-  >
-    <button
-      className="squarebutton"
-    >
-      test
-    </button>
-  </a>
+<div
+  className="squarebutton_content"
+>
+  <button
+    className="squarebutton"
+    content="test"
+    path="/"
+  />
 </div>
 `;
