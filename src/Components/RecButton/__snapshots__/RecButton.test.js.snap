@@ -1,15 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RecButton Component renders the UI as expected 1`] = `
-<a
+<div
   className="recbutton_content"
-  href="/"
-  onClick={[Function]}
 >
   <button
     className="recbutton"
-  >
-    test
-  </button>
-</a>
+    content="test"
+    path="/"
+  />
+</div>
 `;

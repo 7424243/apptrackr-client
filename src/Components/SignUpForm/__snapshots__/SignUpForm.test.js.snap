@@ -6,6 +6,7 @@ exports[`SignUpForm Component renders the UI as expected 1`] = `
 >
   <form
     className="signup_form"
+    onSubmit={[Function]}
   >
     <h2>
       Sign Up Form
@@ -13,46 +14,51 @@ exports[`SignUpForm Component renders the UI as expected 1`] = `
     <section
       className="signup_input"
     >
+      *
       <input
-        placeholder="First Name"
+        autoComplete="off"
+        onChange={[Function]}
+        placeholder="Full Name"
+        required={true}
         type="text"
       />
     </section>
     <section
       className="signup_input"
     >
+      *
       <input
-        placeholder="Last Name"
-        type="text"
-      />
-    </section>
-    <section
-      className="signup_input"
-    >
-      <input
+        autoComplete="off"
+        onChange={[Function]}
         placeholder="Username"
+        required={true}
         type="text"
       />
     </section>
     <section
       className="signup_input"
     >
+      <p>
+        * Must be at least 8 characters long and contain at least 1 upper case, 1 lower case, 1 number, and 1 special character.
+      </p>
       <input
+        autoComplete="off"
+        onChange={[Function]}
         placeholder="Password"
+        required={true}
         type="password"
       />
     </section>
-    <a
+    <div
       className="recbutton_content"
-      href="/jobapps"
-      onClick={[Function]}
     >
       <button
         className="recbutton"
+        type="submit"
       >
         Sign Up
       </button>
-    </a>
+    </div>
   </form>
 </div>
 `;

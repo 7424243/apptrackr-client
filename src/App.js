@@ -28,11 +28,18 @@ class App extends Component {
     this.setState({onLoginSuccess: true})
   }
 
+  handleAddApplication = (application) => {
+    this.setState({
+      applications: [...this.state.applications, application]
+    })
+  }
+
   render() {
     const contextValue = {
       applications: this.state.applications,
       getUserApplications: this.getUserApplications,
-      onLoginSuccess: this.onLoginSuccess
+      onLoginSuccess: this.onLoginSuccess,
+      addApplication: this.handleAddApplication
     }
     return (
       <div className='App'>

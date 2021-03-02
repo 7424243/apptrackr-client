@@ -20,22 +20,6 @@ exports[`App Component renders the UI as expected 1`] = `
       <a
         aria-current={null}
         className="header_navlink"
-        href="/jobapps"
-        onClick={[Function]}
-      >
-        Summary
-      </a>
-      <a
-        aria-current={null}
-        className="header_navlink"
-        href="/resources"
-        onClick={[Function]}
-      >
-        Resources
-      </a>
-      <a
-        aria-current={null}
-        className="header_navlink"
         href="/login"
         onClick={[Function]}
       >

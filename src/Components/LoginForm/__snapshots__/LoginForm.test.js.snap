@@ -6,6 +6,7 @@ exports[`LoginForm Component renders the UI as expected 1`] = `
 >
   <form
     className="login_form"
+    onSubmit={[Function]}
   >
     <h2>
       Login Form
@@ -14,7 +15,10 @@ exports[`LoginForm Component renders the UI as expected 1`] = `
       className="login_input"
     >
       <input
+        autoComplete="on"
+        onChange={[Function]}
         placeholder="username"
+        required={true}
         type="text"
       />
     </section>
@@ -22,31 +26,37 @@ exports[`LoginForm Component renders the UI as expected 1`] = `
       className="login_input"
     >
       <input
+        autoComplete="on"
+        onChange={[Function]}
         placeholder="password"
+        required={true}
         type="text"
       />
     </section>
-    <a
+    <div
       className="recbutton_content"
-      href="/jobapps"
-      onClick={[Function]}
     >
       <button
         className="recbutton"
+        type="submit"
       >
         Login
       </button>
-    </a>
+    </div>
     <a
-      className="recbutton_content"
+      className="login_link"
       href="/signup"
       onClick={[Function]}
     >
-      <button
-        className="recbutton"
+      <div
+        className="recbutton_content"
       >
-        Sign Up
-      </button>
+        <button
+          className="recbutton"
+        >
+          Sign Up
+        </button>
+      </div>
     </a>
   </form>
   <div
@@ -56,10 +66,10 @@ exports[`LoginForm Component renders the UI as expected 1`] = `
       **Demo Credentials:
     </p>
     <p>
-      Username: username
+      Username: demo
     </p>
     <p>
-      Password: password
+      Password: Demo1234!
     </p>
   </div>
 </div>
