@@ -1,7 +1,11 @@
 import React from 'react'
 
 const ApptrackrContext = React.createContext({
-    apps: []
+    applications: [],
+    deleteApplication: () => {},
+    addApplication: () => {},
+    updateApplication: () => {},
+    onLoginSuccess: () => {}
 })
 
 export default ApptrackrContext

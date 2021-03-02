@@ -11,19 +11,21 @@ import MainPage from './Components/MainPage/MainPage'
 import NewResourceForm from './Components/NewResourceForm/NewResourceForm'
 import ResourcesList from './Components/ResourcesList/ResourcesList'
 import SignUpForm from './Components/SignUpForm/SignUpForm'
-import DATA from './DATA'
 import './App.css'
 
 class App extends Component {
+
   state = {
-    apps: []
+    loginStatus: false
   }
-  componentDidMount() {
-    this.setState({apps: DATA.apps})
+
+  onLoginSuccess = () => {
+    this.setState({onLoginSuccess: true})
   }
+
   render() {
     const contextValue = {
-      apps: this.state.apps
+      onLoginSuccess: this.onLoginSuccess
     }
     return (
       <div className='App'>

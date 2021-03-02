@@ -1,15 +1,12 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import './RecButton.css'
 
 function RecButton(props) {
-    return (
-        <Link 
-            className='recbutton_content' 
-            to={props.path}
-        >
-            <button className='recbutton'>{props.content}</button>
-        </Link>
+
+     return (
+         <div className='recbutton_content'>
+            <button className='recbutton' {...props}></button>
+         </div>
     )
 }
 

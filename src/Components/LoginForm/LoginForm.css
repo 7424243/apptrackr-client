@@ -18,3 +18,7 @@
 .login_input {
     margin-bottom: 10px;
 }
+
+.login_link {
+    text-decoration: none;
+}
