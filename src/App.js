@@ -51,6 +51,12 @@ class App extends Component {
     })
   }
 
+  handleDeleteApplication = (applicationId) => {
+    this.setState({
+      applications: this.state.applications.filter(application => application.id !== applicationId)
+    })
+  }
+
   render() {
     const contextValue = {
       applications: this.state.applications,
@@ -60,6 +66,7 @@ class App extends Component {
       addApplication: this.handleAddApplication,
       addResource: this.handleAddResource,
       deleteResource: this.handleDeleteResource,
+      deleteApplication: this.handleAddApplication
     }
     return (
       <div className='App'>

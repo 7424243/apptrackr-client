@@ -45,7 +45,6 @@ class ResourcesList extends Component {
     }
 
     handleClickDelete(id) {
-        console.log('clicked!', id)
         fetch(`${config.API_ENDPOINT}/resources/${id}`, {
             method: 'DELETE',
             headers: {

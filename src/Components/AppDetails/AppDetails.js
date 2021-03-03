@@ -4,40 +4,66 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBackward, faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import './AppDetails.css'
 import ApptrackrContext from '../../ApptrackrContext'
+import { NavLink } from 'react-router-dom'
+import config from '../../config'
+import TokenService from '../../services/token-service'
 
 class AppDetails extends Component {
+
+    state = {
+        error: null
+    }
+
     static contextType = ApptrackrContext
+
+    handleClickDelete = e => {
+        e.preventDefault()
+        const id = parseInt(this.props.match.params.id)
+        console.log(id)
+        fetch(`${config.API_ENDPOINT}/applications/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': `bearer ${TokenService.getAuthToken()}`
+            }
+        })
+            .then(res => {
+                if(!res.ok) {
+                    return res.json().then(e => Promise.reject(e))
+                }
+                return res
+            })
+            .then(() => {
+                this.context.deleteApplication(id)
+                this.props.history.push('/jobapps')
+            })
+            .catch(error => {
+                this.setState({error})
+                console.error({error})
+            })
+    }
+
     render() {
-        const appId = parseInt(this.props.match.params.id)
-        const {apps} = this.context
-        const getApp = (apps, appId) => 
-            apps.find(app => app.id === appId)
-        const appDetails = getApp(apps, appId)
+        const applicationId = parseInt(this.props.match.params.id)
+        const {applications} = this.context
+        const getApplication = (applications, applicationId) => 
+            applications.find(application => application.id === applicationId)
+        const applicationDetails = getApplication(applications, applicationId)
         return (
             <div className='appdetails_container'>
-                <h2 className='appdetails_header'>{appDetails ? appDetails.job_name : null}</h2>
-                <p className='appdetails'><strong>Company:</strong> {appDetails ? appDetails.company_name : null}</p>
-                <p className='appdetails'><strong>Website:</strong> <a href={appDetails ? appDetails.website : null} target='_blank' rel='noreferrer'>Click Here</a></p>
-                <p className='appdetails'><strong>Date Applied:</strong> {appDetails ? appDetails.date_applied : null}</p>
-                <p className='appdetails'><strong>Contact:</strong> {appDetails ? appDetails.contact_name : null}</p>
-                <p className='appdetails'><strong>Contact Email:</strong> {appDetails ? appDetails.contact_email : null}</p>
-                <p className='appdetails'><strong>Contact Phone:</strong> {appDetails ? appDetails.contact_phone : null}</p>
-                <p className='appdetails'><strong>Interview Date:</strong> {appDetails ? appDetails.interview_date : null}</p>
-                <p className='appdetails'><strong>Status:</strong> {appDetails ? appDetails.status : null}</p>
-                <p className='appdetails'><strong>Additional Notes:</strong> {appDetails ? appDetails.notes : null}</p>
+                <h2 className='appdetails_header'>{applicationDetails ? applicationDetails.job_name : null}</h2>
+                <p className='appdetails'><strong>Company:</strong> {applicationDetails ? applicationDetails.company_name : null}</p>
+                <p className='appdetails'><strong>Website:</strong> <a href={applicationDetails ? applicationDetails.website : null} target='_blank' rel='noreferrer'>Click Here</a></p>
+                <p className='appdetails'><strong>Date Applied:</strong> {applicationDetails ? applicationDetails.date_applied : null}</p>
+                <p className='appdetails'><strong>Contact:</strong> {applicationDetails ? applicationDetails.contact_name : null}</p>
+                <p className='appdetails'><strong>Contact Email:</strong> {applicationDetails ? applicationDetails.contact_email : null}</p>
+                <p className='appdetails'><strong>Contact Phone:</strong> {applicationDetails ? applicationDetails.contact_phone : null}</p>
+                <p className='appdetails'><strong>Interview Date:</strong> {applicationDetails ? applicationDetails.interview_date : null}</p>
+                <p className='appdetails'><strong>Status:</strong> {applicationDetails ? applicationDetails.status : null}</p>
+                <p className='appdetails'><strong>Additional Notes:</strong> {applicationDetails ? applicationDetails.notes : null}</p>
                 <div className='appdetails_buttons'>
-                    <SquareButton
-                        path={'/jobapps'}
-                        content={<FontAwesomeIcon icon={faBackward}/>}
-                    />
-                    <SquareButton
-                        path={`/edit/${appId}`}
-                        content={<FontAwesomeIcon icon={faEdit}/>}
-                    />
-                    <SquareButton
-                        path={'/jobapps'}
-                        content={<FontAwesomeIcon icon={faTrashAlt}/>}
-                    />
+                <NavLink to={'/jobapps'}><SquareButton><FontAwesomeIcon icon={faBackward}/></SquareButton></NavLink>
+                <NavLink to={`/edit/${applicationId}`}><SquareButton><FontAwesomeIcon icon={faEdit}/></SquareButton></NavLink>
+                <NavLink to={'/jobapps'}><SquareButton type='button' onClick={this.handleClickDelete}><FontAwesomeIcon icon={faTrashAlt}/></SquareButton></NavLink>
                 </div>
             </div>
         )
