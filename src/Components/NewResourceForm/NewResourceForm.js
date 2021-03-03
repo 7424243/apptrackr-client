@@ -51,33 +51,6 @@ class NewResourceForm extends Component {
                 console.error({error})
             })
     }
-    // handleSubmit = e => {
-    //     e.preventDefault()
-    //     //let payload = Object.assign({}, this.state)
-    //     console.log(this.state)
-    //     fetch(`${config.API_ENDPOINT}/resources/`, {
-    //         method: 'POST',
-    //         body: JSON.stringify(this.state),
-    //         headers: {
-    //             'content-type': 'application/json',
-    //             'Authorization': `bearer ${TokenService.getAuthToken}`
-    //         }
-    //     })
-    //         .then(res => {
-    //             if(!res.ok) {
-    //                 return res.json().then(e => Promise.reject(e))
-    //             }
-    //             return res.json()
-    //         })
-    //         .then(resource => {
-    //             this.context.addResource(resource)
-    //             this.props.history.push('/resources')
-    //         })
-    //         .catch(error => {
-    //             this.setState({error})
-    //             console.error({error})
-    //         })
-    // }
 
     addResourceName = e => {
         this.setState({resource_name: e.target.value})

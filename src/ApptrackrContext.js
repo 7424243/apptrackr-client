@@ -9,7 +9,8 @@ const ApptrackrContext = React.createContext({
     addApplication: () => {},
     addResource: () => {},
     updateApplication: () => {},
-    onLoginSuccess: () => {}
+    onLoginSuccess: () => {},
+    deleteResource: () => {},
 })
 
 export default ApptrackrContext

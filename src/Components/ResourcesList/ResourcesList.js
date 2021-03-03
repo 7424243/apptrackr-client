@@ -13,6 +13,7 @@ class ResourcesList extends Component {
 
     state = {
         resources: [],
+        deleteSuccess: null,
         error: null
     }
 
@@ -43,6 +44,30 @@ class ResourcesList extends Component {
             })
     }
 
+    handleClickDelete(id) {
+        console.log('clicked!', id)
+        fetch(`${config.API_ENDPOINT}/resources/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': `bearer ${TokenService.getAuthToken()}`
+            }
+        })
+            .then(res => {
+                if(!res.ok) {
+                    return res.json().then(e => Promise.reject(e))
+                }
+                return res
+            })
+            .then(() => {
+                this.context.deleteResource(id)
+                this.setState({deleteSuccess: true})
+            })
+            .catch(error => {
+                this.setState({error})
+                console.error({error})
+            })
+    }
+
     render() {
         const {resources} = this.state
         const sortFunction = (a, b) => {
@@ -66,7 +91,7 @@ class ResourcesList extends Component {
                         name={resource.resource_name}
                         url={resource.resource_url}
                     />
-                    <SquareButton><FontAwesomeIcon icon={faTrashAlt}/></SquareButton>
+                    <SquareButton type='button' onClick={() => this.handleClickDelete(resource.id)}><FontAwesomeIcon icon={faTrashAlt}/></SquareButton>
                 </div>
 
             )
@@ -80,7 +105,7 @@ class ResourcesList extends Component {
                         name={resource.resource_name}
                         url={resource.resource_url}
                     />
-                    <SquareButton key='button'><FontAwesomeIcon icon={faTrashAlt}/></SquareButton>
+                    <SquareButton type='button' onClick={() => this.handleClickDelete(resource.id)}><FontAwesomeIcon icon={faTrashAlt}/></SquareButton>
                 </div>
 
             )
