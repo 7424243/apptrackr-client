@@ -118,13 +118,6 @@ class AppForm extends Component {
         }
     }
 
-    validateStatus() {
-        const status = this.state.status.trim()
-        if(status !== 'Interested' || status !== 'Applied' || status !== 'Closed') {
-            return 'A status is required'
-        }
-    }
-
     validateWebsiteUrl() {
         const url = this.state.website_url.trim()
         if(!isWebUri(url)) {
@@ -235,13 +228,12 @@ class AppForm extends Component {
                         </section>
                         <section className='appform_input'>
                             <label htmlFor='status'>Status: </label>
-                            <select onChange={this.addStatus}>
-                                <option value=''>Choose here</option>
-                                <option value='Interested'>Interested</option>
-                                <option value='Applied'>Applied</option>
-                                <option value='Closed'>Closed</option>
+                            <select required onChange={this.addStatus}>
+                                <option name='status' value=''>Choose here</option>
+                                <option name='status' value='Interested'>Interested</option>
+                                <option name='status' value='Applied'>Applied</option>
+                                <option name='status' value='Closed'>Closed</option>
                             </select>
-                            {this.state.status && <ValidationError message={this.validateStatus()}/>}
                         </section>
                         <section className='appform_input appform_textarea'>
                             <textarea 

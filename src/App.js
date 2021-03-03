@@ -17,11 +17,16 @@ class App extends Component {
 
   state = {
     applications: [],
+    resources: [],
     loginStatus: false
   }
 
   getUserApplications = (applications) => {
     this.setState({applications})
+  }
+
+  getUserResources = (resources) => {
+    this.setState({resources})
   }
 
   onLoginSuccess = () => {
@@ -34,12 +39,20 @@ class App extends Component {
     })
   }
 
+  handleAddResource = (resource) => {
+    this.setState({
+      resources: [...this.state.resources, resource]
+    })
+  }
+
   render() {
     const contextValue = {
       applications: this.state.applications,
       getUserApplications: this.getUserApplications,
+      getUserResources: this.getUserResources,
       onLoginSuccess: this.onLoginSuccess,
-      addApplication: this.handleAddApplication
+      addApplication: this.handleAddApplication,
+      addResource: this.handleAddResource,
     }
     return (
       <div className='App'>

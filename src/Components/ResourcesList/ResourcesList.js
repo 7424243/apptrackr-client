@@ -4,50 +4,96 @@ import SquareButton from '../SquareButton/SquareButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import './ResourcesList.css'
+import ApptrackrContext from '../../ApptrackrContext'
+import TokenService from '../../services/token-service'
+import config from '../../config'
+import {NavLink} from 'react-router-dom'
 
 class ResourcesList extends Component {
+
+    state = {
+        resources: [],
+        error: null
+    }
+
+    static contextType = ApptrackrContext
+
+    componentDidMount() {
+        const user_id = TokenService.getUserIdFromToken()
+        fetch(`${config.API_ENDPOINT}/resources/user/${user_id}`, {
+            method: 'GET',
+            headers: {
+                'content-type': 'application/json',
+                'Authorization': `bearer ${TokenService.getAuthToken()}`
+            }
+        })
+            .then(res => {
+                if(!res.ok) {
+                    return res.json().then(e => Promise.reject(e))                
+                }
+                return res.json()
+            })
+            .then(resources => {
+                this.setState({resources})
+                this.context.getUserResources(resources)
+            })
+            .catch(error => {
+                this.setState({error})
+                console.error({error})
+            })
+    }
+
     render() {
+        const {resources} = this.state
+        const sortFunction = (a, b) => {
+            if(a.resource_name.toLowerCase() < b.resource_name.toLowerCase()) {
+                return -1
+            }
+            if(a.resource_name.toLowerCase() > b.resource_name.toLowerCase()) {
+                return 1
+            }
+            return 0
+        }
+        const alphabetizedResources = resources.sort(sortFunction)
+        const otherResources = alphabetizedResources.filter(resource => resource.type === 'Other Resource')
+        const jobResources = alphabetizedResources.filter(resource => resource.type === 'Job Resource')
+        const jobResourceItems = jobResources.map(resource => {
+            return (
+                <div className='resource_item'>
+                    <ResourceItem 
+                        key={resource.id}
+                        id={resource.id}
+                        name={resource.resource_name}
+                        url={resource.resource_url}
+                    />
+                    <SquareButton><FontAwesomeIcon icon={faTrashAlt}/></SquareButton>
+                </div>
+
+            )
+        })
+        const otherResourceItems = otherResources.map(resource => {
+            return (
+                <div className='resource_item'>
+                    <ResourceItem 
+                        key={resource.id}
+                        id={resource.id}
+                        name={resource.resource_name}
+                        url={resource.resource_url}
+                    />
+                    <SquareButton key='button'><FontAwesomeIcon icon={faTrashAlt}/></SquareButton>
+                </div>
+
+            )
+        })
         return (
             <div>
                 <section className='resources_section1'>
                     <div className='resources_section1_content'>
                         <h2>Job Boards</h2>
                         <ul>
-                            <div className='resource_item'>
-                                <ResourceItem 
-                                    name={'Indeed'} 
-                                    url={'https://www.indeed.com/'}
-                                />
-                                <SquareButton 
-                                    content={<FontAwesomeIcon icon={faTrashAlt}/>}
-                                    path={'/resources'}
-                                />
-                            </div>
-                            <div className='resource_item'>
-                                <ResourceItem 
-                                    name={'LinkedIn'} 
-                                    url={'https://www.linkedin.com/jobs/?trk=li_sem_namer_careers_jobsgtm_Careers_NAMER_T1_USCA_Search_Google-Brand_DR-PRS_Multiple_Brand-LinkedIn-Jobs-Exact_Desktop_English_Core_network=g_campaign=11602008719_keyword=linkedin%20jobs&src=go-pa&veh=Careers_NAMER_T1_USCA_Search_Google-Brand_DR-PRS_Multiple_Brand-LinkedIn-Jobs-Exact_Desktop_English_Core_479259659412_linkedin%20jobs_c__kwd-1528692947_11602008719&mcid=&cname=Careers_NAMER_T1_USCA_Search_Google-Brand_DR-PRS_Multiple_Brand-LinkedIn-Jobs-Exact_Desktop_English_Core&camid=11602008719&asid=113158397036&keyword=linkedin%20jobs&targetid=kwd-1528692947&crid=479259659412&placement=&dev=c&gclid=Cj0KCQiA7NKBBhDBARIsAHbXCB7OLVWs8pYmpW31PIvUl-AppU9qdI8QLsUKJMSsiLifTs41no_v3aYaAhwZEALw_wcB'}
-                                />
-                                <SquareButton 
-                                    content={<FontAwesomeIcon icon={faTrashAlt}/>}
-                                    path={'/resources'}
-                                />
-                            </div>
-                            <div className='resource_item'>
-                                <ResourceItem 
-                                    name={'Apprentice.at'} 
-                                    url={'https://apprentice.at/'}
-                                />
-                                <SquareButton 
-                                    content={<FontAwesomeIcon icon={faTrashAlt}/>}
-                                    path={'/resources'}
-                                />
-                            </div>
+                            {jobResourceItems}
                         </ul>
-                        <SquareButton 
-                            content={'+'}
-                            path={'/newresource'}
-                        />
+                        <NavLink to='/newresource'><SquareButton>+</SquareButton></NavLink>
                     </div>
                 </section>
                 <hr/>
@@ -55,42 +101,9 @@ class ResourcesList extends Component {
                     <div className='resources_section2_content'>
                         <h2>Resume & Other Resources</h2>
                         <ul>
-                            <div className='resource_item'>
-                                <ResourceItem 
-                                    name={'Resume'} 
-                                    url={'https://resumekraft.com/wp-content/uploads/2019/12/teacher-resume-example.jpg'}
-                                />
-                                <SquareButton 
-                                    content={<FontAwesomeIcon icon={faTrashAlt}/>}
-                                    path={'/resources'}
-                                />
-                            </div>
-                            <div className='resource_item'>
-                                <ResourceItem 
-                                    name={'Cover Letter'} 
-                                    url={'https://www.thebalancecareers.com/thmb/IC37LV1es8xHWzy2TdJi5sFvIbg=/1650x1275/filters:no_upscale():max_bytes(150000):strip_icc()/The_Balance_Cover_2060250Aug-edddc2451f264a6eb1c94cf627cb77ff.jpg'}
-                                />
-                                <SquareButton 
-                                    content={<FontAwesomeIcon icon={faTrashAlt}/>}
-                                    path={'/resources'}
-                                />
-                            </div>
-                            <div className='resource_item'>
-                                <ResourceItem 
-                                    name={'Resume Optimizer'} 
-                                    url={'https://skillsyncer.com/'}
-                                />
-                                <SquareButton 
-                                    content={<FontAwesomeIcon icon={faTrashAlt}/>}
-                                    path={'/resources'}
-                                />
-                            </div>
-
+                            {otherResourceItems}
                         </ul>
-                        <SquareButton 
-                            content={'+'}
-                            path={'/newresource'}
-                        />
+                        <NavLink to='/newresource'><SquareButton>+</SquareButton></NavLink>
                     </div>
                 </section>
             </div>

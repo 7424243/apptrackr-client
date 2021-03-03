@@ -3,7 +3,7 @@ import './ResourceItem.css'
 
 function ResourceItem(props) {
     return (
-        <li className='resource_item_content'>
+        <li className='resource_item_content' key={props.id}>
             <a 
                 href={props.url} 
                 target='_blank' 
