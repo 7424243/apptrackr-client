@@ -11,29 +11,75 @@ exports[`NewResourceForm Component renders the UI as expected 1`] = `
   </h2>
   <form
     className="resourceform_form"
+    onSubmit={[Function]}
   >
     <section
       className="resourceform_input"
     >
       <input
+        aria-label="name"
+        name="resource name"
+        onChange={[Function]}
         placeholder="Resource Name"
+        required={true}
+        type="text"
       />
+      
     </section>
     <section
       className="resourceform_input"
     >
       <input
+        aria-label="resource url"
+        name="url"
+        onChange={[Function]}
         placeholder="Resource Link"
+        required={true}
+        type="url"
       />
+      
+    </section>
+    <section
+      className="resourceform_input"
+    >
+      <label
+        htmlFor="type"
+      >
+        Type: 
+      </label>
+      <select
+        onChange={[Function]}
+        required={true}
+      >
+        <option
+          name="type"
+          value=""
+        >
+          Choose here
+        </option>
+        <option
+          name="type"
+          value="Job Resource"
+        >
+          Job Resource
+        </option>
+        <option
+          name="type"
+          value="Other Resource"
+        >
+          Other Resource
+        </option>
+      </select>
     </section>
     <div
       className="squarebutton_content"
     >
       <button
         className="squarebutton"
-        content="+"
-        path="/resources"
-      />
+        type="submit"
+      >
+        +
+      </button>
     </div>
   </form>
 </div>

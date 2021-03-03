@@ -11,185 +11,22 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
       <h2>
         Job Boards
       </h2>
-      <ul>
-        <div
-          className="resource_item"
-        >
-          <li
-            className="resource_item_content"
-          >
-            <a
-              href="https://www.indeed.com/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Indeed
-            </a>
-          </li>
-          <div
-            className="squarebutton_content"
-          >
-            <button
-              className="squarebutton"
-              content={
-                <FontAwesomeIcon
-                  border={false}
-                  className=""
-                  fixedWidth={false}
-                  flip={null}
-                  icon={
-                    Object {
-                      "icon": Array [
-                        448,
-                        512,
-                        Array [],
-                        "f2ed",
-                        "M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z",
-                      ],
-                      "iconName": "trash-alt",
-                      "prefix": "fas",
-                    }
-                  }
-                  inverse={false}
-                  listItem={false}
-                  mask={null}
-                  pull={null}
-                  pulse={false}
-                  rotation={null}
-                  size={null}
-                  spin={false}
-                  swapOpacity={false}
-                  symbol={false}
-                  title=""
-                  transform={null}
-                />
-              }
-              path="/resources"
-            />
-          </div>
-        </div>
-        <div
-          className="resource_item"
-        >
-          <li
-            className="resource_item_content"
-          >
-            <a
-              href="https://www.linkedin.com/jobs/?trk=li_sem_namer_careers_jobsgtm_Careers_NAMER_T1_USCA_Search_Google-Brand_DR-PRS_Multiple_Brand-LinkedIn-Jobs-Exact_Desktop_English_Core_network=g_campaign=11602008719_keyword=linkedin%20jobs&src=go-pa&veh=Careers_NAMER_T1_USCA_Search_Google-Brand_DR-PRS_Multiple_Brand-LinkedIn-Jobs-Exact_Desktop_English_Core_479259659412_linkedin%20jobs_c__kwd-1528692947_11602008719&mcid=&cname=Careers_NAMER_T1_USCA_Search_Google-Brand_DR-PRS_Multiple_Brand-LinkedIn-Jobs-Exact_Desktop_English_Core&camid=11602008719&asid=113158397036&keyword=linkedin%20jobs&targetid=kwd-1528692947&crid=479259659412&placement=&dev=c&gclid=Cj0KCQiA7NKBBhDBARIsAHbXCB7OLVWs8pYmpW31PIvUl-AppU9qdI8QLsUKJMSsiLifTs41no_v3aYaAhwZEALw_wcB"
-              rel="noreferrer"
-              target="_blank"
-            >
-              LinkedIn
-            </a>
-          </li>
-          <div
-            className="squarebutton_content"
-          >
-            <button
-              className="squarebutton"
-              content={
-                <FontAwesomeIcon
-                  border={false}
-                  className=""
-                  fixedWidth={false}
-                  flip={null}
-                  icon={
-                    Object {
-                      "icon": Array [
-                        448,
-                        512,
-                        Array [],
-                        "f2ed",
-                        "M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z",
-                      ],
-                      "iconName": "trash-alt",
-                      "prefix": "fas",
-                    }
-                  }
-                  inverse={false}
-                  listItem={false}
-                  mask={null}
-                  pull={null}
-                  pulse={false}
-                  rotation={null}
-                  size={null}
-                  spin={false}
-                  swapOpacity={false}
-                  symbol={false}
-                  title=""
-                  transform={null}
-                />
-              }
-              path="/resources"
-            />
-          </div>
-        </div>
-        <div
-          className="resource_item"
-        >
-          <li
-            className="resource_item_content"
-          >
-            <a
-              href="https://apprentice.at/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Apprentice.at
-            </a>
-          </li>
-          <div
-            className="squarebutton_content"
-          >
-            <button
-              className="squarebutton"
-              content={
-                <FontAwesomeIcon
-                  border={false}
-                  className=""
-                  fixedWidth={false}
-                  flip={null}
-                  icon={
-                    Object {
-                      "icon": Array [
-                        448,
-                        512,
-                        Array [],
-                        "f2ed",
-                        "M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z",
-                      ],
-                      "iconName": "trash-alt",
-                      "prefix": "fas",
-                    }
-                  }
-                  inverse={false}
-                  listItem={false}
-                  mask={null}
-                  pull={null}
-                  pulse={false}
-                  rotation={null}
-                  size={null}
-                  spin={false}
-                  swapOpacity={false}
-                  symbol={false}
-                  title=""
-                  transform={null}
-                />
-              }
-              path="/resources"
-            />
-          </div>
-        </div>
-      </ul>
-      <div
-        className="squarebutton_content"
+      <ul />
+      <a
+        aria-current={null}
+        href="/newresource"
+        onClick={[Function]}
       >
-        <button
-          className="squarebutton"
-          content="+"
-          path="/newresource"
-        />
-      </div>
+        <div
+          className="squarebutton_content"
+        >
+          <button
+            className="squarebutton"
+          >
+            +
+          </button>
+        </div>
+      </a>
     </div>
   </section>
   <hr />
@@ -202,185 +39,22 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
       <h2>
         Resume & Other Resources
       </h2>
-      <ul>
-        <div
-          className="resource_item"
-        >
-          <li
-            className="resource_item_content"
-          >
-            <a
-              href="https://resumekraft.com/wp-content/uploads/2019/12/teacher-resume-example.jpg"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Resume
-            </a>
-          </li>
-          <div
-            className="squarebutton_content"
-          >
-            <button
-              className="squarebutton"
-              content={
-                <FontAwesomeIcon
-                  border={false}
-                  className=""
-                  fixedWidth={false}
-                  flip={null}
-                  icon={
-                    Object {
-                      "icon": Array [
-                        448,
-                        512,
-                        Array [],
-                        "f2ed",
-                        "M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z",
-                      ],
-                      "iconName": "trash-alt",
-                      "prefix": "fas",
-                    }
-                  }
-                  inverse={false}
-                  listItem={false}
-                  mask={null}
-                  pull={null}
-                  pulse={false}
-                  rotation={null}
-                  size={null}
-                  spin={false}
-                  swapOpacity={false}
-                  symbol={false}
-                  title=""
-                  transform={null}
-                />
-              }
-              path="/resources"
-            />
-          </div>
-        </div>
-        <div
-          className="resource_item"
-        >
-          <li
-            className="resource_item_content"
-          >
-            <a
-              href="https://www.thebalancecareers.com/thmb/IC37LV1es8xHWzy2TdJi5sFvIbg=/1650x1275/filters:no_upscale():max_bytes(150000):strip_icc()/The_Balance_Cover_2060250Aug-edddc2451f264a6eb1c94cf627cb77ff.jpg"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Cover Letter
-            </a>
-          </li>
-          <div
-            className="squarebutton_content"
-          >
-            <button
-              className="squarebutton"
-              content={
-                <FontAwesomeIcon
-                  border={false}
-                  className=""
-                  fixedWidth={false}
-                  flip={null}
-                  icon={
-                    Object {
-                      "icon": Array [
-                        448,
-                        512,
-                        Array [],
-                        "f2ed",
-                        "M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z",
-                      ],
-                      "iconName": "trash-alt",
-                      "prefix": "fas",
-                    }
-                  }
-                  inverse={false}
-                  listItem={false}
-                  mask={null}
-                  pull={null}
-                  pulse={false}
-                  rotation={null}
-                  size={null}
-                  spin={false}
-                  swapOpacity={false}
-                  symbol={false}
-                  title=""
-                  transform={null}
-                />
-              }
-              path="/resources"
-            />
-          </div>
-        </div>
-        <div
-          className="resource_item"
-        >
-          <li
-            className="resource_item_content"
-          >
-            <a
-              href="https://skillsyncer.com/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Resume Optimizer
-            </a>
-          </li>
-          <div
-            className="squarebutton_content"
-          >
-            <button
-              className="squarebutton"
-              content={
-                <FontAwesomeIcon
-                  border={false}
-                  className=""
-                  fixedWidth={false}
-                  flip={null}
-                  icon={
-                    Object {
-                      "icon": Array [
-                        448,
-                        512,
-                        Array [],
-                        "f2ed",
-                        "M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z",
-                      ],
-                      "iconName": "trash-alt",
-                      "prefix": "fas",
-                    }
-                  }
-                  inverse={false}
-                  listItem={false}
-                  mask={null}
-                  pull={null}
-                  pulse={false}
-                  rotation={null}
-                  size={null}
-                  spin={false}
-                  swapOpacity={false}
-                  symbol={false}
-                  title=""
-                  transform={null}
-                />
-              }
-              path="/resources"
-            />
-          </div>
-        </div>
-      </ul>
-      <div
-        className="squarebutton_content"
+      <ul />
+      <a
+        aria-current={null}
+        href="/newresource"
+        onClick={[Function]}
       >
-        <button
-          className="squarebutton"
-          content="+"
-          path="/newresource"
-        />
-      </div>
+        <div
+          className="squarebutton_content"
+        >
+          <button
+            className="squarebutton"
+          >
+            +
+          </button>
+        </div>
+      </a>
     </div>
   </section>
 </div>

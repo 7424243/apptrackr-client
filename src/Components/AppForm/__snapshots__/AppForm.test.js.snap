@@ -124,29 +124,33 @@ exports[`AppForm Component renders the UI as expected 1`] = `
       </label>
       <select
         onChange={[Function]}
+        required={true}
       >
         <option
+          name="status"
           value=""
         >
           Choose here
         </option>
         <option
+          name="status"
           value="Interested"
         >
           Interested
         </option>
         <option
+          name="status"
           value="Applied"
         >
           Applied
         </option>
         <option
+          name="status"
           value="Closed"
         >
           Closed
         </option>
       </select>
-      
     </section>
     <section
       className="appform_input appform_textarea"
