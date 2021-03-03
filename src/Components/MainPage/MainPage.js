@@ -9,7 +9,7 @@ import ApptrackrContext from '../../ApptrackrContext'
 class MainPage extends Component {
 
     state = {
-        filter: null
+        filter: 'All'
     }
 
     static contextType = ApptrackrContext
