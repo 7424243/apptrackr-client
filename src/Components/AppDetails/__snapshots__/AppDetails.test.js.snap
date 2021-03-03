@@ -89,11 +89,13 @@ exports[`AppDetails Component renders the UI as expected 1`] = `
   <div
     className="appdetails_buttons"
   >
-    <div>
-      <a
+    <a
+      aria-current={null}
+      href="/jobapps"
+      onClick={[Function]}
+    >
+      <div
         className="squarebutton_content"
-        href="/jobapps"
-        onClick={[Function]}
       >
         <button
           className="squarebutton"
@@ -116,13 +118,15 @@ exports[`AppDetails Component renders the UI as expected 1`] = `
             />
           </svg>
         </button>
-      </a>
-    </div>
-    <div>
-      <a
+      </div>
+    </a>
+    <a
+      aria-current={null}
+      href="/edit/2"
+      onClick={[Function]}
+    >
+      <div
         className="squarebutton_content"
-        href="/edit/2"
-        onClick={[Function]}
       >
         <button
           className="squarebutton"
@@ -145,16 +149,20 @@ exports[`AppDetails Component renders the UI as expected 1`] = `
             />
           </svg>
         </button>
-      </a>
-    </div>
-    <div>
-      <a
+      </div>
+    </a>
+    <a
+      aria-current={null}
+      href="/jobapps"
+      onClick={[Function]}
+    >
+      <div
         className="squarebutton_content"
-        href="/jobapps"
-        onClick={[Function]}
       >
         <button
           className="squarebutton"
+          onClick={[Function]}
+          type="button"
         >
           <svg
             aria-hidden="true"
@@ -174,8 +182,8 @@ exports[`AppDetails Component renders the UI as expected 1`] = `
             />
           </svg>
         </button>
-      </a>
-    </div>
+      </div>
+    </a>
   </div>
 </div>
 `;

@@ -21,7 +21,7 @@ class NewResourceForm extends Component {
     static contextType = ApptrackrContext
 
     componentDidMount() {
-        this.setState({user_id: TokenService.getUserIdFromToken()})
+        this.setState({user_id: this.context.user_id})
     }
 
 

@@ -123,6 +123,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
         Status: 
       </label>
       <select
+        defaultValue={null}
         onChange={[Function]}
         required={true}
       >
@@ -188,15 +189,6 @@ exports[`AppForm Component renders the UI as expected 1`] = `
           />
         </svg>
       </button>
-    </div>
-    <div
-      className="squarebutton_content"
-    >
-      <button
-        className="squarebutton"
-        content="X"
-        path="/jobapps"
-      />
     </div>
   </form>
 </div>

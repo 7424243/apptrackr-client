@@ -15,7 +15,7 @@ class Table extends Component {
     static contextType = ApptrackrContext
 
     componentDidMount() {
-        const user_id = TokenService.getUserIdFromToken()
+        const {user_id} = this.context
         fetch(`${config.API_ENDPOINT}/applications/user/${user_id}`, {
             method: 'GET',
             headers: {
@@ -56,7 +56,7 @@ class Table extends Component {
         })
         return (
             <table>
-                <tbody>
+                <thead>
                     <tr>
                         <th>Job</th>
                         <th>Company</th>
@@ -64,8 +64,8 @@ class Table extends Component {
                         <th>Interview Date</th>
                         <th className='last_th'>Status</th>
                     </tr>
-                    {applicationItems}
-                </tbody>
+                </thead>
+                {applicationItems}
             </table>
         )
     }

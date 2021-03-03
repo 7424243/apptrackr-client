@@ -2,7 +2,7 @@
 
 exports[`Table Component renders the UI as expected 1`] = `
 <table>
-  <tbody>
+  <thead>
     <tr>
       <th>
         Job
@@ -22,6 +22,6 @@ exports[`Table Component renders the UI as expected 1`] = `
         Status
       </th>
     </tr>
-  </tbody>
+  </thead>
 </table>
 `;

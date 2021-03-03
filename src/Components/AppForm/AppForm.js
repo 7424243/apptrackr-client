@@ -30,7 +30,41 @@ class AppForm extends Component {
     static contextType = ApptrackrContext
 
     componentDidMount() {
-        this.setState({user_id: TokenService.getUserIdFromToken()})
+        const {user_id} = this.context
+        this.setState({user_id})
+        const applicationId = this.props.match.params.id
+        if(applicationId) {
+            fetch(`${config.API_ENDPOINT}/applications/${applicationId}`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `bearer ${TokenService.getAuthToken()}`
+                }
+            })
+                .then(res => {
+                    if(!res.ok) {
+                        return res.json().then(e => Promise.reject(e))
+                    }
+                    return res.json()
+                })
+                .then(data => {
+                    this.setState({
+                        job_name: data.job_name,
+                        company_name: data.company_name,
+                        website_url: data.website_url,
+                        date_applied: data.date_applied,
+                        contact_name: data.contact_name,
+                        contact_email: data.contact_email,
+                        contact_phone: data.contact_phone,
+                        interview_date: data.interview_date,
+                        status: data.status,
+                        notes: data.notes,
+                    })
+                })
+                .catch(error => {
+                    this.setState({error})
+                    console.log(error)
+                })    
+        }
     }
 
     handleSubmitAdd = e => {
@@ -60,8 +94,31 @@ class AppForm extends Component {
             })
     }
 
-    handleSubmitEdit = e => {
-        console.log('submit for edit!')
+    handleSubmitEdit = e => {e.preventDefault()
+        let payload = Object.assign({}, this.state)
+        let id = parseInt(this.props.match.params.id)
+        fetch(`${config.API_ENDPOINT}/applications/${id}`, {
+            method: 'PATCH',
+            body: JSON.stringify(payload),
+            headers: {
+                'content-type': 'application/json',
+                'Authorization': `bearer ${TokenService.getAuthToken()}`
+            }
+        })
+            .then(res => {
+                if(!res.ok) {
+                    return res.json().then(e => Promise.reject(e))
+                }
+                return res
+            })
+            .then(data => {
+                this.context.updateApplication(data)
+                this.props.history.push(`/jobapps/${id}`)
+            })
+            .catch(error => {
+                this.setState({error})
+                console.error({error})
+            })
     }
 
     addJobName = e => {
@@ -101,7 +158,7 @@ class AppForm extends Component {
     }
 
     addNotes = e => {
-        this.setState({ntoes: e.target.value})
+        this.setState({notes: e.target.value})
     }
 
     validateJobName() {
@@ -228,7 +285,7 @@ class AppForm extends Component {
                         </section>
                         <section className='appform_input'>
                             <label htmlFor='status'>Status: </label>
-                            <select required onChange={this.addStatus}>
+                            <select required defaultValue={appDetails ? appDetails.status : null} onChange={this.addStatus}>
                                 <option name='status' value=''>Choose here</option>
                                 <option name='status' value='Interested'>Interested</option>
                                 <option name='status' value='Applied'>Applied</option>
@@ -247,12 +304,7 @@ class AppForm extends Component {
                             <SquareButton type='submit'>
                                 <FontAwesomeIcon icon={faSave}/>
                             </SquareButton>
-                            {/* path={appDetails ? `/jobapp/${appDetails.id}` : '/jobapps'}
-                            /> */}
-                            <SquareButton
-                                content={'X'}
-                                path={appDetails ? `/jobapp/${appDetails.id}` : '/jobapps'}
-                            />
+                            
                     </form>
                 </ErrorBoundary>
             </div>

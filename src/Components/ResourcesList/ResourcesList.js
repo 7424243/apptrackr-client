@@ -13,14 +13,14 @@ class ResourcesList extends Component {
 
     state = {
         resources: [],
-        deleteSuccess: null,
+        deletedResourceId: null,
         error: null
     }
 
     static contextType = ApptrackrContext
 
     componentDidMount() {
-        const user_id = TokenService.getUserIdFromToken()
+        const {user_id} = this.context
         fetch(`${config.API_ENDPOINT}/resources/user/${user_id}`, {
             method: 'GET',
             headers: {
@@ -59,7 +59,7 @@ class ResourcesList extends Component {
             })
             .then(() => {
                 this.context.deleteResource(id)
-                this.setState({deleteSuccess: true})
+                this.setState({deletedResourceId: id})
             })
             .catch(error => {
                 this.setState({error})
@@ -90,7 +90,7 @@ class ResourcesList extends Component {
                         name={resource.resource_name}
                         url={resource.resource_url}
                     />
-                    <SquareButton type='button' onClick={() => this.handleClickDelete(resource.id)}><FontAwesomeIcon icon={faTrashAlt}/></SquareButton>
+                    <SquareButton type='button' key={resource.resource_name} onClick={() => this.handleClickDelete(resource.id)}><FontAwesomeIcon icon={faTrashAlt}/></SquareButton>
                 </div>
 
             )
@@ -104,7 +104,7 @@ class ResourcesList extends Component {
                         name={resource.resource_name}
                         url={resource.resource_url}
                     />
-                    <SquareButton type='button' onClick={() => this.handleClickDelete(resource.id)}><FontAwesomeIcon icon={faTrashAlt}/></SquareButton>
+                    <SquareButton type='button' key={resource.resource_name}onClick={() => this.handleClickDelete(resource.id)}><FontAwesomeIcon icon={faTrashAlt}/></SquareButton>
                 </div>
 
             )

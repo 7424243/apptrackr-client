@@ -1,26 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TableItem Component renders the UI as expected 1`] = `
-<tr>
-  <td>
-    <a
-      href="/jobapp/1"
-      onClick={[Function]}
-    />
-  </td>
-  <td>
-    test
-  </td>
-  <td>
-    test
-  </td>
-  <td>
-    test
-  </td>
-  <td
-    className="last_td"
-  >
-    test
-  </td>
-</tr>
+<tbody>
+  <tr>
+    <td>
+      <a
+        href="/jobapp/1"
+        onClick={[Function]}
+      />
+    </td>
+    <td>
+      test
+    </td>
+    <td>
+      test
+    </td>
+    <td>
+      test
+    </td>
+    <td
+      className="last_td"
+    >
+      test
+    </td>
+  </tr>
+</tbody>
 `;

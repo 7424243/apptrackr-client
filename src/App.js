@@ -18,6 +18,7 @@ class App extends Component {
   state = {
     applications: [],
     resources: [],
+    user_id: -1,
     loginStatus: false
   }
 
@@ -29,8 +30,8 @@ class App extends Component {
     this.setState({resources})
   }
 
-  onLoginSuccess = () => {
-    this.setState({onLoginSuccess: true})
+  handleUserId = (user_id) => {
+    this.setState({user_id})
   }
 
   handleAddApplication = (application) => {
@@ -45,28 +46,43 @@ class App extends Component {
     })
   }
 
-  handleDeleteResource = (resourceId) => {
-    this.setState({
-      resources: this.state.resources.filter(resource => resource.id !== resourceId)
-    })
-  }
-
   handleDeleteApplication = (applicationId) => {
     this.setState({
       applications: this.state.applications.filter(application => application.id !== applicationId)
     })
   }
 
+  handleDeleteResource = (resourceId) => {
+    this.setState({
+      resources: this.state.resources.filter(resource => resource.id !== resourceId)
+    })
+  }
+
+  handleUpdateApplication = (updatedApplication) => {
+    const applicationIndex = this.state.applications.findIndex(application => 
+      (application.id === updatedApplication.id))
+      const clonedApplications = [...this.state.applications]
+      clonedApplications[applicationIndex] = updatedApplication
+      this.setState({applications: clonedApplications})
+  }
+
+  onLoginSuccess = () => {
+    this.setState({onLoginSuccess: true})
+  }
+
   render() {
     const contextValue = {
       applications: this.state.applications,
-      getUserApplications: this.getUserApplications,
-      getUserResources: this.getUserResources,
-      onLoginSuccess: this.onLoginSuccess,
+      resources: this.state.resources,
+      user_id: this.state.user_id,
       addApplication: this.handleAddApplication,
       addResource: this.handleAddResource,
+      addUserId: this.handleUserId,
+      deleteApplication: this.handleAddApplication,
       deleteResource: this.handleDeleteResource,
-      deleteApplication: this.handleAddApplication
+      getUserApplications: this.getUserApplications,
+      getUserResources: this.getUserResources,onLoginSuccess: this.onLoginSuccess,
+      updateApplication: this.handleUpdateApplication,
     }
     return (
       <div className='App'>
