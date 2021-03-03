@@ -41,7 +41,18 @@ class Table extends Component {
     
     render() {
         const {applications} = this.state
-        const applicationItems = applications.map(application => {
+        const filter = this.props.filter
+        const sortFunction = (a, b) => {
+            if(a.job_name.toLowerCase() < b.job_name.toLowerCase()) {
+                return -1
+            }
+            if(a.job_name.toLowerCase() > b.job_name.toLowerCase()) {
+                return 1
+            }
+            return 0
+        }
+        const alphabetizedApplications = applications.sort(sortFunction)
+        const applicationItems = alphabetizedApplications.map(application => {
             return (
                 <TableItem
                     key={application.id}
@@ -54,6 +65,21 @@ class Table extends Component {
                 />
             )
         })
+        const filteredApplications = alphabetizedApplications.filter(application => application.status === filter)
+        const filteredItems = filteredApplications.map(application => {
+            return (
+                <TableItem
+                    key={application.id}
+                    id={application.id}
+                    job={application.job_name}
+                    company={application.company_name}
+                    dateApplied={application.date_applied ? application.date_applied : null}
+                    interviewDate={application.interview_date ? application.interview_date : null}
+                    status={application.status}
+                />
+            )
+        })
+
         return (
             <table>
                 <thead>
@@ -65,7 +91,7 @@ class Table extends Component {
                         <th className='last_th'>Status</th>
                     </tr>
                 </thead>
-                {applicationItems}
+                {filter !== 'All' ? filteredItems : applicationItems}
             </table>
         )
     }

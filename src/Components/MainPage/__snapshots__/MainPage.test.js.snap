@@ -45,7 +45,9 @@ Array [
           <label>
             Filter By: 
           </label>
-          <select>
+          <select
+            onChange={[Function]}
+          >
             <option>
               All
             </option>

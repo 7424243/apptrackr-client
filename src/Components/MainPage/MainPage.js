@@ -9,15 +9,19 @@ import ApptrackrContext from '../../ApptrackrContext'
 class MainPage extends Component {
 
     state = {
-        user_id: -1
+        filter: null
     }
 
     static contextType = ApptrackrContext
 
     componentDidMount() {
         const user_id = TokenService.getUserIdFromToken()
-        this.setState({user_id: user_id})
+        //this.setState({user_id: user_id})
         this.context.addUserId(user_id)
+    }
+
+    addFilter = e => {
+        this.setState({filter: e.target.value})
     }
 
     render() {
@@ -38,21 +42,22 @@ class MainPage extends Component {
                             <Link to='/newapp'>
                                 <SquareButton>+</SquareButton> 
                             </Link>
-                            <div>
-                                <label>Filter By: </label>
-                                <select>
-                                    <option>All</option>
-                                    <option>Interested</option>
-                                    <option>Applied</option>
-                                    <option>Closed</option>
-                                </select>
-                            </div>
+                                <div>
+                                    <label>Filter By: </label>
+                                    <select onChange={this.addFilter}>
+                                        <option>All</option>
+                                        <option>Interested</option>
+                                        <option>Applied</option>
+                                        <option>Closed</option>
+                                    </select>
+                                </div>
+
                         </div>
                     </section>
     
                 </div>
                 <section className='section3'>
-                    <Table />  
+                    <Table filter={this.state.filter}/>  
                 </section>
             </>
         )
