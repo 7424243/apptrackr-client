@@ -22,13 +22,6 @@ exports[`AppDetails Component renders the UI as expected 1`] = `
       Website:
     </strong>
      
-    <a
-      href={null}
-      rel="noreferrer"
-      target="_blank"
-    >
-      Click Here
-    </a>
   </p>
   <p
     className="appdetails"

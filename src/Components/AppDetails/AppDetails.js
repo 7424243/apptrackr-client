@@ -16,34 +16,6 @@ class AppDetails extends Component {
 
     static contextType = ApptrackrContext
 
-    // confirmation() {
-    //     let result = confirm('Are you sure you want to delete?')
-    //     if(result) {
-    //         const id = parseInt(this.props.match.params.id)
-    //         console.log(id)
-    //         fetch(`${config.API_ENDPOINT}/applications/${id}`, {
-    //             method: 'DELETE',
-    //             headers: {
-    //                 'Authorization': `bearer ${TokenService.getAuthToken()}`
-    //             }
-    //         })
-    //             .then(res => {
-    //                 if(!res.ok) {
-    //                     return res.json().then(e => Promise.reject(e))
-    //                 }
-    //                 return res
-    //             })
-    //             .then(() => {
-    //                 this.context.deleteApplication(id)
-    //                 this.props.history.push('/jobapps')
-    //             })
-    //             .catch(error => {
-    //                 this.setState({error})
-    //                 console.error({error})
-    //             })
-    //     }
-    // }
-
     handleClickDelete = e => {
         e.preventDefault()
         if(window.confirm('Are you sure you want to delete?')) {
@@ -83,7 +55,7 @@ class AppDetails extends Component {
             <div className='appdetails_container'>
                 <h2 className='appdetails_header'>{applicationDetails ? applicationDetails.job_name : null}</h2>
                 <p className='appdetails'><strong>Company:</strong> {applicationDetails ? applicationDetails.company_name : null}</p>
-                <p className='appdetails'><strong>Website:</strong> <a href={applicationDetails ? applicationDetails.website : null} target='_blank' rel='noreferrer'>Click Here</a></p>
+                <p className='appdetails'><strong>Website:</strong> {applicationDetails && applicationDetails.website_url ? <a href={applicationDetails.website_url} target='_blank' rel='noreferrer'>Click Here</a> : null}</p>
                 <p className='appdetails'><strong>Date Applied:</strong> {applicationDetails ? applicationDetails.date_applied : null}</p>
                 <p className='appdetails'><strong>Contact:</strong> {applicationDetails ? applicationDetails.contact_name : null}</p>
                 <p className='appdetails'><strong>Contact Email:</strong> {applicationDetails ? applicationDetails.contact_email : null}</p>
