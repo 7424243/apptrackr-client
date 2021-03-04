@@ -110,6 +110,7 @@ class App extends Component {
                 component={SignUpForm}
               />
               <Route
+                exact
                 path={'/jobapps'}
                 component={MainPage}
               />
@@ -118,7 +119,7 @@ class App extends Component {
                 component={AppForm}
               />
               <Route
-                path={'/jobapp/:id'}
+                path={'/jobapps/:id'}
                 component={AppDetails}
               />
               <Route

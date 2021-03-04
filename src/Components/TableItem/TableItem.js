@@ -7,7 +7,7 @@ function TableItem(props) {
     return (
         <tbody>
             <tr>
-                <td><Link to={`/jobapp/${props.id}`}>{props.job}</Link></td>
+                <td><Link to={`/jobapps/${props.id}`}>{props.job}</Link></td>
                 <td>{props.company}</td>
                 <td>{props.dateApplied}</td>
                 <td>{props.interviewDate}</td>
