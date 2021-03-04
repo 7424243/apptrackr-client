@@ -13,9 +13,13 @@ exports[`AppForm Component renders the UI as expected 1`] = `
     className="appform_form"
     onSubmit={[Function]}
   >
+    <p>
+      * Required
+    </p>
     <section
       className="appform_input"
     >
+      *
       <input
         aria-label="job title"
         defaultValue={null}
@@ -30,6 +34,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
     <section
       className="appform_input"
     >
+      *
       <input
         aria-label="company name"
         defaultValue={null}
@@ -58,13 +63,14 @@ exports[`AppForm Component renders the UI as expected 1`] = `
       className="appform_input"
     >
       <input
-        aria-label="date applied"
+        aria-label="date applied ="
         defaultValue={null}
         name="date-applied"
         onChange={[Function]}
-        placeholder="Date Applied"
+        placeholder="Date Applied mm/dd/yyyy"
         type="text"
       />
+      
     </section>
     <section
       className="appform_input"
@@ -77,6 +83,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
         placeholder="Contact Name"
         type="text"
       />
+      
     </section>
     <section
       className="appform_input"
@@ -89,6 +96,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
         placeholder="Contact Email"
         type="text"
       />
+      
     </section>
     <section
       className="appform_input"
@@ -98,9 +106,10 @@ exports[`AppForm Component renders the UI as expected 1`] = `
         defaultValue={null}
         name="contact_phone"
         onChange={[Function]}
-        placeholder="Contact Phone"
+        placeholder="Contact Phone (xxx)xxx-xxxx"
         type="text"
       />
+      
     </section>
     <section
       className="appform_input"
@@ -110,9 +119,10 @@ exports[`AppForm Component renders the UI as expected 1`] = `
         defaultValue={null}
         name="interview_date"
         onChange={[Function]}
-        placeholder="Interview Date"
+        placeholder="Interview Date mm/dd/yyyy"
         type="text"
       />
+      
     </section>
     <section
       className="appform_input"
@@ -120,7 +130,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
       <label
         htmlFor="status"
       >
-        Status: 
+        * Status: 
       </label>
       <select
         defaultValue={null}
@@ -163,6 +173,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
         onChange={[Function]}
         placeholder="Additional Notes..."
       />
+      
     </section>
     <div
       className="squarebutton_content"

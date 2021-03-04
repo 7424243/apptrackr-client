@@ -121,43 +121,43 @@ class AppForm extends Component {
             })
     }
 
-    addJobName = e => {
+    handleJobName = e => {
         this.setState({job_name: e.target.value})
     }
 
-    addCompanyName = e => {
+    handleCompanyName = e => {
         this.setState({company_name: e.target.value})
     }
 
-    addWebsiteUrl = e => {
+    handleWebsiteUrl = e => {
         this.setState({website_url: e.target.value})
     }
 
-    addDateApplied = e => {
+    handleDateApplied = e => {
         this.setState({date_applied: e.target.value})
     }
 
-    addContactName = e => {
+    handleContactName = e => {
         this.setState({contact_name: e.target.value})
     }
 
-    addContactPhone = e => {
+    handleContactPhone = e => {
         this.setState({contact_phone: e.target.value})
     }
 
-    addContactEmail = e => {
+    handleContactEmail = e => {
         this.setState({contact_email: e.target.value})
     }
 
-    addInterviewDate = e => {
+    handleInterviewDate = e => {
         this.setState({interview_date: e.target.value})
     }
 
-    addStatus = e => {
+    handleStatus = e => {
         this.setState({status: e.target.value})
     }
 
-    addNotes = e => {
+    handleNotes = e => {
         this.setState({notes: e.target.value})
     }
 
@@ -182,6 +182,55 @@ class AppForm extends Component {
         }
     }
 
+    validateDateApplied() {
+        const dateApplied = this.state.date_applied.trim()
+        if(dateApplied.length < 10) {
+            return 'mm/dd/yyyy'
+        }
+    }
+
+    validateContactName() {
+        const contactName = this.state.contact_name.trim()
+        if(contactName.length === 0) {
+            return 'A contact name must be 1 or more characters'
+        }
+    }
+
+    validateContactEmail() {
+        const contactEmail = this.state.contact_email.trim()
+        if(contactEmail.length === 0) {
+            return 'A contact email must be a valid email address'
+        }
+    }
+
+    validateContactPhone() {
+        const contactPhone = this.state.contact_phone.trim()
+        if(contactPhone.length < 13) {
+            return '(xxx)xxx-xxxx'
+        }
+    }
+
+    validateInterviewDate() {
+        const interviewDate = this.state.interview_date.trim()
+        if(interviewDate < 10) {
+            return 'mm/dd/yyy'
+        }
+    }
+
+    validateStatus() {
+        const status = this.state.status.trim()
+        if(status !== 'Interested' || status !== 'Applied' || status !== 'Closed') {
+            return 'A status is required'
+        }
+    }
+
+    validateNotes() {
+        const notes = this.state.notes.trim()
+        if(notes.length === 0) {
+            return 'Notes must be 1 or more characters long'
+        }
+    }
+
     render() {
 
         const applicationId = parseInt(this.props.match.params.id)
@@ -198,7 +247,8 @@ class AppForm extends Component {
                         className='appform_form'
                         onSubmit={appDetails ? this.handleSubmitEdit : this.handleSubmitAdd}
                     >
-                        <section className='appform_input'>
+                        <p>* Required</p>
+                        <section className='appform_input'>* 
                             <input 
                                 type='text'
                                 aria-label='job title'
@@ -206,11 +256,11 @@ class AppForm extends Component {
                                 defaultValue={appDetails ? appDetails.job_name : null} 
                                 placeholder='Job Title'
                                 required
-                                onChange={this.addJobName}
+                                onChange={this.handleJobName}
                             />
                             {this.state.job_name && <ValidationError message={this.validateJobName()}/>}
                         </section>
-                        <section className='appform_input'>
+                        <section className='appform_input'>*   
                             <input 
                                 type='text'
                                 aria-label='company name'
@@ -218,7 +268,7 @@ class AppForm extends Component {
                                 defaultValue={appDetails ? appDetails.company_name : null} 
                                 placeholder='Company Name'
                                 required
-                                onChange={this.addCompanyName}
+                                onChange={this.handleCompanyName}
                             />
                             {this.state.company_name && <ValidationError message={this.validateCompanyName()}/>}
                         </section>
@@ -229,19 +279,20 @@ class AppForm extends Component {
                                 name='website' 
                                 defaultValue={appDetails ? appDetails.website : null} 
                                 placeholder='Website'
-                                onChange={this.addWebsiteUrl}
+                                onChange={this.handleWebsiteUrl}
                             />
                             {this.state.website_url && <ValidationError message={this.validateWebsiteUrl()}/>} 
                         </section>
                         <section className='appform_input'>
                             <input 
                                 type='text'
-                                aria-label='date applied'
+                                aria-label='date applied ='
                                 name='date-applied' 
                                 defaultValue={appDetails ? appDetails.date_applied : null} 
-                                placeholder='Date Applied'
-                                onChange={this.addDateApplied}
+                                placeholder='Date Applied mm/dd/yyyy'
+                                onChange={this.handleDateApplied}
                             />
+                            {this.state.date_applied && <ValidationError message={this.validateDateApplied()}/>}
                         </section>
                         <section className='appform_input'>
                             <input 
@@ -250,8 +301,9 @@ class AppForm extends Component {
                                 name='contact' 
                                 defaultValue={appDetails ? appDetails.contact_name : null} 
                                 placeholder='Contact Name'
-                                onChange={this.addContactName}
+                                onChange={this.handleContactName}
                             />
+                            {this.state.contact_name && <ValidationError message={this.validateContactName()}/>}
                         </section>
                         <section className='appform_input'>
                             <input 
@@ -260,8 +312,9 @@ class AppForm extends Component {
                                 name='contact_email' 
                                 defaultValue={appDetails ? appDetails.contact_email : null} 
                                 placeholder='Contact Email'
-                                onChange={this.addContactName}
+                                onChange={this.handleContactName}
                             />
+                            {this.state.contact_email && <ValidationError message={this.validateContactEmail()}/>}
                         </section>
                         <section className='appform_input'>
                             <input 
@@ -269,9 +322,10 @@ class AppForm extends Component {
                                 aria-label='contact phone'
                                 name='contact_phone' 
                                 defaultValue={appDetails ? appDetails.contact_phone : null} 
-                                placeholder='Contact Phone'
-                                onChange={this.addContactPhone}
+                                placeholder='Contact Phone (xxx)xxx-xxxx'
+                                onChange={this.handleContactPhone}
                             />
+                            {this.state.contact_phone && <ValidationError message={this.validateContactPhone()}/>}
                         </section>
                         <section className='appform_input'>
                             <input 
@@ -279,13 +333,14 @@ class AppForm extends Component {
                                 aria-label='interview date'
                                 name='interview_date' 
                                 defaultValue={appDetails ? appDetails.interview_date : null} 
-                                placeholder='Interview Date'
-                                onChange={this.addInterviewDate}
+                                placeholder='Interview Date mm/dd/yyyy'
+                                onChange={this.handleInterviewDate}
                             />
+                            {this.state.interview_date && <ValidationError message={this.validateInterviewDate()}/>}
                         </section>
                         <section className='appform_input'>
-                            <label htmlFor='status'>Status: </label>
-                            <select required defaultValue={appDetails ? appDetails.status : null} onChange={this.addStatus}>
+                            <label htmlFor='status'>* Status: </label>
+                            <select required defaultValue={appDetails ? appDetails.status : null} onChange={this.handleStatus}>
                                 <option name='status' value=''>Choose here</option>
                                 <option name='status' value='Interested'>Interested</option>
                                 <option name='status' value='Applied'>Applied</option>
@@ -298,8 +353,9 @@ class AppForm extends Component {
                                 aria-label='additional notes'
                                 defaultValue={appDetails ? appDetails.notes : null} 
                                 placeholder='Additional Notes...'
-                                onChange={this.addNotes}
+                                onChange={this.handleNotes}
                             />
+                            {this.state.notes && <ValidationError message={this.validateNotes()}/>}
                         </section>
                             <SquareButton type='submit'>
                                 <FontAwesomeIcon icon={faSave}/>

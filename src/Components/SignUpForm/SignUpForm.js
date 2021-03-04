@@ -4,6 +4,7 @@ import config from '../../config'
 import TokenService from '../../services/token-service'
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary'
 import RecButton from '../RecButton/RecButton'
+import ValidationError from '../ValidationError/ValidationError'
 import './SignUpForm.css'
 
 class SignUpForm extends Component {
@@ -77,6 +78,38 @@ class SignUpForm extends Component {
         this.setState({password: e.target.value})
     }
 
+    validateFullName() {
+        const fullName = this.state.full_name.trim()
+        if(fullName.length === 0) {
+            return 'A full name is required'
+        }
+    }
+
+    validateUserName() {
+        const userName = this.state.user_name.trim()
+        if(userName.length === 0) {
+            return 'A username is required'
+        }
+    }
+
+    validatePassword() {
+        //eslint-disable-next-line
+        const REGEX_UPPER_LOWER_NUMBER_SPECIAL = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])\S]+/
+        const password = this.state.password.trim()
+        if(password.length < 8) {
+            return 'Password must be longer than 8 characters'
+        }
+        if(password.length > 72) {
+            return 'Password must be less than 72 characters'
+        }
+        if(password.startsWith(' ') || password.endsWith(' ')) {
+            return 'Password must not start or end with empty spaces'
+        }
+        if(!REGEX_UPPER_LOWER_NUMBER_SPECIAL.test(password)) {
+            return 'Password must contain at least 1 upper case, 1 lower case, 1 number and 1 special character'
+        }
+    }
+
     render() {
         return (
             <div className='signup_container'>
@@ -86,6 +119,7 @@ class SignUpForm extends Component {
                         onSubmit={this.handleSubmit}
                     >
                         <h2>Sign Up Form</h2>
+                        <p>* Required</p>
                         <section className='signup_input'>*
                             <input 
                                 type='text' 
@@ -94,6 +128,7 @@ class SignUpForm extends Component {
                                 required
                                 onChange={this.handleAddFullName}
                             />
+                            {this.state.full_name && <ValidationError message={this.validateFullName()}/>}
                         </section>
                         <section className='signup_input'>*
                             <input 
@@ -102,17 +137,19 @@ class SignUpForm extends Component {
                                 autoComplete='off'
                                 required
                                 onChange={this.handleAddUserName}
-                            />                        
+                            />
+                            {this.state.user_name && <ValidationError message={this.validateUserName()}/>}                        
                         </section>
                         <section className='signup_input'>
-                            <p>* Must be at least 8 characters long and contain at least 1 upper case, 1 lower case, 1 number, and 1 special character.</p>
+                            <p>* Must be {'>'} 8 characters and contain at least 1 upper case, 1 lower case, 1 number, and 1 special character.</p>
                             <input 
                                 type='password' 
                                 placeholder='Password'
                                 autoComplete='off'
                                 required
                                 onChange={this.handleAddPassword}
-                            />                        
+                            />      
+                            {this.state.password && <ValidationError message={this.validatePassword()}/>}                  
                         </section>
                             <RecButton type='submit'>Sign Up</RecButton>
                     </form>

@@ -5,6 +5,7 @@ import './LoginForm.css'
 import config from '../../config'
 import TokenService from '../../services/token-service'
 import { Link } from 'react-router-dom'
+import ValidationError from '../ValidationError/ValidationError'
 
 class LoginForm extends Component {
 
@@ -50,6 +51,20 @@ class LoginForm extends Component {
         this.setState({password: e.target.value})
     }
 
+    validateUserName() {
+        const userName = this.state.user_name.trim()
+        if(userName.length === 0) {
+            return 'A username is required'
+        }
+    }
+
+    validatePassword() {
+        const password = this.state.password.trim()
+        if(password.length === 0) {
+            return 'A password is required and must be more than 8 characters and less than 72 characters'
+        }
+    }
+
     render() {
         return (
             <div className='login_container'>
@@ -58,7 +73,8 @@ class LoginForm extends Component {
                     onSubmit={this.handleSubmitJwtAuth}
                 >
                     <h2>Login Form</h2>
-                    <section className='login_input'>
+                    <p>* Required</p>
+                    <section className='login_input'>*
                         <input 
                             type='text'
                             placeholder='username'
@@ -66,15 +82,17 @@ class LoginForm extends Component {
                             required
                             onChange={this.handleUsername}
                         />
+                        {this.state.user_name && <ValidationError message={this.validateUserName()}/>}
                     </section>
-                    <section className='login_input'>
+                    <section className='login_input'>*
                         <input 
-                            type='text' 
+                            type='password' 
                             placeholder='password'
                             autoComplete='on'
                             required
                             onChange={this.handlePassword}
                         />
+                        {this.state.password && <ValidationError message={this.validatePassword()}/>}
                     </section>
                     <RecButton type='submit'>Login</RecButton>
                     <Link to='/signup' className='login_link'>

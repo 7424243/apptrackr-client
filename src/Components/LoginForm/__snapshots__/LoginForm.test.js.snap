@@ -11,9 +11,13 @@ exports[`LoginForm Component renders the UI as expected 1`] = `
     <h2>
       Login Form
     </h2>
+    <p>
+      * Required
+    </p>
     <section
       className="login_input"
     >
+      *
       <input
         autoComplete="on"
         onChange={[Function]}
@@ -21,17 +25,20 @@ exports[`LoginForm Component renders the UI as expected 1`] = `
         required={true}
         type="text"
       />
+      
     </section>
     <section
       className="login_input"
     >
+      *
       <input
         autoComplete="on"
         onChange={[Function]}
         placeholder="password"
         required={true}
-        type="text"
+        type="password"
       />
+      
     </section>
     <div
       className="recbutton_content"

@@ -11,6 +11,9 @@ exports[`SignUpForm Component renders the UI as expected 1`] = `
     <h2>
       Sign Up Form
     </h2>
+    <p>
+      * Required
+    </p>
     <section
       className="signup_input"
     >
@@ -22,6 +25,7 @@ exports[`SignUpForm Component renders the UI as expected 1`] = `
         required={true}
         type="text"
       />
+      
     </section>
     <section
       className="signup_input"
@@ -34,12 +38,15 @@ exports[`SignUpForm Component renders the UI as expected 1`] = `
         required={true}
         type="text"
       />
+      
     </section>
     <section
       className="signup_input"
     >
       <p>
-        * Must be at least 8 characters long and contain at least 1 upper case, 1 lower case, 1 number, and 1 special character.
+        * Must be 
+        &gt;
+         8 characters and contain at least 1 upper case, 1 lower case, 1 number, and 1 special character.
       </p>
       <input
         autoComplete="off"
@@ -48,6 +55,7 @@ exports[`SignUpForm Component renders the UI as expected 1`] = `
         required={true}
         type="password"
       />
+      
     </section>
     <div
       className="recbutton_content"

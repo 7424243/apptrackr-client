@@ -78,6 +78,13 @@ class NewResourceForm extends Component {
         }
     }
 
+    validateResourceStatus() {
+        const status = this.state.status.trim()
+        if(status !== 'Job Resource' || status !== 'Other Resource') {
+            return `A status of 'Job Resource' or 'Other Resource' is required`
+        }
+    }
+
     render() {
         return (
             <div className='resourceform_container'>
@@ -116,6 +123,7 @@ class NewResourceForm extends Component {
                                 <option name='type' value='Job Resource'>Job Resource</option>
                                 <option name='type' value='Other Resource'>Other Resource</option>
                             </select>
+                            {this.state.status && <ValidationError message={this.validateResourceStatus()}/>}
                         </section>
                         <SquareButton type='submit'>+</SquareButton>
                     </form>                    
