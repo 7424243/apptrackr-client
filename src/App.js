@@ -53,9 +53,13 @@ class App extends Component {
   }
 
   handleDeleteResource = (resourceId) => {
-    this.setState({
-      resources: this.state.resources.filter(resource => resource.id !== resourceId)
-    })
+    const resourceIndex = this.state.resources.findIndex(resource => 
+      (resource.id === resourceId))
+    let clonedResources = [...this.state.resources]
+    if(resourceIndex !== -1) {
+      clonedResources.splice(resourceIndex, 1)
+      this.setState({resources: clonedResources})
+    }
   }
 
   handleUpdateApplication = (updatedApplication) => {

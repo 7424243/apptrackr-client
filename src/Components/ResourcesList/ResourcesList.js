@@ -13,7 +13,6 @@ class ResourcesList extends Component {
 
     state = {
         resources: [],
-        deletedResourceId: null,
         error: null
     }
 
@@ -45,26 +44,29 @@ class ResourcesList extends Component {
     }
 
     handleClickDelete(id) {
-        fetch(`${config.API_ENDPOINT}/resources/${id}`, {
-            method: 'DELETE',
-            headers: {
-                'Authorization': `bearer ${TokenService.getAuthToken()}`
-            }
-        })
-            .then(res => {
-                if(!res.ok) {
-                    return res.json().then(e => Promise.reject(e))
+        if(window.confirm('Are you sure you want to delete?')) {
+            fetch(`${config.API_ENDPOINT}/resources/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Authorization': `bearer ${TokenService.getAuthToken()}`
                 }
-                return res
             })
-            .then(() => {
-                this.context.deleteResource(id)
-                this.setState({deletedResourceId: id})
-            })
-            .catch(error => {
-                this.setState({error})
-                console.error({error})
-            })
+                .then(res => {
+                    if(!res.ok) {
+                        return res.json().then(e => Promise.reject(e))
+                    }
+                    console.log(res)
+                    return res
+                })
+                .then(() => {
+                    this.context.deleteResource(id)
+                })
+                .catch(error => {
+                    this.setState({error})
+                    console.error({error})
+                })
+        }
+        
     }
 
     render() {
@@ -83,28 +85,26 @@ class ResourcesList extends Component {
         const jobResources = alphabetizedResources.filter(resource => resource.type === 'Job Resource')
         const jobResourceItems = jobResources.map(resource => {
             return (
-                <div className='resource_item'>
+                <div className='resource_item' key={resource.id}>
                     <ResourceItem 
-                        key={resource.id}
                         id={resource.id}
                         name={resource.resource_name}
                         url={resource.resource_url}
                     />
-                    <SquareButton type='button' key={resource.resource_name} onClick={() => this.handleClickDelete(resource.id)}><FontAwesomeIcon icon={faTrashAlt}/></SquareButton>
+                    <SquareButton type='button' onClick={() => this.handleClickDelete(resource.id)}><FontAwesomeIcon icon={faTrashAlt}/></SquareButton>
                 </div>
 
             )
         })
         const otherResourceItems = otherResources.map(resource => {
             return (
-                <div className='resource_item'>
+                <div className='resource_item' key={resource.id}>
                     <ResourceItem 
-                        key={resource.id}
                         id={resource.id}
                         name={resource.resource_name}
                         url={resource.resource_url}
                     />
-                    <SquareButton type='button' key={resource.resource_name}onClick={() => this.handleClickDelete(resource.id)}><FontAwesomeIcon icon={faTrashAlt}/></SquareButton>
+                    <SquareButton type='button' onClick={() => this.handleClickDelete(resource.id)}><FontAwesomeIcon icon={faTrashAlt}/></SquareButton>
                 </div>
 
             )

@@ -16,7 +16,7 @@ describe('TableItem Component', () => {
     //smoke test
     it('renders without crashing', () => {
         const div = document.createElement('div')
-        ReactDOM.render(<BrowserRouter><TableItem {...props}/></BrowserRouter>, div)
+        ReactDOM.render(<BrowserRouter><table><TableItem {...props}/></table></BrowserRouter>, div)
         ReactDOM.unmountComponentAtNode(div)
     })
 

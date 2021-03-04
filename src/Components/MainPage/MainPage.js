@@ -16,7 +16,6 @@ class MainPage extends Component {
 
     componentDidMount() {
         const user_id = TokenService.getUserIdFromToken()
-        //this.setState({user_id: user_id})
         this.context.addUserId(user_id)
     }
 
@@ -51,7 +50,6 @@ class MainPage extends Component {
                                         <option>Closed</option>
                                     </select>
                                 </div>
-
                         </div>
                     </section>
     

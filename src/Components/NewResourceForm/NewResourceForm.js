@@ -14,7 +14,7 @@ class NewResourceForm extends Component {
         resource_name: '',
         resource_url: '',
         type: '',
-        user_id: 3,
+        user_id: -1,
         error: null
     }
 

@@ -16,30 +16,61 @@ class AppDetails extends Component {
 
     static contextType = ApptrackrContext
 
+    // confirmation() {
+    //     let result = confirm('Are you sure you want to delete?')
+    //     if(result) {
+    //         const id = parseInt(this.props.match.params.id)
+    //         console.log(id)
+    //         fetch(`${config.API_ENDPOINT}/applications/${id}`, {
+    //             method: 'DELETE',
+    //             headers: {
+    //                 'Authorization': `bearer ${TokenService.getAuthToken()}`
+    //             }
+    //         })
+    //             .then(res => {
+    //                 if(!res.ok) {
+    //                     return res.json().then(e => Promise.reject(e))
+    //                 }
+    //                 return res
+    //             })
+    //             .then(() => {
+    //                 this.context.deleteApplication(id)
+    //                 this.props.history.push('/jobapps')
+    //             })
+    //             .catch(error => {
+    //                 this.setState({error})
+    //                 console.error({error})
+    //             })
+    //     }
+    // }
+
     handleClickDelete = e => {
         e.preventDefault()
-        const id = parseInt(this.props.match.params.id)
-        console.log(id)
-        fetch(`${config.API_ENDPOINT}/applications/${id}`, {
-            method: 'DELETE',
-            headers: {
-                'Authorization': `bearer ${TokenService.getAuthToken()}`
-            }
-        })
-            .then(res => {
-                if(!res.ok) {
-                    return res.json().then(e => Promise.reject(e))
+        if(window.confirm('Are you sure you want to delete?')) {
+            const id = parseInt(this.props.match.params.id)
+            console.log(id)
+            fetch(`${config.API_ENDPOINT}/applications/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Authorization': `bearer ${TokenService.getAuthToken()}`
                 }
-                return res
             })
-            .then(() => {
-                this.context.deleteApplication(id)
-                this.props.history.push('/jobapps')
-            })
-            .catch(error => {
-                this.setState({error})
-                console.error({error})
-            })
+                .then(res => {
+                    if(!res.ok) {
+                        return res.json().then(e => Promise.reject(e))
+                    }
+                    return res
+                })
+                .then(() => {
+                    this.context.deleteApplication(id)
+                    this.props.history.push('/jobapps')
+                })
+                .catch(error => {
+                    this.setState({error})
+                    console.error({error})
+                })
+        }
+        
     }
 
     render() {
