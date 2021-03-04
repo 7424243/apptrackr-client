@@ -101,7 +101,7 @@ class LoginForm extends Component {
                 </form>
                 {this.state.error && <p>{this.state.error}. Please try again, or Sign Up for an account.</p>}
                 <div className='demo_creds'>
-                    <p>**Demo Credentials:</p>
+                    <p>Demo Credentials:</p>
                     <p>Username: demo</p>
                     <p>Password: Demo1234!</p>
                 </div>

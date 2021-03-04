@@ -70,7 +70,7 @@ exports[`LoginForm Component renders the UI as expected 1`] = `
     className="demo_creds"
   >
     <p>
-      **Demo Credentials:
+      Demo Credentials:
     </p>
     <p>
       Username: demo

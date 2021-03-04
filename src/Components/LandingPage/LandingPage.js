@@ -1,32 +1,64 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import './LandingPage.css'
 
 function LandingPage() {
     return (
-        <div>
+        <>
             <section className='landing_section1'>
             <div className='landing_section1_content'>
                 <div className='landing'>
-                    <ul className='landing_list'>
-                        <li>Organize job applications!</li>
-                        <li>Create notes for specific applications!</li>
-                        <li>Save frequented resources for convenient access!</li>
-                        <li>Streamline the job search process!</li>
-                    </ul>
-                </div>
-                <img className='landing-img' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQQAAADCCAMAAACYEEwlAAAAA1BMVEXb29tVa/CDAAAASElEQVR4nO3BMQEAAADCoPVPbQhfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeA8XKAAFZcBBuAAAAAElFTkSuQmCC' alt='img of an example table'/>
-            </div>
-            </section>
-            <section className='landing_section2'>
-                <div className='landing_section2_content'>
-                    <img className='landing-img' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARYAAAC1CAMAAACtbCCJAAAACVBMVEVjY2NeXl65ubnV9x57AAAATUlEQVR4nO3BMQEAAAgDoGn/0BZYAA8gAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4J+hyFIcuuEDQ5L8dNwAAAAASUVORK5CYII=' alt='img of resources page'/>
-                    <p><Link to={'/login'}>Login</Link> with these credentials to take a peak!</p>
+                    <h2>Easily organize job applications</h2>
+                    <p>Keep track of details for each job application</p>
+                    <p>Save frequently utilized resources for convenient access</p>
+                    <p><NavLink to={'/login'}>Login</NavLink> with a demo account to take a peak</p>
                     <p>Username: username</p>
                     <p>Password: password</p>
                 </div>
+            </div>
             </section>
-        </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Job</th>
+                        <th>Company</th>
+                        <th>Date Applied</th>
+                        <th>Interview Date</th>
+                        <th className='last_th'>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{'Full Stack Software Engineer'}</td>
+                        <td>{'Olive'}</td>
+                        <td></td>
+                        <td></td>
+                        <td className='last_td'>{'Interested'}</td>
+                    </tr>
+                    <tr>
+                        <td>{'EDU Software Engineer'}</td>
+                        <td>{'Splunk'}</td>
+                        <td>{'02/03/2021'}</td>
+                        <td>{'02/10/2021'}</td>
+                        <td className='last_td'>{'Applied'}</td>
+                    </tr>
+                    <tr>
+                        <td>{'Software Engineer'}</td>
+                        <td>{'Google'}</td>
+                        <td>{'02/15/2021'}</td>
+                        <td>{'03/01/2021'}</td>
+                        <td className='last_td'>{'Applied'}</td>
+                    </tr>
+                    <tr>
+                        <td>{'Web Developer'}</td>
+                        <td>{'Toddy LLC'}</td>
+                        <td>{'02/15/2021'}</td>
+                        <td>{'02/26/2021'}</td>
+                        <td className='last_td'>{'Closed'}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </>
     )
 }
 
