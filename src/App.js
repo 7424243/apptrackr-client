@@ -90,6 +90,7 @@ class App extends Component {
     }
     return (
       <div className='App'>
+      <div >
         <ErrorBoundary>
           <Header/>
         </ErrorBoundary>
@@ -137,7 +138,12 @@ class App extends Component {
             </Switch>
           </ErrorBoundary>
         </ApptrackrContext.Provider>
-        {/* <footer>©2021 by Samantha Sheets</footer> */}
+        
+      </div>
+      <div className='footer'>
+        <footer >© 2021, by Samantha Sheets</footer>
+      </div>
+      
       </div>
     )
   }
