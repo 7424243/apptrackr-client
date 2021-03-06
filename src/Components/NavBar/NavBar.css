@@ -1,9 +1,6 @@
 nav {
     margin-left: 15px;
     font-size: medium;
-    display: flex;
-    flex-wrap: wrap;
-    /* overflow: wrap; */
 }
 
 /* Classes */
@@ -12,5 +9,12 @@ nav {
     text-decoration: none;
     padding-right: 10px;
     color: black;
+}
+
+@media screen and (min-width: 600px) {
+    nav {
+        margin-right: 15px;
+        margin-top: 20px;
+    }
 }
 

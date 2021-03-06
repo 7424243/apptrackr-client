@@ -6,7 +6,7 @@ h1 {
 
 /* Classes */
 
-.header-container {
+.header_container {
     display: flex;
     flex-direction: column;
 }
@@ -18,8 +18,8 @@ h1 {
 
 /* @media */
 
-@media screen and (min-width: 711px) {
-    .header-container {
+@media screen and (min-width: 650px) {
+    .header_container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;

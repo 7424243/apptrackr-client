@@ -16,3 +16,10 @@ th {
 .last_th {
     border-right: none;
 }
+
+@media
+only screen and (max-width: 625px) {
+    td {
+        border-right: none;
+    }
+}
