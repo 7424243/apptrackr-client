@@ -22,3 +22,9 @@
 .login_link {
     text-decoration: none;
 }
+
+.password_reqs {
+    display: flex;
+    flex-wrap: wrap;
+    
+}

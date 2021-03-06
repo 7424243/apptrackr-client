@@ -70,7 +70,7 @@ class ResourcesList extends Component {
     }
 
     render() {
-        const {resources} = this.state
+        const {resources} = this.context
         const sortFunction = (a, b) => {
             if(a.resource_name.toLowerCase() < b.resource_name.toLowerCase()) {
                 return -1

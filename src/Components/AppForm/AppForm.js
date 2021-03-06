@@ -109,7 +109,7 @@ class AppForm extends Component {
                 if(!res.ok) {
                     return res.json().then(e => Promise.reject(e))
                 }
-                return res
+                return res.json()
             })
             .then(data => {
                 this.context.updateApplication(data)

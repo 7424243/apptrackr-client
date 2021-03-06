@@ -93,20 +93,9 @@ class SignUpForm extends Component {
     }
 
     validatePassword() {
-        //eslint-disable-next-line
-        const REGEX_UPPER_LOWER_NUMBER_SPECIAL = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])\S]+/
         const password = this.state.password.trim()
-        if(password.length < 8) {
-            return 'Password must be longer than 8 characters'
-        }
-        if(password.length > 72) {
-            return 'Password must be less than 72 characters'
-        }
-        if(password.startsWith(' ') || password.endsWith(' ')) {
-            return 'Password must not start or end with empty spaces'
-        }
-        if(!REGEX_UPPER_LOWER_NUMBER_SPECIAL.test(password)) {
-            return 'Password must contain at least 1 upper case, 1 lower case, 1 number and 1 special character'
+        if(password.length === 0) {
+            return 'A password is required'
         }
     }
 
@@ -140,8 +129,11 @@ class SignUpForm extends Component {
                             />
                             {this.state.user_name && <ValidationError message={this.validateUserName()}/>}                        
                         </section>
-                        <section className='signup_input'>
-                            <p>* Must be {'>'} 8 characters and contain at least 1 upper case, 1 lower case, 1 number, and 1 special character.</p>
+                        <section className='signup_input'>*
+                            <p className='password_reqs'>* {'>'} 8 characters</p> 
+                            <p>* at least 1 upper case</p>
+                            <p>* at least 1 upper case</p>
+                            <p>1 lower case, 1 number, and 1 special character.</p>
                             <input 
                                 type='password' 
                                 placeholder='Password'
