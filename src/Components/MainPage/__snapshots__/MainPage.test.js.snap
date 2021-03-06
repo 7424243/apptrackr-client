@@ -28,6 +28,7 @@ Array [
         className="section2_content"
       >
         <a
+          className="add"
           href="/newapp"
           onClick={[Function]}
         >
@@ -41,7 +42,9 @@ Array [
             </button>
           </div>
         </a>
-        <div>
+        <div
+          className="filter"
+        >
           <label>
             Filter By: 
           </label>

@@ -43,11 +43,7 @@ exports[`SignUpForm Component renders the UI as expected 1`] = `
     <section
       className="signup_input"
     >
-      <p>
-        * Must be 
-        &gt;
-         8 characters and contain at least 1 upper case, 1 lower case, 1 number, and 1 special character.
-      </p>
+      *
       <input
         autoComplete="off"
         onChange={[Function]}
@@ -55,6 +51,38 @@ exports[`SignUpForm Component renders the UI as expected 1`] = `
         required={true}
         type="password"
       />
+      <p
+        className="password_reqs"
+      >
+        * 
+        &gt;
+         8 characters
+      </p>
+      <p
+        className="password_reqs"
+      >
+        * at least 1 upper case
+      </p>
+      <p
+        className="password_reqs"
+      >
+        * at least 1 upper case
+      </p>
+      <p
+        className="password_reqs"
+      >
+        * at least 1 lower case
+      </p>
+      <p
+        className="password_reqs"
+      >
+        * at least 1 number
+      </p>
+      <p
+        className="password_reqs"
+      >
+        * at least 1 special character
+      </p>
       
     </section>
     <div

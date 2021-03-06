@@ -1,84 +1,86 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppDetails Component renders the UI as expected 1`] = `
-<div
-  className="appdetails_container"
->
-  <h2
-    className="appdetails_header"
-  />
-  <p
-    className="appdetails"
+Array [
+  <div
+    className="appdetails_container"
   >
-    <strong>
-      Company:
-    </strong>
-     
-  </p>
-  <p
-    className="appdetails"
-  >
-    <strong>
-      Website:
-    </strong>
-     
-  </p>
-  <p
-    className="appdetails"
-  >
-    <strong>
-      Date Applied:
-    </strong>
-     
-  </p>
-  <p
-    className="appdetails"
-  >
-    <strong>
-      Contact:
-    </strong>
-     
-  </p>
-  <p
-    className="appdetails"
-  >
-    <strong>
-      Contact Email:
-    </strong>
-     
-  </p>
-  <p
-    className="appdetails"
-  >
-    <strong>
-      Contact Phone:
-    </strong>
-     
-  </p>
-  <p
-    className="appdetails"
-  >
-    <strong>
-      Interview Date:
-    </strong>
-     
-  </p>
-  <p
-    className="appdetails"
-  >
-    <strong>
-      Status:
-    </strong>
-     
-  </p>
-  <p
-    className="appdetails"
-  >
-    <strong>
-      Additional Notes:
-    </strong>
-     
-  </p>
+    <h2
+      className="appdetails_header"
+    />
+    <p
+      className="appdetails"
+    >
+      <strong>
+        Company:
+      </strong>
+       
+    </p>
+    <p
+      className="appdetails"
+    >
+      <strong>
+        Website:
+      </strong>
+       
+    </p>
+    <p
+      className="appdetails"
+    >
+      <strong>
+        Date Applied:
+      </strong>
+       
+    </p>
+    <p
+      className="appdetails"
+    >
+      <strong>
+        Contact:
+      </strong>
+       
+    </p>
+    <p
+      className="appdetails"
+    >
+      <strong>
+        Contact Email:
+      </strong>
+       
+    </p>
+    <p
+      className="appdetails"
+    >
+      <strong>
+        Contact Phone:
+      </strong>
+       
+    </p>
+    <p
+      className="appdetails"
+    >
+      <strong>
+        Interview Date:
+      </strong>
+       
+    </p>
+    <p
+      className="appdetails"
+    >
+      <strong>
+        Status:
+      </strong>
+       
+    </p>
+    <p
+      className="appdetails"
+    >
+      <strong>
+        Additional Notes:
+      </strong>
+       
+    </p>
+  </div>,
   <div
     className="appdetails_buttons"
   >
@@ -177,6 +179,6 @@ exports[`AppDetails Component renders the UI as expected 1`] = `
         </button>
       </div>
     </a>
-  </div>
-</div>
+  </div>,
+]
 `;

@@ -22,6 +22,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
       *
       <input
         aria-label="job title"
+        className="input"
         defaultValue={null}
         name="job"
         onChange={[Function]}
@@ -37,6 +38,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
       *
       <input
         aria-label="company name"
+        className="input"
         defaultValue={null}
         name="company"
         onChange={[Function]}
@@ -51,6 +53,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
     >
       <input
         aria-label="website url"
+        className="input"
         defaultValue={null}
         name="website"
         onChange={[Function]}
@@ -64,6 +67,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
     >
       <input
         aria-label="date applied ="
+        className="input"
         defaultValue={null}
         name="date-applied"
         onChange={[Function]}
@@ -77,6 +81,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
     >
       <input
         aria-label="contact name"
+        className="input"
         defaultValue={null}
         name="contact"
         onChange={[Function]}
@@ -90,6 +95,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
     >
       <input
         aria-label="contact email"
+        className="input"
         defaultValue={null}
         name="contact_email"
         onChange={[Function]}
@@ -103,6 +109,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
     >
       <input
         aria-label="contact phone"
+        className="input"
         defaultValue={null}
         name="contact_phone"
         onChange={[Function]}
@@ -116,6 +123,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
     >
       <input
         aria-label="interview date"
+        className="input"
         defaultValue={null}
         name="interview_date"
         onChange={[Function]}
@@ -168,6 +176,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
     >
       <textarea
         aria-label="additional notes"
+        className="textarea"
         defaultValue={null}
         name="notes"
         onChange={[Function]}
