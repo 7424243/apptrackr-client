@@ -71,7 +71,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
         defaultValue={null}
         name="date-applied"
         onChange={[Function]}
-        placeholder="Date Applied mm/dd/yyyy"
+        placeholder="Date Applied"
         type="text"
       />
       
@@ -113,7 +113,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
         defaultValue={null}
         name="contact_phone"
         onChange={[Function]}
-        placeholder="Contact Phone (xxx)xxx-xxxx"
+        placeholder="Contact Phone"
         type="text"
       />
       
@@ -127,7 +127,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
         defaultValue={null}
         name="interview_date"
         onChange={[Function]}
-        placeholder="Interview Date mm/dd/yyyy"
+        placeholder="Interview Date"
         type="text"
       />
       

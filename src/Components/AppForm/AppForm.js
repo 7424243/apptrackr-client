@@ -184,8 +184,8 @@ class AppForm extends Component {
 
     validateDateApplied() {
         const dateApplied = this.state.date_applied.trim()
-        if(dateApplied.length < 10) {
-            return 'mm/dd/yyyy'
+        if(dateApplied.length === 0) {
+            return 'A date applied must be a valid date'
         }
     }
 
@@ -205,15 +205,15 @@ class AppForm extends Component {
 
     validateContactPhone() {
         const contactPhone = this.state.contact_phone.trim()
-        if(contactPhone.length < 13) {
-            return '(xxx)xxx-xxxx'
+        if(contactPhone.length === 0) {
+            return 'A contact phone must be a valid phone number'
         }
     }
 
     validateInterviewDate() {
         const interviewDate = this.state.interview_date.trim()
-        if(interviewDate < 10) {
-            return 'mm/dd/yyy'
+        if(interviewDate === 0) {
+            return 'An interview date must be a valid date'
         }
     }
 
@@ -293,7 +293,7 @@ class AppForm extends Component {
                                 aria-label='date applied ='
                                 name='date-applied' 
                                 defaultValue={appDetails ? appDetails.date_applied : null} 
-                                placeholder='Date Applied mm/dd/yyyy'
+                                placeholder='Date Applied'
                                 onChange={this.handleDateApplied}
                             />
                             {this.state.date_applied && <ValidationError message={this.validateDateApplied()}/>}
@@ -329,7 +329,7 @@ class AppForm extends Component {
                                 aria-label='contact phone'
                                 name='contact_phone' 
                                 defaultValue={appDetails ? appDetails.contact_phone : null} 
-                                placeholder='Contact Phone (xxx)xxx-xxxx'
+                                placeholder='Contact Phone'
                                 onChange={this.handleContactPhone}
                             />
                             {this.state.contact_phone && <ValidationError message={this.validateContactPhone()}/>}
@@ -341,7 +341,7 @@ class AppForm extends Component {
                                 aria-label='interview date'
                                 name='interview_date' 
                                 defaultValue={appDetails ? appDetails.interview_date : null} 
-                                placeholder='Interview Date mm/dd/yyyy'
+                                placeholder='Interview Date'
                                 onChange={this.handleInterviewDate}
                             />
                             {this.state.interview_date && <ValidationError message={this.validateInterviewDate()}/>}
