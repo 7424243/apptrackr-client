@@ -250,6 +250,7 @@ class AppForm extends Component {
                         <p>* Required</p>
                         <section className='appform_input'>* 
                             <input 
+                                className='input'
                                 type='text'
                                 aria-label='job title'
                                 name='job' 
@@ -262,6 +263,7 @@ class AppForm extends Component {
                         </section>
                         <section className='appform_input'>*   
                             <input 
+                                className='input'
                                 type='text'
                                 aria-label='company name'
                                 name='company' 
@@ -274,6 +276,7 @@ class AppForm extends Component {
                         </section>
                         <section className='appform_input'>
                             <input 
+                                className='input'
                                 type='url'
                                 aria-label='website url'
                                 name='website' 
@@ -285,6 +288,7 @@ class AppForm extends Component {
                         </section>
                         <section className='appform_input'>
                             <input 
+                                className='input'
                                 type='text'
                                 aria-label='date applied ='
                                 name='date-applied' 
@@ -296,6 +300,7 @@ class AppForm extends Component {
                         </section>
                         <section className='appform_input'>
                             <input 
+                                className='input'
                                 type='text'
                                 aria-label='contact name'
                                 name='contact' 
@@ -307,6 +312,7 @@ class AppForm extends Component {
                         </section>
                         <section className='appform_input'>
                             <input 
+                                className='input'
                                 type='text'
                                 aria-label='contact email'
                                 name='contact_email' 
@@ -318,6 +324,7 @@ class AppForm extends Component {
                         </section>
                         <section className='appform_input'>
                             <input 
+                                className='input'
                                 type='text'
                                 aria-label='contact phone'
                                 name='contact_phone' 
@@ -329,6 +336,7 @@ class AppForm extends Component {
                         </section>
                         <section className='appform_input'>
                             <input 
+                                className='input'
                                 type='text'
                                 aria-label='interview date'
                                 name='interview_date' 
@@ -349,6 +357,7 @@ class AppForm extends Component {
                         </section>
                         <section className='appform_input appform_textarea'>
                             <textarea 
+                                className='textarea'
                                 name='notes'
                                 aria-label='additional notes'
                                 defaultValue={appDetails ? appDetails.notes : null} 
