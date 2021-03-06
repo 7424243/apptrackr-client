@@ -130,17 +130,20 @@ class SignUpForm extends Component {
                             {this.state.user_name && <ValidationError message={this.validateUserName()}/>}                        
                         </section>
                         <section className='signup_input'>*
-                            <p className='password_reqs'>* {'>'} 8 characters</p> 
-                            <p>* at least 1 upper case</p>
-                            <p>* at least 1 upper case</p>
-                            <p>1 lower case, 1 number, and 1 special character.</p>
+
                             <input 
                                 type='password' 
                                 placeholder='Password'
                                 autoComplete='off'
                                 required
                                 onChange={this.handleAddPassword}
-                            />      
+                            /> 
+                            <p className='password_reqs'>* {'>'} 8 characters</p> 
+                            <p className='password_reqs'>* at least 1 upper case</p>
+                            <p className='password_reqs'>* at least 1 upper case</p>
+                            <p className='password_reqs'>* at least 1 lower case</p>
+                            <p className='password_reqs'>* at least 1 number</p>
+                            <p className='password_reqs'>* at least 1 special character</p>     
                             {this.state.password && <ValidationError message={this.validatePassword()}/>}                  
                         </section>
                             <RecButton type='submit'>Sign Up</RecButton>

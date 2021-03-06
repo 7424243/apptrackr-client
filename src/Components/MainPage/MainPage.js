@@ -38,10 +38,10 @@ class MainPage extends Component {
                     <section className='section2'>
                         <h2 className='main_header'>Job Applications</h2>
                         <div className='section2_content'>
-                            <Link to='/newapp'>
+                            <Link to='/newapp' className='add'>
                                 <SquareButton>+</SquareButton> 
                             </Link>
-                                <div>
+                                <div className='filter'>
                                     <label>Filter By: </label>
                                     <select onChange={this.addFilter}>
                                         <option>All</option>

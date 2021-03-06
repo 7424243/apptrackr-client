@@ -1,4 +1,6 @@
 nav {
+    display: flex;
+    flex-wrap: wrap;
     margin-left: 15px;
     font-size: medium;
 }
