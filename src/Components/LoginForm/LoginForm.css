@@ -28,3 +28,7 @@
     flex-wrap: wrap;
     
 }
+
+.login_error {
+    text-align: center;
+}

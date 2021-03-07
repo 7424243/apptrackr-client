@@ -148,7 +148,7 @@ class SignUpForm extends Component {
                         </section>
                             <RecButton type='submit'>Sign Up</RecButton>
                     </form>
-                    {this.state.error && <p>{this.state.error}</p>}
+                    {this.state.error && <p className='signup_error'>{this.state.error}</p>}
                 </ErrorBoundary>
                 
             </div>

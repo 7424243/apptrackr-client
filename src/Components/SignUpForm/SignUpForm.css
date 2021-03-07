@@ -19,3 +19,7 @@
     line-height: 1;
     overflow-wrap: break-word;
 }
+
+.signup_error {
+    text-align: center;
+}

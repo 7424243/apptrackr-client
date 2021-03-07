@@ -99,7 +99,7 @@ class LoginForm extends Component {
                         <RecButton>Sign Up</RecButton>
                     </Link>
                 </form>
-                {this.state.error && <p>{this.state.error}. Please try again, or Sign Up for an account.</p>}
+                {this.state.error && <p className='login_error'>{this.state.error}. Please try again, or Sign Up for an account.</p>}
                 <div className='demo_creds'>
                     <p>Demo Credentials:</p>
                     <p>Username: demo</p>
