@@ -7,6 +7,7 @@ import ApptrackrContext from '../../ApptrackrContext'
 import { NavLink } from 'react-router-dom'
 import config from '../../config'
 import TokenService from '../../services/token-service'
+import { format } from 'date-fns';
 
 class AppDetails extends Component {
 
@@ -57,11 +58,11 @@ class AppDetails extends Component {
                     <h2 className='appdetails_header'>{applicationDetails ? applicationDetails.job_name : null}</h2>
                     <p className='appdetails'><strong>Company:</strong> {applicationDetails ? applicationDetails.company_name : null}</p>
                     <p className='appdetails'><strong>Website:</strong> {applicationDetails && applicationDetails.website_url ? <a href={applicationDetails.website_url} target='_blank' rel='noreferrer'>Go To Website ⇢</a> : null}</p>
-                    <p className='appdetails'><strong>Date Applied:</strong> {applicationDetails ? applicationDetails.date_applied : null}</p>
+                    <p className='appdetails'><strong>Date Applied:</strong> {applicationDetails && applicationDetails.date_applied ? format(new Date(applicationDetails.date_applied), 'MM/dd/yyyy') : null}</p>
                     <p className='appdetails'><strong>Contact:</strong> {applicationDetails ? applicationDetails.contact_name : null}</p>
                     <p className='appdetails'><strong>Contact Email:</strong> {applicationDetails ? applicationDetails.contact_email : null}</p>
                     <p className='appdetails'><strong>Contact Phone:</strong> {applicationDetails ? applicationDetails.contact_phone : null}</p>
-                    <p className='appdetails'><strong>Interview Date:</strong> {applicationDetails ? applicationDetails.interview_date : null}</p>
+                    <p className='appdetails'><strong>Interview Date:</strong> {applicationDetails && applicationDetails.interview_date ? format(new Date(applicationDetails.interview_date), 'MM/dd/yyyy') : null}</p>
                     <p className='appdetails'><strong>Status:</strong> {applicationDetails ? applicationDetails.status : null}</p>
                     <p className='appdetails'><strong>Additional Notes:</strong> {applicationDetails ? applicationDetails.notes : null}</p>
                 </div>

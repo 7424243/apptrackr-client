@@ -9,6 +9,9 @@ import TokenService from '../../services/token-service'
 import {isWebUri} from 'valid-url'
 import config from '../../config'
 import ValidationError from '../ValidationError/ValidationError'
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { parseISO, format } from 'date-fns'
 
 class AppForm extends Component {
 
@@ -47,15 +50,16 @@ class AppForm extends Component {
                     return res.json()
                 })
                 .then(data => {
+                    console.log(data)
                     this.setState({
                         job_name: data.job_name,
                         company_name: data.company_name,
                         website_url: data.website_url,
-                        date_applied: data.date_applied,
+                        date_applied: data.date_applied ? new Date(Date.parse(data.date_applied)) : '',
                         contact_name: data.contact_name,
                         contact_email: data.contact_email,
                         contact_phone: data.contact_phone,
-                        interview_date: data.interview_date,
+                        interview_date: data.interview_date ? new Date(Date.parse(data.interview_date)) : '',
                         status: data.status,
                         notes: data.notes,
                     })
@@ -94,7 +98,8 @@ class AppForm extends Component {
             })
     }
 
-    handleSubmitEdit = e => {e.preventDefault()
+    handleSubmitEdit = e => {
+        e.preventDefault()
         let payload = Object.assign({}, this.state)
         let id = parseInt(this.props.match.params.id)
         fetch(`${config.API_ENDPOINT}/applications/${id}`, {
@@ -134,7 +139,7 @@ class AppForm extends Component {
     }
 
     handleDateApplied = e => {
-        this.setState({date_applied: e.target.value})
+        this.setState({date_applied: e})
     }
 
     handleContactName = e => {
@@ -150,7 +155,7 @@ class AppForm extends Component {
     }
 
     handleInterviewDate = e => {
-        this.setState({interview_date: e.target.value})
+        this.setState({interview_date: e})
     }
 
     handleStatus = e => {
@@ -182,12 +187,12 @@ class AppForm extends Component {
         }
     }
 
-    validateDateApplied() {
-        const dateApplied = this.state.date_applied.trim()
-        if(dateApplied.length === 0) {
-            return 'A date applied must be a valid date'
-        }
-    }
+    // validateDateApplied() {
+    //     const dateApplied = this.state.date_applied.trim()
+    //     if(dateApplied.length === 0) {
+    //         return 'A date applied must be a valid date'
+    //     }
+    // }
 
     validateContactName() {
         const contactName = this.state.contact_name.trim()
@@ -210,12 +215,12 @@ class AppForm extends Component {
         }
     }
 
-    validateInterviewDate() {
-        const interviewDate = this.state.interview_date.trim()
-        if(interviewDate === 0) {
-            return 'An interview date must be a valid date'
-        }
-    }
+    // validateInterviewDate() {
+    //     const interviewDate = this.state.interview_date.trim()
+    //     if(interviewDate === 0) {
+    //         return 'An interview date must be a valid date'
+    //     }
+    // }
 
     validateStatus() {
         const status = this.state.status.trim()
@@ -287,16 +292,13 @@ class AppForm extends Component {
                             {this.state.website_url && <ValidationError message={this.validateWebsiteUrl()}/>} 
                         </section>
                         <section className='appform_input'>
-                            <input 
-                                className='input'
-                                type='text'
-                                aria-label='date applied'
-                                name='date-applied' 
-                                defaultValue={appDetails ? appDetails.date_applied : null} 
-                                placeholder='Date Applied'
+                            <DatePicker
+                                placeholderText='Select Date Applied'
+                                dateFormat='MM/dd/yyyy'
+                                // locale='en'
+                                selected={this.state.date_applied}
                                 onChange={this.handleDateApplied}
                             />
-                            {this.state.date_applied && <ValidationError message={this.validateDateApplied()}/>}
                         </section>
                         <section className='appform_input'>
                             <input 
@@ -335,16 +337,13 @@ class AppForm extends Component {
                             {this.state.contact_phone && <ValidationError message={this.validateContactPhone()}/>}
                         </section>
                         <section className='appform_input'>
-                            <input 
-                                className='input'
-                                type='text'
-                                aria-label='interview date'
-                                name='interview_date' 
-                                defaultValue={appDetails ? appDetails.interview_date : null} 
-                                placeholder='Interview Date'
+                            <DatePicker
+                                placeholderText='Select Interview Date'
+                                dateFormat='MM/dd/yyyy'
+                                // locale='en'
+                                selected={this.state.interview_date}
                                 onChange={this.handleInterviewDate}
                             />
-                            {this.state.interview_date && <ValidationError message={this.validateInterviewDate()}/>}
                         </section>
                         <section className='appform_input'>
                             <label htmlFor='status'>* Status: </label>
