@@ -8,8 +8,8 @@ describe('TableItem Component', () => {
     const props = {
         id: 1,
         company: 'test',
-        dateApplied: 'test',
-        interviewDate: 'test',
+        dateApplied: '2021-03-08T07:00:00.000Z',
+        interviewDate: '2021-03-08T07:00:00.000Z',
         status: 'test'
     }
 

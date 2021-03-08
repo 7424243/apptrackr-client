@@ -65,16 +65,27 @@ exports[`AppForm Component renders the UI as expected 1`] = `
     <section
       className="appform_input"
     >
-      <input
-        aria-label="date applied ="
-        className="input"
-        defaultValue={null}
-        name="date-applied"
-        onChange={[Function]}
-        placeholder="Date Applied"
-        type="text"
-      />
-      
+      <div
+        className="react-datepicker-wrapper"
+      >
+        <div
+          className="react-datepicker__input-container"
+        >
+          <input
+            className=""
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Select Date Applied"
+            readOnly={false}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
     </section>
     <section
       className="appform_input"
@@ -121,16 +132,27 @@ exports[`AppForm Component renders the UI as expected 1`] = `
     <section
       className="appform_input"
     >
-      <input
-        aria-label="interview date"
-        className="input"
-        defaultValue={null}
-        name="interview_date"
-        onChange={[Function]}
-        placeholder="Interview Date"
-        type="text"
-      />
-      
+      <div
+        className="react-datepicker-wrapper"
+      >
+        <div
+          className="react-datepicker__input-container"
+        >
+          <input
+            className=""
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Select Interview Date"
+            readOnly={false}
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
     </section>
     <section
       className="appform_input"
@@ -142,28 +164,33 @@ exports[`AppForm Component renders the UI as expected 1`] = `
       </label>
       <select
         defaultValue={null}
+        id="status"
         onChange={[Function]}
         required={true}
       >
         <option
+          aria-label="choose option"
           name="status"
           value=""
         >
           Choose here
         </option>
         <option
+          aria-label="interested"
           name="status"
           value="Interested"
         >
           Interested
         </option>
         <option
+          aria-label="applied"
           name="status"
           value="Applied"
         >
           Applied
         </option>
         <option
+          aria-label="closed"
           name="status"
           value="Closed"
         >
@@ -191,23 +218,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
         className="squarebutton"
         type="submit"
       >
-        <svg
-          aria-hidden="true"
-          className="svg-inline--fa fa-save fa-w-14 "
-          data-icon="save"
-          data-prefix="fas"
-          focusable="false"
-          role="img"
-          style={Object {}}
-          viewBox="0 0 448 512"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M433.941 129.941l-83.882-83.882A48 48 0 0 0 316.118 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V163.882a48 48 0 0 0-14.059-33.941zM224 416c-35.346 0-64-28.654-64-64 0-35.346 28.654-64 64-64s64 28.654 64 64c0 35.346-28.654 64-64 64zm96-304.52V212c0 6.627-5.373 12-12 12H76c-6.627 0-12-5.373-12-12V108c0-6.627 5.373-12 12-12h228.52c3.183 0 6.235 1.264 8.485 3.515l3.48 3.48A11.996 11.996 0 0 1 320 111.48z"
-            fill="currentColor"
-            style={Object {}}
-          />
-        </svg>
+        Save
       </button>
     </div>
   </form>

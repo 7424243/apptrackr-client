@@ -19,6 +19,7 @@ exports[`LoginForm Component renders the UI as expected 1`] = `
     >
       *
       <input
+        aria-label="login username"
         autoComplete="on"
         onChange={[Function]}
         placeholder="username"
@@ -32,6 +33,7 @@ exports[`LoginForm Component renders the UI as expected 1`] = `
     >
       *
       <input
+        aria-label="login password"
         autoComplete="on"
         onChange={[Function]}
         placeholder="password"

@@ -48,23 +48,25 @@ exports[`NewResourceForm Component renders the UI as expected 1`] = `
         Type: 
       </label>
       <select
+        id="type"
         onChange={[Function]}
         required={true}
       >
         <option
+          aria-label="choose here"
           name="type"
           value=""
         >
           Choose here
         </option>
         <option
-          name="type"
+          aria-label="job resource"
           value="Job Resource"
         >
           Job Resource
         </option>
         <option
-          name="type"
+          aria-label="other resource"
           value="Other Resource"
         >
           Other Resource

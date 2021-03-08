@@ -45,10 +45,13 @@ Array [
         <div
           className="filter"
         >
-          <label>
+          <label
+            htmlFor="filter"
+          >
             Filter By: 
           </label>
           <select
+            id="filter"
             onChange={[Function]}
           >
             <option>

@@ -6,6 +6,8 @@ import { NavLink } from 'react-router-dom'
 import config from '../../config'
 import TokenService from '../../services/token-service'
 import { format } from 'date-fns';
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css'; 
 
 class AppDetails extends Component {
 
@@ -17,31 +19,43 @@ class AppDetails extends Component {
 
     handleClickDelete = e => {
         e.preventDefault()
-        if(window.confirm('Are you sure you want to delete?')) {
-            const id = parseInt(this.props.match.params.id)
-            console.log(id)
-            fetch(`${config.API_ENDPOINT}/applications/${id}`, {
-                method: 'DELETE',
-                headers: {
-                    'Authorization': `bearer ${TokenService.getAuthToken()}`
-                }
-            })
-                .then(res => {
-                    if(!res.ok) {
-                        return res.json().then(e => Promise.reject(e))
+        const id = parseInt(this.props.match.params.id)
+        console.log(id)
+        confirmAlert({
+            title: 'Confirm to Delete',
+            message: 'Are you sure you want to delete this?',
+            buttons: [
+                {
+                    label: 'Yes',
+                    onClick: () => {
+                        fetch(`${config.API_ENDPOINT}/applications/${id}`, {
+                            method: 'DELETE',
+                            headers: {
+                                'Authorization': `bearer ${TokenService.getAuthToken()}`
+                            }
+                        })
+                            .then(res => {
+                                if(!res.ok) {
+                                    return res.json().then(e => Promise.reject(e))
+                                }
+                                return res
+                            })
+                            .then(() => {
+                                this.context.deleteApplication(id)
+                                this.props.history.push('/jobapps')
+                            })
+                            .catch(error => {
+                                this.setState({error})
+                                console.error({error})
+                            })
                     }
-                    return res
-                })
-                .then(() => {
-                    this.context.deleteApplication(id)
-                    this.props.history.push('/jobapps')
-                })
-                .catch(error => {
-                    this.setState({error})
-                    console.error({error})
-                })
-        }
-        
+                },
+                {
+                    label: 'No',
+                    onClick: () => this.props.history.push(`/jobapps/${id}`)
+                }
+            ]
+        })
     }
 
     render() {

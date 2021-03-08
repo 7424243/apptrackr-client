@@ -6,6 +6,8 @@ import ApptrackrContext from '../../ApptrackrContext'
 import TokenService from '../../services/token-service'
 import config from '../../config'
 import {NavLink} from 'react-router-dom'
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css'; 
 
 class ResourcesList extends Component {
 
@@ -42,29 +44,43 @@ class ResourcesList extends Component {
     }
 
     handleClickDelete(id) {
-        if(window.confirm('Are you sure you want to delete?')) {
-            fetch(`${config.API_ENDPOINT}/resources/${id}`, {
-                method: 'DELETE',
-                headers: {
-                    'Authorization': `bearer ${TokenService.getAuthToken()}`
+        confirmAlert({
+            title: 'Confirm to Delete',
+            message: 'Are you sure you want to delete this?',
+            buttons: [
+                {
+                    label: 'Yes',
+                    onClick: () => {
+                        fetch(`${config.API_ENDPOINT}/resources/${id}`, {
+                            method: 'DELETE',
+                            headers: {
+                                'Authorization': `bearer ${TokenService.getAuthToken()}`
+                            }
+                        })
+                            .then(res => {
+                                if(!res.ok) {
+                                    return res.json().then(e => Promise.reject(e))
+                                }
+                                console.log(res)
+                                return res
+                            })
+                            .then(() => {
+                                this.context.deleteResource(id)
+                            })
+                            .catch(error => {
+                                this.setState({error})
+                                console.error({error})
+                            })
+                    }         
+                },
+                {
+                    label: 'No',
+                    onClick: () => this.props.history.push('/resources')
                 }
-            })
-                .then(res => {
-                    if(!res.ok) {
-                        return res.json().then(e => Promise.reject(e))
-                    }
-                    console.log(res)
-                    return res
-                })
-                .then(() => {
-                    this.context.deleteResource(id)
-                })
-                .catch(error => {
-                    this.setState({error})
-                    console.error({error})
-                })
-        }
-        
+                
+
+            ]
+        })
     }
 
     render() {

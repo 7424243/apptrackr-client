@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import { format } from 'date-fns';
+import { format } from 'date-fns'
 import './TableItem.css'
 
 function TableItem(props) {

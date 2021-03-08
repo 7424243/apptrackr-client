@@ -13,10 +13,10 @@ exports[`TableItem Component renders the UI as expected 1`] = `
       test
     </td>
     <td>
-      test
+      03/08/2021
     </td>
     <td>
-      test
+      03/08/2021
     </td>
     <td
       className="last_td"

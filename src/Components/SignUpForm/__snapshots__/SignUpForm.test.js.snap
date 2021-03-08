@@ -19,6 +19,7 @@ exports[`SignUpForm Component renders the UI as expected 1`] = `
     >
       *
       <input
+        aria-label="signup full name"
         autoComplete="off"
         onChange={[Function]}
         placeholder="Full Name"
@@ -32,6 +33,7 @@ exports[`SignUpForm Component renders the UI as expected 1`] = `
     >
       *
       <input
+        aria-label="signup username"
         autoComplete="off"
         onChange={[Function]}
         placeholder="Username"
@@ -45,6 +47,7 @@ exports[`SignUpForm Component renders the UI as expected 1`] = `
     >
       *
       <input
+        aria-label="signup password"
         autoComplete="off"
         onChange={[Function]}
         placeholder="Password"
