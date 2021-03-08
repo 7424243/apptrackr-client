@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import ResourceItem from '../ResourceItem/ResourceItem'
 import SquareButton from '../SquareButton/SquareButton'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import './ResourcesList.css'
 import ApptrackrContext from '../../ApptrackrContext'
 import TokenService from '../../services/token-service'

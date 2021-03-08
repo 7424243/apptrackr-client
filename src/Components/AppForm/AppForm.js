@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import ApptrackrContext from '../../ApptrackrContext'
 import SquareButton from '../SquareButton/SquareButton'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSave } from '@fortawesome/free-solid-svg-icons'
 import './AppForm.css'
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary'
 import TokenService from '../../services/token-service'
@@ -11,7 +9,6 @@ import config from '../../config'
 import ValidationError from '../ValidationError/ValidationError'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { parseISO, format } from 'date-fns'
 
 class AppForm extends Component {
 
@@ -365,9 +362,7 @@ class AppForm extends Component {
                             />
                             {this.state.notes && <ValidationError message={this.validateNotes()}/>}
                         </section>
-                            <SquareButton type='submit'>Save 
-                                {/* <FontAwesomeIcon icon={faSave}/> */}
-                            </SquareButton>
+                            <SquareButton type='submit'>Save</SquareButton>
                             
                     </form>
                 </ErrorBoundary>

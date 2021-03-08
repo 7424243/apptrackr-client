@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
 import SquareButton from '../SquareButton/SquareButton'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBackward, faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import './AppDetails.css'
 import ApptrackrContext from '../../ApptrackrContext'
 import { NavLink } from 'react-router-dom'
