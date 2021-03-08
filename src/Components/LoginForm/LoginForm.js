@@ -77,6 +77,7 @@ class LoginForm extends Component {
                     <section className='login_input'>*
                         <input 
                             type='text'
+                            aria-label='login username'
                             placeholder='username'
                             autoComplete='on'
                             required
@@ -87,6 +88,7 @@ class LoginForm extends Component {
                     <section className='login_input'>*
                         <input 
                             type='password' 
+                            aria-label='login password'
                             placeholder='password'
                             autoComplete='on'
                             required

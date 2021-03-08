@@ -42,8 +42,8 @@ class MainPage extends Component {
                                 <SquareButton>+</SquareButton> 
                             </Link>
                                 <div className='filter'>
-                                    <label>Filter By: </label>
-                                    <select onChange={this.addFilter}>
+                                    <label htmlFor='filter'>Filter By: </label>
+                                    <select id='filter' onChange={this.addFilter}>
                                         <option>All</option>
                                         <option>Interested</option>
                                         <option>Applied</option>

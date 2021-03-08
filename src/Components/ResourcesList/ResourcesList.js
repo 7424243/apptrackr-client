@@ -91,7 +91,7 @@ class ResourcesList extends Component {
                         name={resource.resource_name}
                         url={resource.resource_url}
                     />
-                    <SquareButton type='button' onClick={() => this.handleClickDelete(resource.id)}><FontAwesomeIcon icon={faTrashAlt}/></SquareButton>
+                    <SquareButton type='button' onClick={() => this.handleClickDelete(resource.id)}>Delete</SquareButton>
                 </div>
 
             )
@@ -104,7 +104,7 @@ class ResourcesList extends Component {
                         name={resource.resource_name}
                         url={resource.resource_url}
                     />
-                    <SquareButton type='button' onClick={() => this.handleClickDelete(resource.id)}><FontAwesomeIcon icon={faTrashAlt}/></SquareButton>
+                    <SquareButton type='button' onClick={() => this.handleClickDelete(resource.id)}>Delete</SquareButton>
                 </div>
 
             )

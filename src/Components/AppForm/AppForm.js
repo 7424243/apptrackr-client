@@ -290,7 +290,7 @@ class AppForm extends Component {
                             <input 
                                 className='input'
                                 type='text'
-                                aria-label='date applied ='
+                                aria-label='date applied'
                                 name='date-applied' 
                                 defaultValue={appDetails ? appDetails.date_applied : null} 
                                 placeholder='Date Applied'
@@ -348,11 +348,11 @@ class AppForm extends Component {
                         </section>
                         <section className='appform_input'>
                             <label htmlFor='status'>* Status: </label>
-                            <select required defaultValue={appDetails ? appDetails.status : null} onChange={this.handleStatus}>
-                                <option name='status' value=''>Choose here</option>
-                                <option name='status' value='Interested'>Interested</option>
-                                <option name='status' value='Applied'>Applied</option>
-                                <option name='status' value='Closed'>Closed</option>
+                            <select id='status' required defaultValue={appDetails ? appDetails.status : null} onChange={this.handleStatus}>
+                                <option aria-label='choose option' name='status' value=''>Choose here</option>
+                                <option aria-label='interested' name='status' value='Interested'>Interested</option>
+                                <option aria-label='applied' name='status' value='Applied'>Applied</option>
+                                <option aria-label='closed' name='status' value='Closed'>Closed</option>
                             </select>
                         </section>
                         <section className='appform_input appform_textarea'>
@@ -366,8 +366,8 @@ class AppForm extends Component {
                             />
                             {this.state.notes && <ValidationError message={this.validateNotes()}/>}
                         </section>
-                            <SquareButton type='submit'>
-                                <FontAwesomeIcon icon={faSave}/>
+                            <SquareButton type='submit'>Save 
+                                {/* <FontAwesomeIcon icon={faSave}/> */}
                             </SquareButton>
                             
                     </form>

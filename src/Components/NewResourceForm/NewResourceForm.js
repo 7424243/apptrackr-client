@@ -118,10 +118,10 @@ class NewResourceForm extends Component {
                         </section>
                         <section className='resourceform_input'>
                             <label htmlFor='type'>Type: </label>
-                            <select required onChange={this.addResourceType}>
-                                <option name='type' value=''>Choose here</option>
-                                <option name='type' value='Job Resource'>Job Resource</option>
-                                <option name='type' value='Other Resource'>Other Resource</option>
+                            <select id='type' required onChange={this.addResourceType}>
+                                <option aria-label='choose here' name='type' value=''>Choose here</option>
+                                <option aria-label='job resource' value='Job Resource'>Job Resource</option>
+                                <option aria-label='other resource' value='Other Resource'>Other Resource</option>
                             </select>
                             {this.state.status && <ValidationError message={this.validateResourceStatus()}/>}
                         </section>

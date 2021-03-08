@@ -56,7 +56,7 @@ class AppDetails extends Component {
                 <div className='appdetails_container'>
                     <h2 className='appdetails_header'>{applicationDetails ? applicationDetails.job_name : null}</h2>
                     <p className='appdetails'><strong>Company:</strong> {applicationDetails ? applicationDetails.company_name : null}</p>
-                    <p className='appdetails'><strong>Website:</strong> {applicationDetails && applicationDetails.website_url ? <a href={applicationDetails.website_url} target='_blank' rel='noreferrer'>Click Here</a> : null}</p>
+                    <p className='appdetails'><strong>Website:</strong> {applicationDetails && applicationDetails.website_url ? <a href={applicationDetails.website_url} target='_blank' rel='noreferrer'>Go To Website ⇢</a> : null}</p>
                     <p className='appdetails'><strong>Date Applied:</strong> {applicationDetails ? applicationDetails.date_applied : null}</p>
                     <p className='appdetails'><strong>Contact:</strong> {applicationDetails ? applicationDetails.contact_name : null}</p>
                     <p className='appdetails'><strong>Contact Email:</strong> {applicationDetails ? applicationDetails.contact_email : null}</p>
@@ -66,9 +66,9 @@ class AppDetails extends Component {
                     <p className='appdetails'><strong>Additional Notes:</strong> {applicationDetails ? applicationDetails.notes : null}</p>
                 </div>
                 <div className='appdetails_buttons'>
-                    <NavLink to={'/jobapps'}><SquareButton><FontAwesomeIcon icon={faBackward}/></SquareButton></NavLink>
-                    <NavLink to={`/edit/${applicationId}`}><SquareButton><FontAwesomeIcon icon={faEdit}/></SquareButton></NavLink>
-                    <NavLink to={'/jobapps'}><SquareButton type='button' onClick={this.handleClickDelete}><FontAwesomeIcon icon={faTrashAlt}/></SquareButton></NavLink>
+                    <NavLink to={'/jobapps'}><SquareButton>Back</SquareButton></NavLink>
+                    <NavLink to={`/edit/${applicationId}`}><SquareButton>Edit</SquareButton></NavLink>
+                    <NavLink to={'/jobapps'}><SquareButton type='button' onClick={this.handleClickDelete}>Delete</SquareButton></NavLink>
                 </div>
             </>
         )
