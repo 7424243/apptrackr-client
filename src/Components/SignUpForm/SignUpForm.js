@@ -2,10 +2,10 @@ import React, {Component} from 'react'
 import ApptrackrContext from '../../ApptrackrContext'
 import config from '../../config'
 import TokenService from '../../services/token-service'
-import ErrorBoundary from '../ErrorBoundary/ErrorBoundary'
 import RecButton from '../RecButton/RecButton'
 import ValidationError from '../ValidationError/ValidationError'
 import './SignUpForm.css'
+import PropTypes from 'prop-types'
 
 class SignUpForm extends Component {
 
@@ -102,7 +102,7 @@ class SignUpForm extends Component {
     render() {
         return (
             <div className='signup_container'>
-                <ErrorBoundary>
+                
                     <form 
                         className='signup_form'
                         onSubmit={this.handleSubmit}
@@ -151,7 +151,7 @@ class SignUpForm extends Component {
                             <RecButton type='submit'>Sign Up</RecButton>
                     </form>
                     {this.state.error && <p className='signup_error'>{this.state.error}</p>}
-                </ErrorBoundary>
+                
                 
             </div>
         )
@@ -159,3 +159,9 @@ class SignUpForm extends Component {
 }
 
 export default SignUpForm
+
+SignUpForm.propTypes = {
+    history: PropTypes.shape({
+        push: PropTypes.func
+    }).isRequired
+}

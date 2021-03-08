@@ -6,7 +6,8 @@ describe('ResourceItem Component', () => {
 
     const props = {
         url: 'https://www.google.com',
-        name: 'test'
+        name: 'test',
+        id: 1
     }
 
     //smoke test

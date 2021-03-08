@@ -6,8 +6,9 @@ import ApptrackrContext from '../../ApptrackrContext'
 import TokenService from '../../services/token-service'
 import config from '../../config'
 import {NavLink} from 'react-router-dom'
-import { confirmAlert } from 'react-confirm-alert';
-import 'react-confirm-alert/src/react-confirm-alert.css'; 
+import { confirmAlert } from 'react-confirm-alert'
+import 'react-confirm-alert/src/react-confirm-alert.css'
+import PropTypes from 'prop-types' 
 
 class ResourcesList extends Component {
 
@@ -150,3 +151,9 @@ class ResourcesList extends Component {
 }
 
 export default ResourcesList
+
+ResourcesList.propTypes = {
+    history: PropTypes.shape({
+        push: PropTypes.func
+    }).isRequired
+}

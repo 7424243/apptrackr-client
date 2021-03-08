@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import { format } from 'date-fns'
 import './TableItem.css'
+import PropTypes from 'prop-types'
 
 function TableItem(props) {
 
@@ -19,3 +20,12 @@ function TableItem(props) {
 }
 
 export default TableItem
+
+TableItem.propTypes = {
+    id: PropTypes.number.isRequired,
+    job: PropTypes.string.isRequired,
+    company: PropTypes.string.isRequired,
+    dateApplied: PropTypes.string,
+    interviewDate: PropTypes.string,
+    status: PropTypes.string.isRequired
+}

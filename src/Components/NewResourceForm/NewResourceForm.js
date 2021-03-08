@@ -7,6 +7,7 @@ import ErrorBoundary from '../ErrorBoundary/ErrorBoundary'
 import SquareButton from '../SquareButton/SquareButton'
 import ValidationError from '../ValidationError/ValidationError'
 import './NewResourceForm.css'
+import PropTypes from 'prop-types'
 
 class NewResourceForm extends Component {
 
@@ -135,3 +136,9 @@ class NewResourceForm extends Component {
 }
 
 export default NewResourceForm
+
+NewResourceForm.propTypes = {
+    history: PropTypes.shape({
+        push: PropTypes.func
+    }).isRequired
+}

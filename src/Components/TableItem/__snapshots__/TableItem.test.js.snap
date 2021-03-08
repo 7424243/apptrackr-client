@@ -7,7 +7,9 @@ exports[`TableItem Component renders the UI as expected 1`] = `
       <a
         href="/jobapps/1"
         onClick={[Function]}
-      />
+      >
+        test
+      </a>
     </td>
     <td>
       test

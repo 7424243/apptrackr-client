@@ -6,8 +6,9 @@ import { NavLink } from 'react-router-dom'
 import config from '../../config'
 import TokenService from '../../services/token-service'
 import { format } from 'date-fns';
-import { confirmAlert } from 'react-confirm-alert';
-import 'react-confirm-alert/src/react-confirm-alert.css'; 
+import { confirmAlert } from 'react-confirm-alert'
+import 'react-confirm-alert/src/react-confirm-alert.css'
+import PropTypes from 'prop-types'
 
 class AppDetails extends Component {
 
@@ -89,3 +90,14 @@ class AppDetails extends Component {
 }
 
 export default AppDetails
+
+AppDetails.propTypes = {
+    history: PropTypes.shape({
+        push: PropTypes.func
+    }).isRequired,
+    match: PropTypes.shape({
+        params: PropTypes.shape({
+            id: PropTypes.string
+        })
+    }).isRequired
+}

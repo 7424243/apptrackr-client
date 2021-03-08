@@ -4,6 +4,7 @@ import TableItem from '../TableItem/TableItem'
 import config from '../../config'
 import TokenService from '../../services/token-service'
 import './Table.css'
+import PropTypes from 'prop-types'
 
 class Table extends Component {
 
@@ -98,3 +99,7 @@ class Table extends Component {
 }
 
 export default Table
+
+Table.propTypes = {
+    filter: PropTypes.string
+}

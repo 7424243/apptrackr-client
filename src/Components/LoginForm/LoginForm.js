@@ -6,6 +6,7 @@ import config from '../../config'
 import TokenService from '../../services/token-service'
 import { Link } from 'react-router-dom'
 import ValidationError from '../ValidationError/ValidationError'
+import PropTypes from 'prop-types'
 
 class LoginForm extends Component {
 
@@ -113,3 +114,9 @@ class LoginForm extends Component {
 }
 
 export default LoginForm
+
+LoginForm.propTypes = {
+    history: PropTypes.shape({
+        push: PropTypes.func
+    }).isRequired
+}

@@ -10,6 +10,9 @@ describe('AppDetails Component', () => {
             params: {
                 id: '2'
             }
+        },
+        history: {
+            push: jest.fn()
         }
     }
 

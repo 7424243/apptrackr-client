@@ -1,5 +1,6 @@
 import React from 'react'
 import './ResourceItem.css'
+import PropTypes from 'prop-types'
 
 function ResourceItem(props) {
     return (
@@ -15,3 +16,9 @@ function ResourceItem(props) {
 }
 
 export default ResourceItem
+
+ResourceItem.propTypes = {
+    id: PropTypes.number.isRequired,
+    url: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
+}

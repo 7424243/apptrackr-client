@@ -7,8 +7,9 @@ import TokenService from '../../services/token-service'
 import {isWebUri} from 'valid-url'
 import config from '../../config'
 import ValidationError from '../ValidationError/ValidationError'
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css"
+import PropTypes from 'prop-types'
 
 class AppForm extends Component {
 
@@ -372,3 +373,14 @@ class AppForm extends Component {
 }
 
 export default AppForm
+
+AppForm.propTypes = {
+    history: PropTypes.shape({
+        push: PropTypes.func
+    }).isRequired,
+    match: PropTypes.shape({
+        params: PropTypes.shape({
+            id: PropTypes.string
+        })
+    }).isRequired
+}
