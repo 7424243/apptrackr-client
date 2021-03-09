@@ -109,8 +109,9 @@ class SignUpForm extends Component {
                     >
                         <h2>Sign Up Form</h2>
                         <p>* Required</p>
-                        <section className='signup_input'>* 
+                        <section className='signup_section'>* 
                             <input 
+                                className='signup_input'
                                 type='text'
                                 aria-label='signup full name'
                                 placeholder='Full Name'
@@ -120,8 +121,9 @@ class SignUpForm extends Component {
                             />
                             {this.state.full_name && <ValidationError message={this.validateFullName()}/>}
                         </section>
-                        <section className='signup_input'>*
+                        <section className='signup_section'>*
                             <input 
+                                className='signup_input'
                                 type='text'
                                 aria-label='signup username'
                                 placeholder='Username'
@@ -131,8 +133,9 @@ class SignUpForm extends Component {
                             />
                             {this.state.user_name && <ValidationError message={this.validateUserName()}/>}                        
                         </section>
-                        <section className='signup_input'>*
+                        <section className='signup_section'>*
                             <input 
+                                className='signup_input'
                                 type='password' 
                                 aria-label='signup password'
                                 placeholder='Password'

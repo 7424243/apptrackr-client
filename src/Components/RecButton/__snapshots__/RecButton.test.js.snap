@@ -6,8 +6,7 @@ exports[`RecButton Component renders the UI as expected 1`] = `
 >
   <button
     className="recbutton"
-    content="test"
-    path="/"
+    string="test"
   />
 </div>
 `;

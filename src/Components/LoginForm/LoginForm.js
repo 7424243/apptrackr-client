@@ -75,8 +75,9 @@ class LoginForm extends Component {
                 >
                     <h2>Login Form</h2>
                     <p>* Required</p>
-                    <section className='login_input'>*
+                    <section className='login_section'>*
                         <input 
+                            className='login_input'
                             type='text'
                             aria-label='login username'
                             placeholder='username'
@@ -86,8 +87,9 @@ class LoginForm extends Component {
                         />
                         {this.state.user_name && <ValidationError message={this.validateUserName()}/>}
                     </section>
-                    <section className='login_input'>*
+                    <section className='login_section'>*
                         <input 
+                            className='login_input'
                             type='password' 
                             aria-label='login password'
                             placeholder='password'

@@ -10,7 +10,14 @@ nav {
 .header_navlink {
     text-decoration: none;
     padding-right: 10px;
-    color: black;
+    color: #e27802;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.header_navlink:active {
+    font-weight: bolder;
+    color: #686d76;
 }
 
 @media screen and (min-width: 600px) {

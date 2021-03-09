@@ -23,6 +23,7 @@ Array [
         <p>
           <a
             aria-current={null}
+            className="landing_login"
             href="/login"
             onClick={[Function]}
           >

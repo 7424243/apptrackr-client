@@ -1,7 +1,9 @@
 /* Classes */
 
 .landing_section1_content {
+
     text-align: center;
+    width: 100%;
 }
 
 .landing_section1 {
@@ -9,6 +11,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 50px;
+    font-size: larger;
 }
 .landing {
     margin: auto;
@@ -17,6 +23,12 @@
 
 .landing_table {
     margin: 15px;
+}
+
+.landing_login {
+  text-decoration: none;
+  color: #e27802;
+  font-weight: bold;
 }
 
 

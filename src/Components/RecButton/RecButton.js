@@ -1,5 +1,6 @@
 import React from 'react'
 import './RecButton.css'
+import PropTypes from 'prop-types'
 
 function RecButton(props) {
 
@@ -11,3 +12,9 @@ function RecButton(props) {
 }
 
 export default RecButton
+
+RecButton.propTypes = {
+    type: PropTypes.string,
+}
+
+

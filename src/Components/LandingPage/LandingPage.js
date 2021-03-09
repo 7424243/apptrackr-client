@@ -11,7 +11,7 @@ function LandingPage() {
                     <h2>Easily organize job applications</h2>
                     <p>Keep track of details for each job application</p>
                     <p>Save frequently utilized resources for convenient access</p>
-                    <p><NavLink to={'/login'}>Login</NavLink> with a demo account to take a peak</p>
+                    <p><NavLink to={'/login'} className='landing_login'>Login</NavLink> with a demo account to take a peak</p>
                     <p>Username: demo</p>
                     <p>Password: Demo1234!</p>
                 </div>

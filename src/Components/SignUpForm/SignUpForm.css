@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    font-size: larger;
 }
 
 .signup_form {
@@ -11,7 +12,7 @@
     text-align: left;
 }
 
-.signup_input {
+.signup_section {
     margin-bottom: 20px;
 }
 
@@ -22,4 +23,11 @@
 
 .signup_error {
     text-align: center;
+    color: #e27802;
+    font-weight: bold;
+}
+
+.signup_input {
+    font-size: large;
+    border-style: solid;
 }

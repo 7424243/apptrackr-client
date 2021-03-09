@@ -5,8 +5,8 @@ import SquareButton from './SquareButton'
 describe('SquareButton Component', () => {
 
     const props = {
-        path: '/',
-        content: 'test'
+        type: 'test',
+        onClick: jest.fn()
     }
 
     //smoke test

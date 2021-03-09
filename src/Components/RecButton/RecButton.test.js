@@ -5,8 +5,7 @@ import RecButton from './RecButton'
 describe('RecButton Component', () => {
 
     const props = {
-        path: '/', 
-        content: 'test'
+        string: 'test'
     }
 
     //smoke test

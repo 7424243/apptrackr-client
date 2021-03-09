@@ -6,8 +6,8 @@ exports[`SquareButton Component renders the UI as expected 1`] = `
 >
   <button
     className="squarebutton"
-    content="test"
-    path="/"
+    onClick={[MockFunction]}
+    type="test"
   />
 </div>
 `;

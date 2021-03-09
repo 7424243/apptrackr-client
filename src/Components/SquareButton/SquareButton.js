@@ -1,5 +1,6 @@
 import React from 'react'
 import './SquareButton.css'
+import PropTypes from 'prop-types'
 
 function SquareButton(props) {
     return (
@@ -12,3 +13,9 @@ function SquareButton(props) {
 }
 
 export default SquareButton
+
+SquareButton.propTypes = {
+    type: PropTypes.string,
+    onClick: PropTypes.func,
+    
+}

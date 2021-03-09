@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    font-size: larger;
 }
 
 .login_form {
@@ -15,7 +16,7 @@
     text-align: left;
 }
 
-.login_input {
+.login_section {
     margin-bottom: 20px;
 }
 
@@ -31,4 +32,11 @@
 
 .login_error {
     text-align: center;
+    color: #e27802;
+    font-weight: bold;
+}
+
+.login_input {
+    font-size: large;
+    border-style: solid;
 }
