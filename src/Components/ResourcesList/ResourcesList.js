@@ -9,6 +9,7 @@ import {NavLink} from 'react-router-dom'
 import { confirmAlert } from 'react-confirm-alert'
 import 'react-confirm-alert/src/react-confirm-alert.css'
 import PropTypes from 'prop-types' 
+import RecButton from '../RecButton/RecButton'
 
 class ResourcesList extends Component {
 
@@ -106,7 +107,10 @@ class ResourcesList extends Component {
                         name={resource.resource_name}
                         url={resource.resource_url}
                     />
-                    <SquareButton type='button' onClick={() => this.handleClickDelete(resource.id)}>Delete</SquareButton>
+                    <div className='resource_delete'>
+                        <RecButton type='button' onClick={() => this.handleClickDelete(resource.id)}>Delete</RecButton>
+                    </div>
+                    
                 </div>
 
             )
@@ -119,7 +123,7 @@ class ResourcesList extends Component {
                         name={resource.resource_name}
                         url={resource.resource_url}
                     />
-                    <SquareButton type='button' onClick={() => this.handleClickDelete(resource.id)}>Delete</SquareButton>
+                    <RecButton type='button' onClick={() => this.handleClickDelete(resource.id)}>Delete</RecButton>
                 </div>
 
             )
@@ -132,7 +136,7 @@ class ResourcesList extends Component {
                         <ul>
                             {jobResourceItems}
                         </ul>
-                        <NavLink to='/newresource'><SquareButton>+</SquareButton></NavLink>
+                        <NavLink to='/newresource' className='resource_add_button'><SquareButton >+</SquareButton></NavLink>
                     </div>
                 </section>
                 <hr/>
@@ -142,7 +146,7 @@ class ResourcesList extends Component {
                         <ul>
                             {otherResourceItems}
                         </ul>
-                        <NavLink to='/newresource'><SquareButton>+</SquareButton></NavLink>
+                        <NavLink to='/newresource'  className='resource_add_button'><SquareButton>+</SquareButton></NavLink>
                     </div>
                 </section>
             </div>

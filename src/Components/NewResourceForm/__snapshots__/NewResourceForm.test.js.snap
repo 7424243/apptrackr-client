@@ -14,10 +14,11 @@ exports[`NewResourceForm Component renders the UI as expected 1`] = `
     onSubmit={[Function]}
   >
     <section
-      className="resourceform_input"
+      className="resourceform_section"
     >
       <input
         aria-label="name"
+        className="resourceform_input"
         name="resource name"
         onChange={[Function]}
         placeholder="Resource Name"
@@ -27,10 +28,11 @@ exports[`NewResourceForm Component renders the UI as expected 1`] = `
       
     </section>
     <section
-      className="resourceform_input"
+      className="resourceform_section"
     >
       <input
         aria-label="resource url"
+        className="resourceform_input"
         name="url"
         onChange={[Function]}
         placeholder="Resource Link"
@@ -40,7 +42,7 @@ exports[`NewResourceForm Component renders the UI as expected 1`] = `
       
     </section>
     <section
-      className="resourceform_input"
+      className="resourceform_section"
     >
       <label
         htmlFor="type"
@@ -48,6 +50,7 @@ exports[`NewResourceForm Component renders the UI as expected 1`] = `
         Type: 
       </label>
       <select
+        className="resourceform_input"
         id="type"
         onChange={[Function]}
         required={true}
@@ -74,13 +77,13 @@ exports[`NewResourceForm Component renders the UI as expected 1`] = `
       </select>
     </section>
     <div
-      className="squarebutton_content"
+      className="recbutton_content"
     >
       <button
-        className="squarebutton"
+        className="recbutton"
         type="submit"
       >
-        +
+        Save
       </button>
     </div>
   </form>

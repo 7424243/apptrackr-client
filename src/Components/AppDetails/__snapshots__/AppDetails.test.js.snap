@@ -8,92 +8,97 @@ Array [
     <h2
       className="appdetails_header"
     />
-    <p
-      className="appdetails"
+    <div
+      className="appdetails_small_container"
     >
-      <strong>
-        Company:
-      </strong>
-       
-    </p>
-    <p
-      className="appdetails"
-    >
-      <strong>
-        Website:
-      </strong>
-       
-    </p>
-    <p
-      className="appdetails"
-    >
-      <strong>
-        Date Applied:
-      </strong>
-       
-    </p>
-    <p
-      className="appdetails"
-    >
-      <strong>
-        Contact:
-      </strong>
-       
-    </p>
-    <p
-      className="appdetails"
-    >
-      <strong>
-        Contact Email:
-      </strong>
-       
-    </p>
-    <p
-      className="appdetails"
-    >
-      <strong>
-        Contact Phone:
-      </strong>
-       
-    </p>
-    <p
-      className="appdetails"
-    >
-      <strong>
-        Interview Date:
-      </strong>
-       
-    </p>
-    <p
-      className="appdetails"
-    >
-      <strong>
-        Status:
-      </strong>
-       
-    </p>
-    <p
-      className="appdetails"
-    >
-      <strong>
-        Additional Notes:
-      </strong>
-       
-    </p>
+      <p
+        className="appdetails"
+      >
+        <strong>
+          Company:
+        </strong>
+         
+      </p>
+      <p
+        className="appdetails"
+      >
+        <strong>
+          Website:
+        </strong>
+         
+      </p>
+      <p
+        className="appdetails"
+      >
+        <strong>
+          Date Applied:
+        </strong>
+         
+      </p>
+      <p
+        className="appdetails"
+      >
+        <strong>
+          Contact:
+        </strong>
+         
+      </p>
+      <p
+        className="appdetails"
+      >
+        <strong>
+          Contact Email:
+        </strong>
+         
+      </p>
+      <p
+        className="appdetails"
+      >
+        <strong>
+          Contact Phone:
+        </strong>
+         
+      </p>
+      <p
+        className="appdetails"
+      >
+        <strong>
+          Interview Date:
+        </strong>
+         
+      </p>
+      <p
+        className="appdetails"
+      >
+        <strong>
+          Status:
+        </strong>
+         
+      </p>
+      <p
+        className="appdetails"
+      >
+        <strong>
+          Additional Notes:
+        </strong>
+         
+      </p>
+    </div>
   </div>,
   <div
     className="appdetails_buttons"
   >
     <a
       aria-current={null}
+      className="appdetail_button"
       href="/jobapps"
       onClick={[Function]}
     >
       <div
-        className="squarebutton_content"
+        className="recbutton_content"
       >
         <button
-          className="squarebutton"
+          className="recbutton"
         >
           Back
         </button>
@@ -101,14 +106,15 @@ Array [
     </a>
     <a
       aria-current={null}
+      className="appdetail_button"
       href="/edit/2"
       onClick={[Function]}
     >
       <div
-        className="squarebutton_content"
+        className="recbutton_content"
       >
         <button
-          className="squarebutton"
+          className="recbutton"
         >
           Edit
         </button>
@@ -116,14 +122,15 @@ Array [
     </a>
     <a
       aria-current={null}
+      className="appdetail_button"
       href="/jobapps"
       onClick={[Function]}
     >
       <div
-        className="squarebutton_content"
+        className="recbutton_content"
       >
         <button
-          className="squarebutton"
+          className="recbutton"
           onClick={[Function]}
           type="button"
         >

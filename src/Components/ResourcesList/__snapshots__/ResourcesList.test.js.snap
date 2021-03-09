@@ -14,6 +14,7 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
       <ul />
       <a
         aria-current={null}
+        className="resource_add_button"
         href="/newresource"
         onClick={[Function]}
       >
@@ -42,6 +43,7 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
       <ul />
       <a
         aria-current={null}
+        className="resource_add_button"
         href="/newresource"
         onClick={[Function]}
       >

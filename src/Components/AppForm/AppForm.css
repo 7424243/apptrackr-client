@@ -5,12 +5,14 @@
 
 .appform_form {
     margin-left: 20px;
+    margin-right: 20px;
     max-width: 80%;
     text-align: left;
     padding-bottom: 40px;
+    font-size: larger;
 }
 
-.appform_input {
+.appform_section {
     margin-bottom: 20px;
 }
 
@@ -20,11 +22,41 @@
     padding-top: 20px;
 }
 
-.input {
-    width: 200px;
+.appform_input {
+    width: 250px;
+    font-size: large;
+    border-style: solid;
 }
 
-.textarea {
-    width: 400px;
+.appform_textarea {
+    width: 100%;
     height: 200px;
+    font-size: large;
+    border-style: solid;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#status {
+    width: 170px;
+}
+
+@media only screen and (min-width: 700px) {
+    .appform_form {
+        display: flex;
+        flex-direction: row;
+    }
+    .appform_right {
+        margin-top: 20px;
+        margin-left: 70px;
+        margin-right: 20px;
+    }
+    .appform_header {
+        text-align: center;
+    }
+    .appform_form {
+        margin: auto
+    }
+    .appform_textarea {
+        height: 350px;
+    }
 }

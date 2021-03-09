@@ -4,7 +4,7 @@ import ApptrackrContext from '../../ApptrackrContext'
 import config from '../../config'
 import TokenService from '../../services/token-service'
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary'
-import SquareButton from '../SquareButton/SquareButton'
+import RecButton from '../RecButton/RecButton'
 import ValidationError from '../ValidationError/ValidationError'
 import './NewResourceForm.css'
 import PropTypes from 'prop-types'
@@ -95,8 +95,9 @@ class NewResourceForm extends Component {
                         className='resourceform_form'
                         onSubmit={this.handleSubmit}
                     >
-                        <section className='resourceform_input'>
+                        <section className='resourceform_section'>
                             <input 
+                                className='resourceform_input'
                                 type='text'
                                 aria-label='name'
                                 name='resource name'
@@ -106,8 +107,9 @@ class NewResourceForm extends Component {
                             />
                             {this.state.resource_name && <ValidationError message={this.validateResourceName()}/>}
                         </section>
-                        <section className='resourceform_input'>
+                        <section className='resourceform_section'>
                             <input 
+                                className='resourceform_input'
                                 type='url'
                                 aria-label='resource url'
                                 name='url'
@@ -117,16 +119,16 @@ class NewResourceForm extends Component {
                             />
                             {this.state.resource_url && <ValidationError message={this.validateResourceUrl()}/>}
                         </section>
-                        <section className='resourceform_input'>
+                        <section className='resourceform_section'>
                             <label htmlFor='type'>Type: </label>
-                            <select id='type' required onChange={this.addResourceType}>
+                            <select id='type' required  className='resourceform_input' onChange={this.addResourceType}>
                                 <option aria-label='choose here' name='type' value=''>Choose here</option>
                                 <option aria-label='job resource' value='Job Resource'>Job Resource</option>
                                 <option aria-label='other resource' value='Other Resource'>Other Resource</option>
                             </select>
                             {this.state.status && <ValidationError message={this.validateResourceStatus()}/>}
                         </section>
-                        <SquareButton type='submit'>+</SquareButton>
+                        <RecButton type='submit'>Save</RecButton>
                     </form>                    
                 </ErrorBoundary>
 

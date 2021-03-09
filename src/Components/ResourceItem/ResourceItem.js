@@ -9,7 +9,7 @@ function ResourceItem(props) {
                 href={props.url} 
                 target='_blank' 
                 rel='noreferrer'
-            >{props.name}
+            >{props.name} ⇢
             </a>
         </li>
     )

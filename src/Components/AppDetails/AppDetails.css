@@ -4,16 +4,24 @@
     padding-bottom: 40px;
 }
 
+.appdetails_small_container {
+    margin-right: 20px;
+    max-width: 100%;
+    text-align: left;
+    padding-bottom: 40px;
+    font-size: larger;
+}
+
 .appdetails{
     margin-left: 20px;
-    max-width: 80%;
+    max-width: 100%;
+    margin-bottom: 25px;
     text-align: left;
     font-size: large;
 }
 
 .appdetails_header {
     margin-left: 20px;
-    max-width: 80%;
     text-align: left;
     padding-top: 20px;
 }
@@ -22,5 +30,31 @@
     display: flex;
     flex-direction: row;
     margin-left: 20px;
+}
+
+.appdetail_button {
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #e27802;
+}
+
+@media only screen and (min-width: 700px) {
+    .appdetails {
+        text-align: left;
+    }
+    .appdetails_small_container {
+        width: 60%;
+        margin: auto;
+    }
+    .appdetails_header {
+        text-align: center;
+    }
+    .appdetails_buttons {
+        justify-content: center;
+    }
 }
 

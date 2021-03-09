@@ -10,6 +10,7 @@ exports[`ResourceItem Component renders the UI as expected 1`] = `
     target="_blank"
   >
     test
+     ⇢
   </a>
 </li>
 `;

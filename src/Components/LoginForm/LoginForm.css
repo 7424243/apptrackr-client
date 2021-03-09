@@ -1,16 +1,16 @@
 .demo_creds {
-    text-align: center;
+    margin-left: 20px;
+    text-align: left;
 }
 
 .login_container {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     font-size: larger;
 }
 
 .login_form {
-    margin: 0 auto;
+    margin-left: 20px;
     padding: 40px 0;
     max-width: 80%;
     text-align: left;
@@ -24,14 +24,8 @@
     text-decoration: none;
 }
 
-.password_reqs {
-    display: flex;
-    flex-wrap: wrap;
-    
-}
-
 .login_error {
-    text-align: center;
+    text-align: left;
     color: #e27802;
     font-weight: bold;
 }
@@ -39,4 +33,17 @@
 .login_input {
     font-size: large;
     border-style: solid;
+}
+
+@media only screen and (min-width: 650px) {
+
+    .login_form {
+        margin: 0 auto;
+    }
+    .login_error {
+        text-align: center;
+    }
+    .demo_creds {
+        text-align: center;
+    }
 }

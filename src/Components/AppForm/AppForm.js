@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import ApptrackrContext from '../../ApptrackrContext'
-import SquareButton from '../SquareButton/SquareButton'
+import RecButton from '../RecButton/RecButton'
 import './AppForm.css'
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary'
 import TokenService from '../../services/token-service'
@@ -250,121 +250,127 @@ class AppForm extends Component {
                         className='appform_form'
                         onSubmit={appDetails ? this.handleSubmitEdit : this.handleSubmitAdd}
                     >
-                        <p>* Required</p>
-                        <section className='appform_input'>* 
-                            <input 
-                                className='input'
-                                type='text'
-                                aria-label='job title'
-                                name='job' 
-                                defaultValue={appDetails ? appDetails.job_name : null} 
-                                placeholder='Job Title'
-                                required
-                                onChange={this.handleJobName}
-                            />
-                            {this.state.job_name && <ValidationError message={this.validateJobName()}/>}
-                        </section>
-                        <section className='appform_input'>*   
-                            <input 
-                                className='input'
-                                type='text'
-                                aria-label='company name'
-                                name='company' 
-                                defaultValue={appDetails ? appDetails.company_name : null} 
-                                placeholder='Company Name'
-                                required
-                                onChange={this.handleCompanyName}
-                            />
-                            {this.state.company_name && <ValidationError message={this.validateCompanyName()}/>}
-                        </section>
-                        <section className='appform_input'>
-                            <input 
-                                className='input'
-                                type='url'
-                                aria-label='website url'
-                                name='website' 
-                                defaultValue={appDetails ? appDetails.website : null} 
-                                placeholder='Website'
-                                onChange={this.handleWebsiteUrl}
-                            />
-                            {this.state.website_url && <ValidationError message={this.validateWebsiteUrl()}/>} 
-                        </section>
-                        <section className='appform_input'>
-                            <DatePicker
-                                placeholderText='Select Date Applied'
-                                dateFormat='MM/dd/yyyy'
-                                // locale='en'
-                                selected={this.state.date_applied}
-                                onChange={this.handleDateApplied}
-                            />
-                        </section>
-                        <section className='appform_input'>
-                            <input 
-                                className='input'
-                                type='text'
-                                aria-label='contact name'
-                                name='contact' 
-                                defaultValue={appDetails ? appDetails.contact_name : null} 
-                                placeholder='Contact Name'
-                                onChange={this.handleContactName}
-                            />
-                            {this.state.contact_name && <ValidationError message={this.validateContactName()}/>}
-                        </section>
-                        <section className='appform_input'>
-                            <input 
-                                className='input'
-                                type='text'
-                                aria-label='contact email'
-                                name='contact_email' 
-                                defaultValue={appDetails ? appDetails.contact_email : null} 
-                                placeholder='Contact Email'
-                                onChange={this.handleContactName}
-                            />
-                            {this.state.contact_email && <ValidationError message={this.validateContactEmail()}/>}
-                        </section>
-                        <section className='appform_input'>
-                            <input 
-                                className='input'
-                                type='text'
-                                aria-label='contact phone'
-                                name='contact_phone' 
-                                defaultValue={appDetails ? appDetails.contact_phone : null} 
-                                placeholder='Contact Phone'
-                                onChange={this.handleContactPhone}
-                            />
-                            {this.state.contact_phone && <ValidationError message={this.validateContactPhone()}/>}
-                        </section>
-                        <section className='appform_input'>
-                            <DatePicker
-                                placeholderText='Select Interview Date'
-                                dateFormat='MM/dd/yyyy'
-                                // locale='en'
-                                selected={this.state.interview_date}
-                                onChange={this.handleInterviewDate}
-                            />
-                        </section>
-                        <section className='appform_input'>
-                            <label htmlFor='status'>* Status: </label>
-                            <select id='status' required defaultValue={appDetails ? appDetails.status : null} onChange={this.handleStatus}>
-                                <option aria-label='choose option' name='status' value=''>Choose here</option>
-                                <option aria-label='interested' name='status' value='Interested'>Interested</option>
-                                <option aria-label='applied' name='status' value='Applied'>Applied</option>
-                                <option aria-label='closed' name='status' value='Closed'>Closed</option>
-                            </select>
-                        </section>
-                        <section className='appform_input appform_textarea'>
-                            <textarea 
-                                className='textarea'
-                                name='notes'
-                                aria-label='additional notes'
-                                defaultValue={appDetails ? appDetails.notes : null} 
-                                placeholder='Additional Notes...'
-                                onChange={this.handleNotes}
-                            />
-                            {this.state.notes && <ValidationError message={this.validateNotes()}/>}
-                        </section>
-                            <SquareButton type='submit'>Save</SquareButton>
-                            
+                        <div className='appform_left'>
+                            <p>* Required</p>
+                            <section className='appform_section'>* 
+                                <input 
+                                    className='appform_input'
+                                    type='text'
+                                    aria-label='job title'
+                                    name='job' 
+                                    defaultValue={appDetails ? appDetails.job_name : null} 
+                                    placeholder='Job Title'
+                                    required
+                                    onChange={this.handleJobName}
+                                />
+                                {this.state.job_name && <ValidationError message={this.validateJobName()}/>}
+                            </section>
+                            <section className='appform_section'>*   
+                                <input 
+                                    className='appform_input'
+                                    type='text'
+                                    aria-label='company name'
+                                    name='company' 
+                                    defaultValue={appDetails ? appDetails.company_name : null} 
+                                    placeholder='Company Name'
+                                    required
+                                    onChange={this.handleCompanyName}
+                                />
+                                {this.state.company_name && <ValidationError message={this.validateCompanyName()}/>}
+                            </section>
+                            <section className='appform_section'>
+                                <input 
+                                    className='appform_input'
+                                    type='url'
+                                    aria-label='website url'
+                                    name='website' 
+                                    defaultValue={appDetails ? appDetails.website : null} 
+                                    placeholder='Website'
+                                    onChange={this.handleWebsiteUrl}
+                                />
+                                {this.state.website_url && <ValidationError message={this.validateWebsiteUrl()}/>} 
+                            </section>
+                            <section className='appform_section'>
+                                <DatePicker
+                                    className='appform_input'
+                                    placeholderText='Select Date Applied'
+                                    dateFormat='MM/dd/yyyy'
+                                    // locale='en'
+                                    selected={this.state.date_applied}
+                                    onChange={this.handleDateApplied}
+                                />
+                            </section>
+                            <section className='appform_section'>
+                                <input 
+                                    className='appform_input'
+                                    type='text'
+                                    aria-label='contact name'
+                                    name='contact' 
+                                    defaultValue={appDetails ? appDetails.contact_name : null} 
+                                    placeholder='Contact Name'
+                                    onChange={this.handleContactName}
+                                />
+                                {this.state.contact_name && <ValidationError message={this.validateContactName()}/>}
+                            </section>
+                            <section className='appform_section'>
+                                <input 
+                                    className='appform_input'
+                                    type='text'
+                                    aria-label='contact email'
+                                    name='contact_email' 
+                                    defaultValue={appDetails ? appDetails.contact_email : null} 
+                                    placeholder='Contact Email'
+                                    onChange={this.handleContactName}
+                                />
+                                {this.state.contact_email && <ValidationError message={this.validateContactEmail()}/>}
+                            </section>
+                            <section className='appform_section'>
+                                <input 
+                                    className='appform_input'
+                                    type='text'
+                                    aria-label='contact phone'
+                                    name='contact_phone' 
+                                    defaultValue={appDetails ? appDetails.contact_phone : null} 
+                                    placeholder='Contact Phone'
+                                    onChange={this.handleContactPhone}
+                                />
+                                {this.state.contact_phone && <ValidationError message={this.validateContactPhone()}/>}
+                            </section>
+                            <section className='appform_section'>
+                                <DatePicker
+                                    className='appform_input'
+                                    placeholderText='Select Interview Date'
+                                    dateFormat='MM/dd/yyyy'
+                                    // locale='en'
+                                    selected={this.state.interview_date}
+                                    onChange={this.handleInterviewDate}
+                                />
+                            </section>
+                        </div>
+                        <div className='appform_right'>
+                            <section className='appform_section'>
+                                <label htmlFor='status'>* Status: </label>
+                                <select id='status' className='appform_input' required defaultValue={appDetails ? appDetails.status : null} onChange={this.handleStatus}>
+                                    <option aria-label='choose option' name='status' value=''>Choose here</option>
+                                    <option aria-label='interested' name='status' value='Interested'>Interested</option>
+                                    <option aria-label='applied' name='status' value='Applied'>Applied</option>
+                                    <option aria-label='closed' name='status' value='Closed'>Closed</option>
+                                </select>
+                            </section>
+                            <section className='appform_section appform_textarea'>
+                                <textarea 
+                                    className='appform_textarea'
+                                    name='notes'
+                                    aria-label='additional notes'
+                                    defaultValue={appDetails ? appDetails.notes : null} 
+                                    placeholder='Additional Notes...'
+                                    onChange={this.handleNotes}
+                                />
+                                {this.state.notes && <ValidationError message={this.validateNotes()}/>}
+                            </section>
+                            <RecButton type='submit'>Save</RecButton>
+                        </div>
+                        
                     </form>
                 </ErrorBoundary>
             </div>
