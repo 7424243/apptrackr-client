@@ -16,6 +16,7 @@ class NavBar extends Component {
 
     handleLogoutClick = () => {
         TokenService.clearAuthToken()
+        this.setState({isLoggedIn: false})
     }
 
     logoutLink() {
