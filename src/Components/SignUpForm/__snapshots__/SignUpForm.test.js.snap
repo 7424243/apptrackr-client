@@ -9,7 +9,7 @@ exports[`SignUpForm Component renders the UI as expected 1`] = `
     onSubmit={[Function]}
   >
     <h2>
-      Sign Up Form
+      Sign Up
     </h2>
     <p>
       * Required
