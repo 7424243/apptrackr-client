@@ -72,7 +72,7 @@ class AppDetails extends Component {
                     <div className='appdetails_small_container'>
                      
                             <p className='appdetails'><strong>Company:</strong> {applicationDetails ? applicationDetails.company_name : null}</p>
-                            <p className='appdetails'><strong>Website:</strong> {applicationDetails && applicationDetails.website_url ? <a classname='website' href={applicationDetails.website_url} target='_blank' rel='noreferrer'>Go To Website ⇢</a> : null}</p>
+                            <p className='appdetails'><strong>Website:</strong> {applicationDetails && applicationDetails.website_url ? <a className='website' href={applicationDetails.website_url} target='_blank' rel='noreferrer'>Go To Website ⇢</a> : null}</p>
                             <p className='appdetails'><strong>Date Applied:</strong> {applicationDetails && applicationDetails.date_applied ? format(new Date(applicationDetails.date_applied), 'MM/dd/yyyy') : null}</p>
                             <p className='appdetails'><strong>Contact:</strong> {applicationDetails ? applicationDetails.contact_name : null}</p>
                             <p className='appdetails'><strong>Contact Email:</strong> {applicationDetails ? applicationDetails.contact_email : null}</p>
