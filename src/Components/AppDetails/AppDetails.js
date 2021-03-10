@@ -13,7 +13,7 @@ import PropTypes from 'prop-types'
 class AppDetails extends Component {
 
     state = {
-        error: null
+        error: null,
     }
 
     static contextType = ApptrackrContext

@@ -9,7 +9,7 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
       className="resources_section1_content"
     >
       <h2>
-        Job Boards
+        Job Postings
       </h2>
       <ul />
       <a

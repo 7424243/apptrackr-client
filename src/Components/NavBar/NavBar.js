@@ -9,14 +9,13 @@ import './NavBar.css'
 class NavBar extends Component {
 
     state = {
-        isLoggedIn: true
+        isLoggedIn: true,
     }
 
     static contextType = ApptrackrContext
 
     handleLogoutClick = () => {
         TokenService.clearAuthToken()
-        this.setState({isLoggedIn: false})
     }
 
     logoutLink() {

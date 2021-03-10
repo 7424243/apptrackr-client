@@ -25,7 +25,7 @@ class AppForm extends Component {
         status: '',
         notes: '',
         user_id: '',
-        error: null
+        error: null,
     }
 
     static contextType = ApptrackrContext
@@ -185,13 +185,6 @@ class AppForm extends Component {
         }
     }
 
-    // validateDateApplied() {
-    //     const dateApplied = this.state.date_applied.trim()
-    //     if(dateApplied.length === 0) {
-    //         return 'A date applied must be a valid date'
-    //     }
-    // }
-
     validateContactName() {
         const contactName = this.state.contact_name.trim()
         if(contactName.length === 0) {
@@ -212,13 +205,6 @@ class AppForm extends Component {
             return 'A contact phone must be a valid phone number'
         }
     }
-
-    // validateInterviewDate() {
-    //     const interviewDate = this.state.interview_date.trim()
-    //     if(interviewDate === 0) {
-    //         return 'An interview date must be a valid date'
-    //     }
-    // }
 
     validateStatus() {
         const status = this.state.status.trim()

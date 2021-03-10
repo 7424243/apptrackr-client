@@ -13,13 +13,15 @@ class LoginForm extends Component {
     state = {
         user_name: '',
         password: '',
-        error: null
+        error: null,
+        loading: false
     }
 
     static contextType = ApptrackrContext
 
     handleSubmitJwtAuth = e => {
         e.preventDefault()
+        this.setState({loading: true})
         fetch(`${config.API_ENDPOINT}/auth/login`, {
             method: 'POST',
             headers: {
@@ -36,9 +38,11 @@ class LoginForm extends Component {
             .then(res => {
                 TokenService.saveAuthToken(res.authToken)
                 this.context.onLoginSuccess()
+                this.setState({loading: false})
                 this.props.history.push('/jobapps')
             })
             .catch(err => {
+                this.setState({loading: false})
                 this.setState({error: err.error})
                 console.error({err})
             })
@@ -67,6 +71,7 @@ class LoginForm extends Component {
     }
 
     render() {
+        const {loading} = this.state
         return (
             <div className='login_container'>
                 <form 
@@ -100,6 +105,7 @@ class LoginForm extends Component {
                         {this.state.password && <ValidationError message={this.validatePassword()}/>}
                     </section>
                     <RecButton type='submit'>Login</RecButton>
+                    {loading ? <div class="lds-ripple"><div></div><div></div></div> : null}
                     <Link to='/signup' className='login_link'>
                         <RecButton>Sign Up</RecButton>
                     </Link>

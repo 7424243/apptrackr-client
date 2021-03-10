@@ -15,12 +15,13 @@ exports[`LoginForm Component renders the UI as expected 1`] = `
       * Required
     </p>
     <section
-      className="login_input"
+      className="login_section"
     >
       *
       <input
         aria-label="login username"
         autoComplete="on"
+        className="login_input"
         onChange={[Function]}
         placeholder="username"
         required={true}
@@ -29,12 +30,13 @@ exports[`LoginForm Component renders the UI as expected 1`] = `
       
     </section>
     <section
-      className="login_input"
+      className="login_section"
     >
       *
       <input
         aria-label="login password"
         autoComplete="on"
+        className="login_input"
         onChange={[Function]}
         placeholder="password"
         required={true}

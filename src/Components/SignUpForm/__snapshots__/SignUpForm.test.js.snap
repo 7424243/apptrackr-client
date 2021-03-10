@@ -15,12 +15,13 @@ exports[`SignUpForm Component renders the UI as expected 1`] = `
       * Required
     </p>
     <section
-      className="signup_input"
+      className="signup_section"
     >
       *
       <input
         aria-label="signup full name"
         autoComplete="off"
+        className="signup_input"
         onChange={[Function]}
         placeholder="Full Name"
         required={true}
@@ -29,12 +30,13 @@ exports[`SignUpForm Component renders the UI as expected 1`] = `
       
     </section>
     <section
-      className="signup_input"
+      className="signup_section"
     >
       *
       <input
         aria-label="signup username"
         autoComplete="off"
+        className="signup_input"
         onChange={[Function]}
         placeholder="Username"
         required={true}
@@ -43,12 +45,13 @@ exports[`SignUpForm Component renders the UI as expected 1`] = `
       
     </section>
     <section
-      className="signup_input"
+      className="signup_section"
     >
       *
       <input
         aria-label="signup password"
         autoComplete="off"
+        className="signup_input"
         onChange={[Function]}
         placeholder="Password"
         required={true}

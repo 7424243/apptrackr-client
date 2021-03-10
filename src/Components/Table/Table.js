@@ -82,18 +82,21 @@ class Table extends Component {
         })
 
         return (
-            <table>
+            <div className='container'>
+            <table className='responsive-table'>
                 <thead>
                     <tr>
-                        <th>Job</th>
-                        <th>Company</th>
-                        <th>Date Applied</th>
-                        <th>Interview Date</th>
-                        <th className='last_th'>Status</th>
+                        <th scope='col'>Job</th>
+                        <th scope='col'>Company</th>
+                        <th scope='col'>Date Applied</th>
+                        <th scope='col'>Interview Date</th>
+                        <th scope='col' className='last_th'>Status</th>
                     </tr>
                 </thead>
                 {filter !== 'All' ? filteredItems : applicationItems}
             </table>
+            </div>
+
         )
     }
 }

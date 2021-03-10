@@ -132,7 +132,7 @@ class ResourcesList extends Component {
             <div>
                 <section className='resources_section1'>
                     <div className='resources_section1_content'>
-                        <h2>Job Boards</h2>
+                        <h2>Job Postings</h2>
                         <ul>
                             {jobResourceItems}
                         </ul>

@@ -3,7 +3,9 @@
 exports[`TableItem Component renders the UI as expected 1`] = `
 <tbody>
   <tr>
-    <td>
+    <td
+      data-title="Job"
+    >
       <a
         href="/jobapps/1"
         onClick={[Function]}
@@ -11,17 +13,24 @@ exports[`TableItem Component renders the UI as expected 1`] = `
         test
       </a>
     </td>
-    <td>
+    <td
+      data-title="Company"
+    >
       test
     </td>
-    <td>
+    <td
+      data-title="Date Applied"
+    >
       03/08/2021
     </td>
-    <td>
+    <td
+      data-title="Interview Date"
+    >
       03/08/2021
     </td>
     <td
       className="last_td"
+      data-title="Status"
     >
       test
     </td>

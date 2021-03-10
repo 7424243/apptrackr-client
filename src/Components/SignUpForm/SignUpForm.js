@@ -13,13 +13,15 @@ class SignUpForm extends Component {
         full_name: '',
         user_name: '',
         password: '',
-        error: null
+        error: null,
+        loading: false
     }
 
     static contextType = ApptrackrContext
 
     handleSubmit = e => {
         e.preventDefault()
+        this.setState({loading: true})
         fetch(`${config.API_ENDPOINT}/users/`, {
             method: 'POST',
             headers: {
@@ -53,17 +55,23 @@ class SignUpForm extends Component {
                     .then(res => {
                         TokenService.saveAuthToken(res.authToken)
                         this.context.onLoginSuccess()
+                        this.setState({loading: false})
                         this.props.history.push('/jobapps')
                     })
                     .catch(err => {
+                        this.setState({loading: false})
                         this.setState({error: err.error})
                         console.error({err})
                     })
             })
             .catch(err => {
+                this.setState({loading: false})
                 this.setState({error: err.error.message})
                 console.error({err})
             })
+        setTimeout(() => {
+            this.setState({loading: false})
+        }, 2000)
     }
 
     handleAddFullName = e => {
@@ -100,6 +108,7 @@ class SignUpForm extends Component {
     }
 
     render() {
+        const {loading} = this.state
         return (
             <div className='signup_container'>
                 
@@ -152,6 +161,7 @@ class SignUpForm extends Component {
                             {this.state.password && <ValidationError message={this.validatePassword()}/>}                  
                         </section>
                             <RecButton type='submit'>Sign Up</RecButton>
+                            {loading ? <div class="lds-ripple"><div></div><div></div></div> : null}
                     </form>
                     {this.state.error && <p className='signup_error'>{this.state.error}</p>}
                 
