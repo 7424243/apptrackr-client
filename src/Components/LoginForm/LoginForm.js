@@ -78,7 +78,7 @@ class LoginForm extends Component {
                     className='login_form'
                     onSubmit={this.handleSubmitJwtAuth}
                 >
-                    <h2>Login Form</h2>
+                    <h2>Login</h2>
                     <p>* Required</p>
                     <section className='login_section'>*
                         <input 

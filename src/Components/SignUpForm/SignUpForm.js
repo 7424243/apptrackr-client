@@ -116,7 +116,7 @@ class SignUpForm extends Component {
                         className='signup_form'
                         onSubmit={this.handleSubmit}
                     >
-                        <h2>Sign Up Form</h2>
+                        <h2>Sign Up</h2>
                         <p>* Required</p>
                         <section className='signup_section'>* 
                             <input 
