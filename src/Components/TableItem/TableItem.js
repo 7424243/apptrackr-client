@@ -9,7 +9,7 @@ function TableItem(props) {
     return (
         <tbody>
             <tr>
-                <td data-title='Job'><Link to={`/jobapps/${props.id}`}>{props.job}</Link></td>
+                <td data-title='Job' className='job'><Link to={`/jobapps/${props.id}`}>{props.job}</Link></td>
                 <td data-title='Company'>{props.company}</td>
                 <td data-title='Date Applied'>{props.dateApplied ? format(new Date(props.dateApplied), 'MM/dd/yyy') : null}</td>
                 <td data-title='Interview Date'>{props.interviewDate ? format(new Date(props.interviewDate), 'MM/dd/yyyy') : null}</td>

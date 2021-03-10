@@ -8,3 +8,8 @@ td {
 .last_td {
     border-right: none;
 }
+
+.job {
+    font-size: medium;
+    font-weight: bold;
+}

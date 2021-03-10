@@ -4,6 +4,7 @@ exports[`TableItem Component renders the UI as expected 1`] = `
 <tbody>
   <tr>
     <td
+      className="job"
       data-title="Job"
     >
       <a

@@ -77,6 +77,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
             <input
               className="appform_input"
               disabled={false}
+              name="date applied"
               onBlur={[Function]}
               onChange={[Function]}
               onClick={[Function]}

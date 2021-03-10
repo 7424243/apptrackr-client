@@ -281,6 +281,8 @@ class AppForm extends Component {
                                     className='appform_input'
                                     placeholderText='Select Date Applied'
                                     dateFormat='MM/dd/yyyy'
+                                    aria-label='date applied'
+                                    name='date applied'
                                     // locale='en'
                                     selected={this.state.date_applied}
                                     onChange={this.handleDateApplied}

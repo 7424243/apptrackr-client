@@ -114,6 +114,11 @@ Array [
         </thead>
       </table>
     </div>
+    <p
+      className="no_applications"
+    >
+      Add a new job application to get started!
+    </p>
   </section>,
 ]
 `;
