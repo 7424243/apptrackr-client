@@ -68,6 +68,12 @@ exports[`AppForm Component renders the UI as expected 1`] = `
       <section
         className="appform_section"
       >
+        <label
+          className="appform_date"
+          htmlFor="date applied"
+        >
+          Date Applied
+        </label>
         <div
           className="react-datepicker-wrapper"
         >
@@ -77,7 +83,7 @@ exports[`AppForm Component renders the UI as expected 1`] = `
             <input
               className="appform_input"
               disabled={false}
-              name="date applied"
+              name="date_applied"
               onBlur={[Function]}
               onChange={[Function]}
               onClick={[Function]}

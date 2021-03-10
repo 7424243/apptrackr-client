@@ -82,7 +82,7 @@ class Table extends Component {
         })
 
         return (
-            <div className='container'>
+<div className='container'>
             <table className='responsive-table'>
                 <thead>
                     <tr>
@@ -106,3 +106,4 @@ export default Table
 Table.propTypes = {
     filter: PropTypes.string
 }
+

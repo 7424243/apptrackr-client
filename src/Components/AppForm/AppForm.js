@@ -277,13 +277,12 @@ class AppForm extends Component {
                                 {this.state.website_url && <ValidationError message={this.validateWebsiteUrl()}/>} 
                             </section>
                             <section className='appform_section'>
+                                <label htmlFor='date applied' className='appform_date'>Date Applied</label>
                                 <DatePicker
                                     className='appform_input'
                                     placeholderText='Select Date Applied'
                                     dateFormat='MM/dd/yyyy'
-                                    aria-label='date applied'
-                                    name='date applied'
-                                    // locale='en'
+                                    name='date_applied'
                                     selected={this.state.date_applied}
                                     onChange={this.handleDateApplied}
                                 />
@@ -329,7 +328,6 @@ class AppForm extends Component {
                                     className='appform_input'
                                     placeholderText='Select Interview Date'
                                     dateFormat='MM/dd/yyyy'
-                                    // locale='en'
                                     selected={this.state.interview_date}
                                     onChange={this.handleInterviewDate}
                                 />

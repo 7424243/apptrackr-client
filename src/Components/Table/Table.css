@@ -1,84 +1,60 @@
-
-
 table {
-    margin-left: auto;
-    margin-right: auto;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 th {
-    text-align: left;
-    border-bottom: 1px solid black;
-    padding: 3px;
-    border-right: 1px solid black;
+  text-align: left;
+  border-bottom: 1px solid black;
+  padding: 3px;
+  border-right: 1px solid black;
 }
 
 .last_th {
-    border-right: none;
+  border-right: none;
 }
 
-
-
-
-/* @media
-only screen and (min-width: 625px) {
-table {
-    margin-left: auto;
-    margin-right: auto;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+.container {
+  width: 100%;
 }
 
-th {
-    text-align: left;
-    border-bottom: 1px solid black;
-    padding: 3px;
-    border-right: 1px solid black;
-}
-
-.last_th {
-    border-right: none;
-}
-} */
 @media only screen and (max-width: 625px) {
 
-    td {
-        border-right: none;
+  td {
+      border-right: none;
+  }
+
+  table, thead, tbody, th, td, tr {
+      display: block;
     }
-
-    table, thead, tbody, th, td, tr {
-        display: block;
-      }
-      thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-      }
-      tr { border: 1px solid #ccc; }
-      td {
-        border: none;
-        /* border-bottom: 1px solid #eee; */
-        position: relative;
-        padding-left: 50px;
-        margin-left: 125px;
-        overflow-wrap: normal;
-      }
-      td:before {
-        position: absolute;
-        top: 12px;
-        left: 6px;
-        width: 200px;
-        padding-right: 40px;
-        white-space: nowrap;
-        margin-left: -125px;
-      }
-      td:nth-of-type(1):before { content: "Job:"; }
-      td:nth-of-type(2):before { content: "Company:"; }
-      td:nth-of-type(3):before { content: "Date Applied:"; }
-      td:nth-of-type(4):before { content: "Interview Date:";}
-      td:nth-of-type(5):before { content: "Status:";}
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    tr { border: 1px solid #ccc; }
+    td {
+      border: none;
+      position: relative;
+      padding-left: 50px;
+      margin-left: 125px;
+      overflow-wrap: normal;
+    }
+    td:before {
+      position: absolute;
+      top: 12px;
+      left: 6px;
+      width: 200px;
+      padding-right: 40px;
+      white-space: nowrap;
+      margin-left: -125px;
+    }
+    td:nth-of-type(1):before { content: "Job:"; }
+    td:nth-of-type(2):before { content: "Company:"; }
+    td:nth-of-type(3):before { content: "Date Applied:"; }
+    td:nth-of-type(4):before { content: "Interview Date:";}
+    td:nth-of-type(5):before { content: "Status:";}
 }
-

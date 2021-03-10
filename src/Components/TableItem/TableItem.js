@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 function TableItem(props) {
 
     return (
-        <tbody>
+<tbody>
             <tr>
                 <td data-title='Job' className='job'><Link to={`/jobapps/${props.id}`}>{props.job}</Link></td>
                 <td data-title='Company'>{props.company}</td>
@@ -17,6 +17,7 @@ function TableItem(props) {
             </tr>
         </tbody>
     )
+    
 }
 
 export default TableItem
@@ -29,3 +30,4 @@ TableItem.propTypes = {
     interviewDate: PropTypes.string,
     status: PropTypes.string.isRequired
 }
+
