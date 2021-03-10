@@ -68,12 +68,6 @@ exports[`AppForm Component renders the UI as expected 1`] = `
       <section
         className="appform_section"
       >
-        <label
-          className="appform_date"
-          htmlFor="date applied"
-        >
-          Date Applied
-        </label>
         <div
           className="react-datepicker-wrapper"
         >
