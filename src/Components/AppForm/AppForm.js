@@ -277,7 +277,6 @@ class AppForm extends Component {
                                 {this.state.website_url && <ValidationError message={this.validateWebsiteUrl()}/>} 
                             </section>
                             <section className='appform_section'>
-                                <label htmlFor='date applied' className='appform_date'>Date Applied</label>
                                 <DatePicker
                                     className='appform_input'
                                     placeholderText='Select Date Applied'
