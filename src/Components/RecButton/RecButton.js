@@ -3,7 +3,6 @@ import './RecButton.css'
 import PropTypes from 'prop-types'
 
 function RecButton(props) {
-
      return (
          <div className='recbutton_content'>
             <button className='recbutton' {...props}></button>

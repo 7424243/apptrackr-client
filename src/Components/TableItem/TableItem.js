@@ -1,13 +1,12 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import { format } from 'date-fns'
-import './TableItem.css'
 import PropTypes from 'prop-types'
+import './TableItem.css'
 
 function TableItem(props) {
-
     return (
-<tbody>
+        <tbody>
             <tr>
                 <td data-title='Job' className='job'><Link to={`/jobapps/${props.id}`}>{props.job}</Link></td>
                 <td data-title='Company'>{props.company}</td>

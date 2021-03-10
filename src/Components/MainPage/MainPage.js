@@ -2,13 +2,14 @@ import React, {Component} from 'react'
 import SquareButton from '../SquareButton/SquareButton'
 import {Link} from 'react-router-dom'
 import Table from '../Table/Table'
-import './MainPage.css'
 import TokenService from '../../services/token-service'
 import ApptrackrContext from '../../ApptrackrContext'
+import './MainPage.css'
 
 class MainPage extends Component {
 
     state = {
+        //default filter to All
         filter: 'All'
     }
 
@@ -53,7 +54,6 @@ class MainPage extends Component {
                                 </div>
                         </div>
                     </section>
-    
                 </div>
                 <section className='section3'>
                     <Table filter={this.state.filter}/>  
@@ -62,8 +62,6 @@ class MainPage extends Component {
             </>
         )
     }
-
-    
 }
 
 export default MainPage

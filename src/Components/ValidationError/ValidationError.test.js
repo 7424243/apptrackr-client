@@ -19,4 +19,5 @@ describe('ValidationError Component', () => {
             .toJSON()
         expect(tree).toMatchSnapshot()
     })
+    
 })

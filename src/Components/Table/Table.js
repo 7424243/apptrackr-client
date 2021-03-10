@@ -66,6 +66,7 @@ class Table extends Component {
                 />
             )
         })
+        //based on Status on application
         const filteredApplications = alphabetizedApplications.filter(application => application.status === filter)
         const filteredItems = filteredApplications.map(application => {
             return (
@@ -82,21 +83,20 @@ class Table extends Component {
         })
 
         return (
-<div className='container'>
-            <table className='responsive-table'>
-                <thead>
-                    <tr>
-                        <th scope='col'>Job</th>
-                        <th scope='col'>Company</th>
-                        <th scope='col'>Date Applied</th>
-                        <th scope='col'>Interview Date</th>
-                        <th scope='col' className='last_th'>Status</th>
-                    </tr>
-                </thead>
-                {filter !== 'All' ? filteredItems : applicationItems}
-            </table>
+            <div className='container'>
+                <table className='responsive-table'>
+                    <thead>
+                        <tr>
+                            <th scope='col'>Job</th>
+                            <th scope='col'>Company</th>
+                            <th scope='col'>Date Applied</th>
+                            <th scope='col'>Interview Date</th>
+                            <th scope='col' className='last_th'>Status</th>
+                        </tr>
+                    </thead>
+                    {filter !== 'All' ? filteredItems : applicationItems}
+                </table>
             </div>
-
         )
     }
 }

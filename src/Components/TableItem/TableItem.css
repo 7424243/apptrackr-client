@@ -5,6 +5,8 @@ td {
     padding: 7px;
 }
 
+/* Classes */
+
 .last_td {
     border-right: none;
 }

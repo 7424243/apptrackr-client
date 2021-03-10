@@ -111,7 +111,6 @@ class SignUpForm extends Component {
         const {loading} = this.state
         return (
             <div className='signup_container'>
-                
                     <form 
                         className='signup_form'
                         onSubmit={this.handleSubmit}
@@ -160,12 +159,10 @@ class SignUpForm extends Component {
                             <p className='password_reqs'>* at least 1 special character</p>     
                             {this.state.password && <ValidationError message={this.validatePassword()}/>}                  
                         </section>
-                            <RecButton type='submit'>Sign Up</RecButton>
-                            {loading ? <div className="lds-ripple"><div></div><div></div></div> : null}
+                        <RecButton type='submit'>Sign Up</RecButton>
+                        {loading ? <div className="lds-ripple"><div></div><div></div></div> : null}
                     </form>
                     {this.state.error && <p className='signup_error'>{this.state.error}</p>}
-                
-                
             </div>
         )
     }

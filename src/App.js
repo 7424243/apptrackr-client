@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Route, Switch } from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import ApptrackrContext from './ApptrackrContext'
 import AppDetails from './Components/AppDetails/AppDetails'
 import AppForm from './Components/AppForm/AppForm'
@@ -58,6 +58,7 @@ class App extends Component {
     let clonedResources = [...this.state.resources]
     if(resourceIndex !== -1) {
       clonedResources.splice(resourceIndex, 1)
+      //use the clonedResources in order to trigger the re-render
       this.setState({resources: clonedResources})
     }
   }
@@ -67,6 +68,7 @@ class App extends Component {
       (application.id === updatedApplication.id))
       const clonedApplications = [...this.state.applications]
       clonedApplications[applicationIndex] = updatedApplication
+      //use the clonedApplications in order to trigger the re-render
       this.setState({applications: clonedApplications})
   }
 
@@ -75,6 +77,7 @@ class App extends Component {
   }
 
   render() {
+
     const contextValue = {
       applications: this.state.applications,
       resources: this.state.resources,
@@ -88,62 +91,61 @@ class App extends Component {
       getUserResources: this.getUserResources,onLoginSuccess: this.onLoginSuccess,
       updateApplication: this.handleUpdateApplication,
     }
+
     return (
       <div className='App'>
-      <div >
-        <ErrorBoundary>
-          <Header/>
-        </ErrorBoundary>
-        <ApptrackrContext.Provider value={contextValue}>
+        <div>
           <ErrorBoundary>
-            <Switch>
-              <Route 
-                exact
-                path={'/'}
-                component={LandingPage}
-              />
-              <Route 
-                path={'/login'}
-                component={LoginForm}
-              />
-              <Route
-                path={'/signup'}
-                component={SignUpForm}
-              />
-              <Route
-                exact
-                path={'/jobapps'}
-                component={MainPage}
-              />
-              <Route
-                path={'/newapp'}
-                component={AppForm}
-              />
-              <Route
-                path={'/jobapps/:id'}
-                component={AppDetails}
-              />
-              <Route
-                path={'/edit/:id'}
-                component={AppForm}
-              />
-              <Route
-                path={'/resources'}
-                component={ResourcesList}
-              />
-              <Route
-                path={'/newresource'}
-                component={NewResourceForm}
-              />
-            </Switch>
+            <Header/>
           </ErrorBoundary>
-        </ApptrackrContext.Provider>
-        
-      </div>
-      <div className='footer'>
-        <footer >© 2021, by Samantha Sheets</footer>
-      </div>
-      
+          <ApptrackrContext.Provider value={contextValue}>
+            <ErrorBoundary>
+              <Switch>
+                <Route 
+                  exact
+                  path={'/'}
+                  component={LandingPage}
+                />
+                <Route 
+                  path={'/login'}
+                  component={LoginForm}
+                />
+                <Route
+                  path={'/signup'}
+                  component={SignUpForm}
+                />
+                <Route
+                  exact
+                  path={'/jobapps'}
+                  component={MainPage}
+                />
+                <Route
+                  path={'/newapp'}
+                  component={AppForm}
+                />
+                <Route
+                  path={'/jobapps/:id'}
+                  component={AppDetails}
+                />
+                <Route
+                  path={'/edit/:id'}
+                  component={AppForm}
+                />
+                <Route
+                  path={'/resources'}
+                  component={ResourcesList}
+                />
+                <Route
+                  path={'/newresource'}
+                  component={NewResourceForm}
+                />
+              </Switch>
+            </ErrorBoundary>
+          </ApptrackrContext.Provider>
+        </div>
+        <div className='footer'>
+          <footer >© 2021, by Samantha Sheets</footer>
+        </div>
       </div>
     )
   }

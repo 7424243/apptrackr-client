@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
 import ApptrackrContext from '../../ApptrackrContext'
 import RecButton from '../RecButton/RecButton'
-import './LoginForm.css'
 import config from '../../config'
 import TokenService from '../../services/token-service'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import ValidationError from '../ValidationError/ValidationError'
 import PropTypes from 'prop-types'
+import './LoginForm.css'
 
 class LoginForm extends Component {
 

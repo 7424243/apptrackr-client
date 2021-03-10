@@ -4,8 +4,6 @@ import ApptrackrContext from '../../ApptrackrContext'
 import TokenService from '../../services/token-service'
 import './NavBar.css'
 
-//NavLink = activeStyle attribute
-
 class NavBar extends Component {
 
     state = {

@@ -46,6 +46,7 @@ class ResourcesList extends Component {
     }
 
     handleClickDelete(id) {
+        //confirm to delete
         confirmAlert({
             title: 'Confirm to Delete',
             message: 'Are you sure you want to delete this?',
@@ -79,8 +80,6 @@ class ResourcesList extends Component {
                     label: 'No',
                     onClick: () => this.props.history.push('/resources')
                 }
-                
-
             ]
         })
     }
@@ -110,9 +109,7 @@ class ResourcesList extends Component {
                     <div className='resource_delete'>
                         <RecButton type='button' onClick={() => this.handleClickDelete(resource.id)}>Delete</RecButton>
                     </div>
-                    
                 </div>
-
             )
         })
         const otherResourceItems = otherResources.map(resource => {
@@ -125,7 +122,6 @@ class ResourcesList extends Component {
                     />
                     <RecButton type='button' onClick={() => this.handleClickDelete(resource.id)}>Delete</RecButton>
                 </div>
-
             )
         })
         return (

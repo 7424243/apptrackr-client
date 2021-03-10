@@ -7,6 +7,16 @@ body, html {
     margin: 0;
 }
 
+/* Classes */
+
+.App {
+    position: relative;
+    padding-bottom: 60px;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    color: #686d76;
+}
+
 .footer {
     position: absolute;
     bottom:0;
@@ -17,11 +27,5 @@ body, html {
     color: #686d76;
 }
 
-.App {
-    position: relative;
-    padding-bottom: 60px;
-    min-height: 100vh;
-    font-family: 'Open Sans', sans-serif;
-    color: #686d76;
-}
+
 

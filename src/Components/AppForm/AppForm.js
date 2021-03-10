@@ -34,6 +34,7 @@ class AppForm extends Component {
         const {user_id} = this.context
         this.setState({user_id})
         const applicationId = this.props.match.params.id
+        //if applicationId is obtained, set up component for Edit
         if(applicationId) {
             fetch(`${config.API_ENDPOINT}/applications/${applicationId}`, {
                 method: 'GET',
@@ -221,13 +222,11 @@ class AppForm extends Component {
     }
 
     render() {
-
         const applicationId = parseInt(this.props.match.params.id)
         const {applications} = this.context
         const getApp = (applications, applicationId) => 
             applications.find(application => application.id === applicationId)
         const appDetails = getApp(applications, applicationId)
-
         return (
             <div className='appform_container'>
                 <h2 className='appform_header'>{appDetails ? 'Edit Job Application' : 'New Job Application'}</h2>
@@ -355,7 +354,6 @@ class AppForm extends Component {
                             </section>
                             <RecButton type='submit'>Save</RecButton>
                         </div>
-                        
                     </form>
                 </ErrorBoundary>
             </div>

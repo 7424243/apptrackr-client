@@ -1,3 +1,5 @@
+/* Classes */
+
 .resourceform_container {
     display: flex;
     flex-direction: column;
@@ -12,12 +14,6 @@
     padding-bottom: 40px;
 }
 
-.resourceform_input {
-    margin-bottom: 20px;
-    font-size: large;
-    border-style: solid;
-}
-
 .resourceform_header {
     max-width: 100%;
     text-align: left;
@@ -25,11 +21,22 @@
     padding-top: 20px;
 }
 
+.resourceform_input {
+    margin-bottom: 20px;
+    font-size: large;
+    border-style: solid;
+}
+
+/* Media Query */
+
 @media only screen and (min-width: 650px) {
-    .resourceform_header {
-        text-align: center;
-    }
+
     .resourceform_form {
         margin: 0 auto;
     }
+
+    .resourceform_header {
+        text-align: center;
+    }
+
 }

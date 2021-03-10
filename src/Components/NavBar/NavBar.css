@@ -20,10 +20,14 @@ nav {
     color: #686d76;
 }
 
+/* Media Query */
+
 @media screen and (min-width: 600px) {
+
     nav {
         margin-right: 15px;
         margin-top: 20px;
     }
+    
 }
 

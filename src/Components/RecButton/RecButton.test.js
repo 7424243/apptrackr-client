@@ -22,4 +22,5 @@ describe('RecButton Component', () => {
             .toJSON()
         expect(tree).toMatchSnapshot()
     })
+    
 })

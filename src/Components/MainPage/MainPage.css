@@ -1,3 +1,15 @@
+/* Classes */
+
+.filter {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: large;
+}
+
+.main_header, .no_applications {
+    text-align: center;
+}
+
 .section1 {
     text-align: center;
 }
@@ -10,19 +22,8 @@
 }
 
 .section2_content {
-    /* display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; */
-    /* margin-left: 40%;
-    margin-right: 40%; */
     padding: 15px;
     text-align: center;
-}
-
-.filter {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: large;
 }
 
 .section3 {
@@ -30,13 +31,11 @@
     margin-right: 20px;
 }
 
-.main_header, .no_applications {
-    text-align: center;
-}
-
 .quote {
     font-size: large;
 }
+
+/* ids */
 
 #filter {
     border-style: solid;

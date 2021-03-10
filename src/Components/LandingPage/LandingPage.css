@@ -1,9 +1,14 @@
 /* Classes */
 
-.landing_section1_content {
+.landing {
+    margin: auto;
+    width: 70%;
+}
 
-    text-align: center;
-    width: 100%;
+.landing_login {
+    text-decoration: none;
+    color: #e27802;
+    font-weight: bold;
 }
 
 .landing_section1 {
@@ -16,19 +21,17 @@
     margin-top: 50px;
     font-size: larger;
 }
-.landing {
-    margin: auto;
-    width: 70%;
+
+.landing_section1_content {
+
+    text-align: center;
+    width: 100%;
 }
 
 .landing_table {
     margin: 15px;
 }
 
-.landing_login {
-  text-decoration: none;
-  color: #e27802;
-  font-weight: bold;
-}
+
 
 

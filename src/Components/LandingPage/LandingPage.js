@@ -60,7 +60,6 @@ function LandingPage() {
                     </tbody>
                 </table>
             </div>
-            
         </>
     )
 }

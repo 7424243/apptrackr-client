@@ -13,6 +13,8 @@ th {
   border-right: 1px solid black;
 }
 
+/* Classes */
+
 .last_th {
   border-right: none;
 }
@@ -21,40 +23,47 @@ th {
   width: 100%;
 }
 
+/* Media Query */
+
 @media only screen and (max-width: 625px) {
 
-  td {
-      border-right: none;
+  table, thead, tbody, th, td, tr {
+    display: block;
   }
 
-  table, thead, tbody, th, td, tr {
-      display: block;
-    }
-    thead tr {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-    }
-    tr { border: 1px solid #ccc; }
-    td {
-      border: none;
-      position: relative;
-      padding-left: 50px;
-      margin-left: 125px;
-      overflow-wrap: normal;
-    }
-    td:before {
-      position: absolute;
-      top: 12px;
-      left: 6px;
-      width: 200px;
-      padding-right: 40px;
-      white-space: nowrap;
-      margin-left: -125px;
-    }
-    td:nth-of-type(1):before { content: "Job:"; }
-    td:nth-of-type(2):before { content: "Company:"; }
-    td:nth-of-type(3):before { content: "Date Applied:"; }
-    td:nth-of-type(4):before { content: "Interview Date:";}
-    td:nth-of-type(5):before { content: "Status:";}
+  td {
+    border: none;
+    border-right: none;
+    position: relative;
+    padding-left: 50px;
+    margin-left: 125px;
+    overflow-wrap: normal;
+  }
+
+  td:before {
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    width: 200px;
+    padding-right: 40px;
+    white-space: nowrap;
+    margin-left: -125px;
+  }
+
+  td:nth-of-type(1):before { content: "Job:"; }
+  td:nth-of-type(2):before { content: "Company:"; }
+  td:nth-of-type(3):before { content: "Date Applied:"; }
+  td:nth-of-type(4):before { content: "Interview Date:";}
+  td:nth-of-type(5):before { content: "Status:";}
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr { 
+    border: 1px solid #ccc; 
+  }
+  
 }

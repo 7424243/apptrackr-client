@@ -64,12 +64,14 @@ exports[`NewResourceForm Component renders the UI as expected 1`] = `
         </option>
         <option
           aria-label="job resource"
+          name="type"
           value="Job Resource"
         >
           Job Resource
         </option>
         <option
           aria-label="other resource"
+          name="type"
           value="Other Resource"
         >
           Other Resource

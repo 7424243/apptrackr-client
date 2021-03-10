@@ -1,13 +1,11 @@
 import React from 'react'
-import './SquareButton.css'
 import PropTypes from 'prop-types'
+import './SquareButton.css'
 
 function SquareButton(props) {
     return (
         <div className='squarebutton_content'>
-
             <button className='squarebutton' {...props}></button>
-
         </div>
     )
 }

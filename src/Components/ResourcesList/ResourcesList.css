@@ -1,3 +1,18 @@
+hr {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+ul {
+    margin-bottom: 30px;
+}
+
+/* Classes */
+
+.resource_item {
+    margin-bottom: 20px;
+}
+
 .resources_section1, .resources_section2 {
     text-align: left;
 }
@@ -15,28 +30,21 @@
     padding: 15px;
 }
 
-.resource_item {
-    margin-bottom: 20px;
-}
-
-ul {
-    margin-bottom: 30px;
-}
-
-hr {
-    margin-left: 20px;
-    margin-right: 20px;
-}
+/* Media Query */
 
 @media only screen and (min-width: 650px) {
-    .resources_section1, .resources_section2 {
-        text-align: center;
-    }
+
     ul {
         list-style-position: inside
     }
+
     .resource_item {
         display: flex;
         justify-content: center;
     }
+    
+    .resources_section1, .resources_section2 {
+        text-align: center;
+    }
+
 }
