@@ -12,6 +12,9 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
         Job Postings
       </h2>
       <ul />
+      <p>
+        Add a resource to get started!
+      </p>
       <a
         aria-current={null}
         className="resource_add_button"
@@ -41,6 +44,9 @@ exports[`ResourcesList Component renders the UI as expected 1`] = `
         Resume & Other Resources
       </h2>
       <ul />
+      <p>
+        Add a resource to get started!
+      </p>
       <a
         aria-current={null}
         className="resource_add_button"
