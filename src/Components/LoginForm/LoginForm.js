@@ -105,7 +105,7 @@ class LoginForm extends Component {
                         {this.state.password && <ValidationError message={this.validatePassword()}/>}
                     </section>
                     <RecButton type='submit'>Login</RecButton>
-                    {loading ? <div class="lds-ripple"><div></div><div></div></div> : null}
+                    {loading ? <div className="lds-ripple"><div></div><div></div></div> : null}
                     <Link to='/signup' className='login_link'>
                         <RecButton>Sign Up</RecButton>
                     </Link>

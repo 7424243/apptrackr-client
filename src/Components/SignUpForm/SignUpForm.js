@@ -161,7 +161,7 @@ class SignUpForm extends Component {
                             {this.state.password && <ValidationError message={this.validatePassword()}/>}                  
                         </section>
                             <RecButton type='submit'>Sign Up</RecButton>
-                            {loading ? <div class="lds-ripple"><div></div><div></div></div> : null}
+                            {loading ? <div className="lds-ripple"><div></div><div></div></div> : null}
                     </form>
                     {this.state.error && <p className='signup_error'>{this.state.error}</p>}
                 
