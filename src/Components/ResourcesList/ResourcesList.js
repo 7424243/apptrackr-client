@@ -136,6 +136,7 @@ class ResourcesList extends Component {
                         <ul>
                             {jobResourceItems}
                         </ul>
+                        {resources.length === 0? <p>Add a resource to get started!</p> : null}
                         <NavLink to='/newresource' className='resource_add_button'><SquareButton >+</SquareButton></NavLink>
                     </div>
                 </section>
@@ -146,6 +147,7 @@ class ResourcesList extends Component {
                         <ul>
                             {otherResourceItems}
                         </ul>
+                        {resources.length === 0? <p>Add a resource to get started!</p> : null}
                         <NavLink to='/newresource'  className='resource_add_button'><SquareButton>+</SquareButton></NavLink>
                     </div>
                 </section>

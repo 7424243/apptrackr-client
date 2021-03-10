@@ -24,6 +24,7 @@ class MainPage extends Component {
     }
 
     render() {
+        const {applications} = this.context
         return (
             <>
                 <div className='main_container'>
@@ -56,6 +57,7 @@ class MainPage extends Component {
                 </div>
                 <section className='section3'>
                     <Table filter={this.state.filter}/>  
+                    {applications.length ===0 ? <p className='no_applications'>Add a new job application to get started!</p> : null}
                 </section>
             </>
         )
