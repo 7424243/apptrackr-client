@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# apptrackr app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+apptrackr is a responsive web application that allows users to keep track of their job applications and organize the process of a job search. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Live Demo
 
-In the project directory, you can run:
+Click [here](https://apptrackr-client.vercel.app/).
 
-### `npm start`
+## Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Login Page
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![login page image](assets/screenshots/login_page.png)
 
-### `npm test`
+### Sign Up Page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![sign up page image](assets/screenshots/signup_page.png)
 
-### `npm run build`
+### Main Page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![main page image](assets/screenshots/main_page.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Job Application Details Page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![job appliction details page image](assets/screenshots/application_details_page.png)
 
-### `npm run eject`
+### Add / Edit Job Application Page
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![add/edit job appliction page image](assets/screenshots/add_edit_application_page.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Resources Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![resources page image](assets/screenshots/resources_page.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Add Resource Page
 
-## Learn More
+![login page image](assets/screenshots/new_resource_page.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Summary
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This app allows users to easily keep track of their job applications. The app requires authentication so a user has to sign up for an account, or, if they would like to simply tour the app and get a feel for how it works, demo login credentials are provided in the Live Demo landing page. Once logged in, a user can see all of their previously saved job applications, filter the applications by status, add and/or edit a job application, and view details of a previously saved job application. A user can also save links to their favorite job boards and other resources within the 'Resources' page, which allows for a more streamlined and efficient job search.
 
-### Code Splitting
+## Built With
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* React
+* CSS
+* JavaScript
 
-### Analyzing the Bundle Size
+## Ideas for Future Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* Connect app with Gmail 
+* Ability to export data to Google Sheets
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
