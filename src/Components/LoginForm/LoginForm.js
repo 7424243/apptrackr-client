@@ -14,14 +14,14 @@ class LoginForm extends Component {
         user_name: '',
         password: '',
         error: null,
-        loading: false
+        isPageLoading: false
     }
 
     static contextType = ApptrackrContext
 
     handleSubmitJwtAuth = e => {
         e.preventDefault()
-        this.setState({loading: true})
+        this.setState({isPageLoading: true})
         fetch(`${config.API_ENDPOINT}/auth/login`, {
             method: 'POST',
             headers: {
@@ -38,11 +38,11 @@ class LoginForm extends Component {
             .then(res => {
                 TokenService.saveAuthToken(res.authToken)
                 this.context.onLoginSuccess()
-                this.setState({loading: false})
+                this.setState({isPageLoading: false})
                 this.props.history.push('/jobapps')
             })
             .catch(err => {
-                this.setState({loading: false})
+                this.setState({isPageLoading: false})
                 this.setState({error: err.error})
                 console.error({err})
             })
@@ -71,7 +71,7 @@ class LoginForm extends Component {
     }
 
     render() {
-        const {loading} = this.state
+        const {isPageLoading} = this.state
         return (
             <div className='login_container'>
                 <form 
@@ -105,7 +105,7 @@ class LoginForm extends Component {
                         {this.state.password && <ValidationError message={this.validatePassword()}/>}
                     </section>
                     <RecButton type='submit'>Login</RecButton>
-                    {loading ? <div className="lds-ripple"><div></div><div></div></div> : null}
+                    {isPageLoading ? <div className="lds-ripple"><div></div><div></div></div> : null}
                     <Link to='/signup' className='login_link'>
                         <RecButton>Sign Up</RecButton>
                     </Link>

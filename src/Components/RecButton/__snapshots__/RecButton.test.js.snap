@@ -6,7 +6,8 @@ exports[`RecButton Component renders the UI as expected 1`] = `
 >
   <button
     className="recbutton"
-    string="test"
+    onClick={[MockFunction]}
+    type="test"
   />
 </div>
 `;

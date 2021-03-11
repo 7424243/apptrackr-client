@@ -37,7 +37,7 @@ th {
     position: relative;
     padding-left: 50px;
     margin-left: 125px;
-    overflow-wrap: normal;
+    overflow-wrap: break-word;
   }
 
   td:before {

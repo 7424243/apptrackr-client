@@ -1,6 +1,6 @@
 import React from 'react'
-import './RecButton.css'
 import PropTypes from 'prop-types'
+import './RecButton.css'
 
 function RecButton(props) {
      return (
@@ -14,6 +14,7 @@ export default RecButton
 
 RecButton.propTypes = {
     type: PropTypes.string,
+    onClick: PropTypes.func
 }
 
 

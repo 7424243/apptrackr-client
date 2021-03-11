@@ -5,7 +5,8 @@ import RecButton from './RecButton'
 describe('RecButton Component', () => {
 
     const props = {
-        string: 'test'
+        type: 'test',
+        onClick: jest.fn()
     }
 
     //smoke test

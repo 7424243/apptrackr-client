@@ -9,10 +9,249 @@ exports[`AppForm Component renders the UI as expected 1`] = `
   >
     New Job Application
   </h2>
-  <h2
-    className="error-boundary-heading"
+  <form
+    className="appform_form"
+    onSubmit={[Function]}
   >
-    Something went wrong, unable to display at this time.
-  </h2>
+    <div
+      className="appform_left"
+    >
+      <p>
+        * Required
+      </p>
+      <section
+        className="appform_section"
+      >
+        *
+        <input
+          aria-label="job title"
+          className="appform_input"
+          defaultValue={null}
+          name="job"
+          onChange={[Function]}
+          placeholder="Job Title"
+          required={true}
+          type="text"
+        />
+        
+      </section>
+      <section
+        className="appform_section"
+      >
+        *
+        <input
+          aria-label="company name"
+          className="appform_input"
+          defaultValue={null}
+          name="company"
+          onChange={[Function]}
+          placeholder="Company Name"
+          required={true}
+          type="text"
+        />
+        
+      </section>
+      <section
+        className="appform_section"
+      >
+        <input
+          aria-label="website url"
+          className="appform_input"
+          defaultValue={null}
+          name="website"
+          onChange={[Function]}
+          placeholder="Website"
+          type="url"
+        />
+        
+      </section>
+      <section
+        className="appform_section"
+      >
+        <div
+          className="react-datepicker-wrapper"
+        >
+          <div
+            className="react-datepicker__input-container"
+          >
+            <input
+              className="appform_input"
+              disabled={false}
+              name="date_applied"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder="Select Date Applied"
+              readOnly={false}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        className="appform_section"
+      >
+        <input
+          aria-label="contact name"
+          className="appform_input"
+          defaultValue={null}
+          name="contact"
+          onChange={[Function]}
+          placeholder="Contact Name"
+          type="text"
+        />
+        
+      </section>
+      <section
+        className="appform_section"
+      >
+        <input
+          aria-label="contact email"
+          className="appform_input"
+          defaultValue={null}
+          name="contact_email"
+          onChange={[Function]}
+          placeholder="Contact Email"
+          type="text"
+        />
+        
+      </section>
+      <section
+        className="appform_section"
+      >
+        <input
+          aria-label="contact phone"
+          className="appform_input"
+          defaultValue={null}
+          name="contact_phone"
+          onChange={[Function]}
+          placeholder="Contact Phone"
+          type="text"
+        />
+        
+      </section>
+      <section
+        className="appform_section"
+      >
+        <div
+          className="react-datepicker-wrapper"
+        >
+          <div
+            className="react-datepicker__input-container"
+          >
+            <input
+              className="appform_input"
+              disabled={false}
+              name="interview_date"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder="Select Interview Date"
+              readOnly={false}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+    <div
+      className="appform_right"
+    >
+      <section
+        className="appform_section"
+      >
+        <label
+          htmlFor="status"
+        >
+          * Status: 
+        </label>
+        <select
+          className="appform_input"
+          defaultValue={null}
+          id="status"
+          onChange={[Function]}
+          required={true}
+        >
+          <option
+            aria-label="choose option"
+            name="status"
+            value=""
+          >
+            Choose here
+          </option>
+          <option
+            aria-label="interested"
+            name="status"
+            value="Interested"
+          >
+            Interested
+          </option>
+          <option
+            aria-label="applied"
+            name="status"
+            value="Applied"
+          >
+            Applied
+          </option>
+          <option
+            aria-label="closed"
+            name="status"
+            value="Closed"
+          >
+            Closed
+          </option>
+        </select>
+      </section>
+      <section
+        className="appform_section appform_textarea"
+      >
+        <textarea
+          aria-label="additional notes"
+          className="appform_textarea"
+          defaultValue={null}
+          name="notes"
+          onChange={[Function]}
+          placeholder="Additional Notes..."
+        />
+        
+      </section>
+      <div
+        className="appform_buttons"
+      >
+        <div
+          className="recbutton_content"
+        >
+          <button
+            className="recbutton"
+            type="submit"
+          >
+            Save
+          </button>
+        </div>
+        <a
+          aria-current={null}
+          className="appform_button"
+          href="/jobapps"
+          onClick={[Function]}
+        >
+          <div
+            className="recbutton_content"
+          >
+            <button
+              className="recbutton"
+            >
+              Back
+            </button>
+          </div>
+        </a>
+      </div>
+    </div>
+  </form>
 </div>
 `;

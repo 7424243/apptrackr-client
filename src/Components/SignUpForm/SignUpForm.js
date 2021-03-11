@@ -14,14 +14,14 @@ class SignUpForm extends Component {
         user_name: '',
         password: '',
         error: null,
-        loading: false
+        isPageLoading: false
     }
 
     static contextType = ApptrackrContext
 
     handleSubmit = e => {
         e.preventDefault()
-        this.setState({loading: true})
+        this.setState({isPageLoading: true})
         fetch(`${config.API_ENDPOINT}/users/`, {
             method: 'POST',
             headers: {
@@ -55,23 +55,20 @@ class SignUpForm extends Component {
                     .then(res => {
                         TokenService.saveAuthToken(res.authToken)
                         this.context.onLoginSuccess()
-                        this.setState({loading: false})
+                        this.setState({isPageLoading: false})
                         this.props.history.push('/jobapps')
                     })
                     .catch(err => {
-                        this.setState({loading: false})
+                        this.setState({isPageLoading: false})
                         this.setState({error: err.error})
                         console.error({err})
                     })
             })
             .catch(err => {
-                this.setState({loading: false})
+                this.setState({isPageLoading: false})
                 this.setState({error: err.error.message})
                 console.error({err})
             })
-        setTimeout(() => {
-            this.setState({loading: false})
-        }, 2000)
     }
 
     handleAddFullName = e => {
@@ -108,7 +105,7 @@ class SignUpForm extends Component {
     }
 
     render() {
-        const {loading} = this.state
+        const {isPageLoading} = this.state
         return (
             <div className='signup_container'>
                     <form 
@@ -160,7 +157,7 @@ class SignUpForm extends Component {
                             {this.state.password && <ValidationError message={this.validatePassword()}/>}                  
                         </section>
                         <RecButton type='submit'>Sign Up</RecButton>
-                        {loading ? <div className="lds-ripple"><div></div><div></div></div> : null}
+                        {isPageLoading ? <div className="lds-ripple"><div></div><div></div></div> : null}
                     </form>
                     {this.state.error && <p className='signup_error'>{this.state.error}</p>}
             </div>

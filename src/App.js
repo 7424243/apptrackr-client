@@ -77,7 +77,6 @@ class App extends Component {
   }
 
   render() {
-
     const contextValue = {
       applications: this.state.applications,
       resources: this.state.resources,

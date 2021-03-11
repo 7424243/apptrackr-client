@@ -7,6 +7,7 @@ a {
 
 .appdetails {
     margin-left: 20px;
+    margin-right: 20px;
     max-width: 100%;
     margin-bottom: 25px;
     text-align: left;
@@ -20,7 +21,7 @@ a {
 
 .appdetails_buttons {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-left: 20px;
 }
 
@@ -45,6 +46,12 @@ a {
 }
 
 /* Media Query */
+
+@media only screen and (min-width: 425px) {
+    .appdetails_buttons {
+        flex-direction: row;
+    }
+}
 
 @media only screen and (min-width: 700px) {
 

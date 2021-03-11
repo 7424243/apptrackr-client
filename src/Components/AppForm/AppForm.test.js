@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom'
 import renderer from 'react-test-renderer'
+import {BrowserRouter} from 'react-router-dom'
 import AppForm from './AppForm'
 
 describe('AppForm Component', () => {
@@ -18,14 +19,14 @@ describe('AppForm Component', () => {
     //smoke test
     it('renders without crashing', () => {
         const div = document.createElement('div')
-        ReactDOM.render(<AppForm {...props}/>, div)
+        ReactDOM.render(<BrowserRouter><AppForm {...props}/></BrowserRouter>, div)
         ReactDOM.unmountComponentAtNode(div)
     })
 
     //snapshot test
     it('renders the UI as expected', () => {
         const tree = renderer
-            .create(<AppForm {...props}/>)
+            .create(<BrowserRouter><AppForm {...props}/></BrowserRouter>)
             .toJSON()
         expect(tree).toMatchSnapshot()
     })

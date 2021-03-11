@@ -134,7 +134,6 @@ class NewResourceForm extends Component {
                                     <RecButton>Back</RecButton>
                             </NavLink>
                         </div>
-                        
                     </form>                    
                 </ErrorBoundary>
             </div>

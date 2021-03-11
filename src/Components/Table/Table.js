@@ -3,8 +3,8 @@ import ApptrackrContext from '../../ApptrackrContext'
 import TableItem from '../TableItem/TableItem'
 import config from '../../config'
 import TokenService from '../../services/token-service'
-import './Table.css'
 import PropTypes from 'prop-types'
+import './Table.css'
 
 class Table extends Component {
 
@@ -66,7 +66,7 @@ class Table extends Component {
                 />
             )
         })
-        //based on Status on application
+        //filter applications based on Status of application
         const filteredApplications = alphabetizedApplications.filter(application => application.status === filter)
         const filteredItems = filteredApplications.map(application => {
             return (

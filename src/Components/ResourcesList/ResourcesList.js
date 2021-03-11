@@ -1,15 +1,15 @@
 import React, {Component} from 'react'
 import ResourceItem from '../ResourceItem/ResourceItem'
 import SquareButton from '../SquareButton/SquareButton'
-import './ResourcesList.css'
 import ApptrackrContext from '../../ApptrackrContext'
 import TokenService from '../../services/token-service'
 import config from '../../config'
 import {NavLink} from 'react-router-dom'
-import { confirmAlert } from 'react-confirm-alert'
-import 'react-confirm-alert/src/react-confirm-alert.css'
+import {confirmAlert} from 'react-confirm-alert'
 import PropTypes from 'prop-types' 
 import RecButton from '../RecButton/RecButton'
+import 'react-confirm-alert/src/react-confirm-alert.css'
+import './ResourcesList.css'
 
 class ResourcesList extends Component {
 

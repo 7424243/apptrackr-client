@@ -35,7 +35,7 @@ class AppForm extends Component {
         const {user_id} = this.context
         this.setState({user_id})
         const applicationId = this.props.match.params.id
-        //if applicationId is obtained, set up component for Edit
+        //if applicationId is obtained, set up component for `Edit`
         if(applicationId) {
             fetch(`${config.API_ENDPOINT}/applications/${applicationId}`, {
                 method: 'GET',
@@ -359,7 +359,6 @@ class AppForm extends Component {
                                     <RecButton>Back</RecButton>
                                 </NavLink>
                             </div>
-
                         </div>
                     </form>
                 </ErrorBoundary>

@@ -13,13 +13,13 @@ describe('App Component', () => {
     ReactDOM.unmountComponentAtNode(div)
   })
 
-    //snapshot test
-    it('renders the UI as expected', () => {
-      const tree = renderer 
-        .create(<BrowserRouter><App/></BrowserRouter>)
-        .toJSON()
-      expect(tree).toMatchSnapshot()
-    })
+  //snapshot test
+  it('renders the UI as expected', () => {
+    const tree = renderer 
+      .create(<BrowserRouter><App/></BrowserRouter>)
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 
 })
 

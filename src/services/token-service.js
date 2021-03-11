@@ -1,5 +1,6 @@
 import config from '../config'
 
+//Authentication type: JWT
 const TokenService = {
     saveAuthToken(token) {
         window.sessionStorage.setItem(config.TOKEN_KEY, token)

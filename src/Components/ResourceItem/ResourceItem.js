@@ -1,6 +1,6 @@
 import React from 'react'
-import './ResourceItem.css'
 import PropTypes from 'prop-types'
+import './ResourceItem.css'
 
 function ResourceItem(props) {
     return (

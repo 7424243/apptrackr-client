@@ -43,15 +43,15 @@ class MainPage extends Component {
                             <Link to='/newapp' className='add'>
                                 <SquareButton>+</SquareButton> 
                             </Link>
-                                <div className='filter'>
-                                    <label htmlFor='filter'>Filter By: </label>
-                                    <select id='filter' onChange={this.addFilter}>
-                                        <option>All</option>
-                                        <option>Interested</option>
-                                        <option>Applied</option>
-                                        <option>Closed</option>
-                                    </select>
-                                </div>
+                            <div className='filter'>
+                                <label htmlFor='filter'>Filter By: </label>
+                                <select id='filter' onChange={this.addFilter}>
+                                    <option>All</option>
+                                    <option>Interested</option>
+                                    <option>Applied</option>
+                                    <option>Closed</option>
+                                </select>
+                            </div>
                         </div>
                     </section>
                 </div>
