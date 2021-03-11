@@ -47,6 +47,9 @@ exports[`App Component renders the UI as expected 1`] = `
             Save frequently utilized resources for convenient access
           </p>
           <p>
+            View a snapshot of the main page below
+          </p>
+          <p>
             <a
               aria-current={null}
               className="landing_login"
@@ -55,7 +58,7 @@ exports[`App Component renders the UI as expected 1`] = `
             >
               Login
             </a>
-             with a demo account to take a peak
+             with demo credentials to sample full functionality of the app
           </p>
           <p>
             Username: demo
@@ -99,8 +102,12 @@ exports[`App Component renders the UI as expected 1`] = `
             <td>
               Olive
             </td>
-            <td />
-            <td />
+            <td>
+              --
+            </td>
+            <td>
+              --
+            </td>
             <td
               className="last_td"
             >
@@ -137,7 +144,7 @@ exports[`App Component renders the UI as expected 1`] = `
               02/15/2021
             </td>
             <td>
-              03/01/2021
+              --
             </td>
             <td
               className="last_td"

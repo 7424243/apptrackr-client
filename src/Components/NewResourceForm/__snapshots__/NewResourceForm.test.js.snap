@@ -9,85 +9,10 @@ exports[`NewResourceForm Component renders the UI as expected 1`] = `
   >
     New Resource
   </h2>
-  <form
-    className="resourceform_form"
-    onSubmit={[Function]}
+  <h2
+    className="error-boundary-heading"
   >
-    <section
-      className="resourceform_section"
-    >
-      <input
-        aria-label="name"
-        className="resourceform_input"
-        name="resource name"
-        onChange={[Function]}
-        placeholder="Resource Name"
-        required={true}
-        type="text"
-      />
-      
-    </section>
-    <section
-      className="resourceform_section"
-    >
-      <input
-        aria-label="resource url"
-        className="resourceform_input"
-        name="url"
-        onChange={[Function]}
-        placeholder="Resource Link"
-        required={true}
-        type="url"
-      />
-      
-    </section>
-    <section
-      className="resourceform_section"
-    >
-      <label
-        htmlFor="type"
-      >
-        Type: 
-      </label>
-      <select
-        className="resourceform_input"
-        id="type"
-        onChange={[Function]}
-        required={true}
-      >
-        <option
-          aria-label="choose here"
-          name="type"
-          value=""
-        >
-          Choose here
-        </option>
-        <option
-          aria-label="job resource"
-          name="type"
-          value="Job Resource"
-        >
-          Job Resource
-        </option>
-        <option
-          aria-label="other resource"
-          name="type"
-          value="Other Resource"
-        >
-          Other Resource
-        </option>
-      </select>
-    </section>
-    <div
-      className="recbutton_content"
-    >
-      <button
-        className="recbutton"
-        type="submit"
-      >
-        Save
-      </button>
-    </div>
-  </form>
+    Something went wrong, unable to display at this time.
+  </h2>
 </div>
 `;

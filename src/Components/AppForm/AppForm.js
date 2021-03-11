@@ -326,6 +326,7 @@ class AppForm extends Component {
                                     className='appform_input'
                                     placeholderText='Select Interview Date'
                                     dateFormat='MM/dd/yyyy'
+                                    name='interview_date'
                                     selected={this.state.interview_date}
                                     onChange={this.handleInterviewDate}
                                 />
