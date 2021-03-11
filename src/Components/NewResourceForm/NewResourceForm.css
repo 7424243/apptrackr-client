@@ -1,5 +1,14 @@
 /* Classes */
 
+.resourceform_button {
+    margin-left: 20px;
+}
+
+.resourceform_buttons {
+    display: flex;
+    flex-direction: row;
+}
+
 .resourceform_container {
     display: flex;
     flex-direction: column;

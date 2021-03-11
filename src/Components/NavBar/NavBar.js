@@ -32,7 +32,7 @@ class NavBar extends Component {
         return (
             <nav>
                 {TokenService.hasAuthToken() ? <NavLink className='header_navlink' to='/jobapps'>Summary</NavLink> : null}
-                {TokenService.hasAuthToken() ? <NavLink className='header_navlink' to='resources'>Resources</NavLink> : null}
+                {TokenService.hasAuthToken() ? <NavLink className='header_navlink' to='/resources'>Resources</NavLink> : null}
                 {TokenService.hasAuthToken() ? this.logoutLink() : this.loginLink()}
             </nav>
         )

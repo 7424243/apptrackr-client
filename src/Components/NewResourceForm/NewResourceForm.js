@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {isWebUri} from 'valid-url'
+import {NavLink} from 'react-router-dom'
 import ApptrackrContext from '../../ApptrackrContext'
 import config from '../../config'
 import TokenService from '../../services/token-service'
@@ -127,7 +128,13 @@ class NewResourceForm extends Component {
                             </select>
                             {this.state.status && <ValidationError message={this.validateResourceStatus()}/>}
                         </section>
-                        <RecButton type='submit'>Save</RecButton>
+                        <div className='resourceform_buttons'>
+                            <RecButton type='submit'>Save</RecButton>
+                            <NavLink className='resourceform_button' to={'/resources'}>
+                                    <RecButton>Back</RecButton>
+                            </NavLink>
+                        </div>
+                        
                     </form>                    
                 </ErrorBoundary>
             </div>
