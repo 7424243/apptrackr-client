@@ -1,15 +1,16 @@
 import React, {Component} from 'react'
 import ApptrackrContext from '../../ApptrackrContext'
 import RecButton from '../RecButton/RecButton'
-import './AppForm.css'
+import {NavLink} from 'react-router-dom'
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary'
 import TokenService from '../../services/token-service'
 import {isWebUri} from 'valid-url'
 import config from '../../config'
 import ValidationError from '../ValidationError/ValidationError'
 import DatePicker from "react-datepicker"
-import "react-datepicker/dist/react-datepicker.css"
 import PropTypes from 'prop-types'
+import "react-datepicker/dist/react-datepicker.css"
+import './AppForm.css'
 
 class AppForm extends Component {
 
@@ -268,7 +269,7 @@ class AppForm extends Component {
                                     type='url'
                                     aria-label='website url'
                                     name='website' 
-                                    defaultValue={appDetails ? appDetails.website : null} 
+                                    defaultValue={appDetails ? appDetails.website_url : null} 
                                     placeholder='Website'
                                     onChange={this.handleWebsiteUrl}
                                 />
@@ -351,7 +352,13 @@ class AppForm extends Component {
                                 />
                                 {this.state.notes && <ValidationError message={this.validateNotes()}/>}
                             </section>
-                            <RecButton type='submit'>Save</RecButton>
+                            <div className='appform_buttons'>
+                                <RecButton type='submit'>Save</RecButton>
+                                <NavLink className='appform_button' to={appDetails ? `/jobapps/${appDetails.id}` : `/jobapps`}>
+                                    <RecButton>Back</RecButton>
+                                </NavLink>
+                            </div>
+
                         </div>
                     </form>
                 </ErrorBoundary>
