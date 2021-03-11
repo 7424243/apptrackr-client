@@ -32,8 +32,8 @@ function LandingPage() {
                         <tr>
                             <td>{'Full Stack Software Engineer'}</td>
                             <td>{'Olive'}</td>
-                            <td></td>
-                            <td></td>
+                            <td>{'--'}</td>
+                            <td>{'--'}</td>
                             <td className='last_td'>{'Interested'}</td>
                         </tr>
                         <tr>
@@ -47,7 +47,7 @@ function LandingPage() {
                             <td>{'Software Engineer'}</td>
                             <td>{'Google'}</td>
                             <td>{'02/15/2021'}</td>
-                            <td>{'03/01/2021'}</td>
+                            <td>{'--'}</td>
                             <td className='last_td'>{'Applied'}</td>
                         </tr>
                         <tr>

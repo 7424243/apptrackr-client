@@ -53,7 +53,7 @@ th {
   td:nth-of-type(1):before { content: "Job:"; }
   td:nth-of-type(2):before { content: "Company:"; }
   td:nth-of-type(3):before { content: "Date Applied:"; }
-  td:nth-of-type(4):before { content: "Interview Date:";}
+  td:nth-of-type(4):before { content: "Interview Date:"; }
   td:nth-of-type(5):before { content: "Status:";}
 
   thead tr {
