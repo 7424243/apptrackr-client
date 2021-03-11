@@ -49,7 +49,6 @@ class AppForm extends Component {
                     return res.json()
                 })
                 .then(data => {
-                    console.log(data)
                     this.setState({
                         job_name: data.job_name,
                         company_name: data.company_name,
@@ -65,7 +64,7 @@ class AppForm extends Component {
                 })
                 .catch(error => {
                     this.setState({error})
-                    console.log(error)
+                    console.error({error})
                 })    
         }
     }

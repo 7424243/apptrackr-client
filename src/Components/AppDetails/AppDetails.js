@@ -21,7 +21,6 @@ class AppDetails extends Component {
     handleClickDelete = e => {
         e.preventDefault()
         const id = parseInt(this.props.match.params.id)
-        console.log(id)
         //confirm to delete
         confirmAlert({
             title: 'Confirm to Delete',

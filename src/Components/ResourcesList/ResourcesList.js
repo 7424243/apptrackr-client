@@ -64,7 +64,6 @@ class ResourcesList extends Component {
                                 if(!res.ok) {
                                     return res.json().then(e => Promise.reject(e))
                                 }
-                                console.log(res)
                                 return res
                             })
                             .then(() => {
