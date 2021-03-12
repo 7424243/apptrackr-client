@@ -38,7 +38,7 @@ Click [here](https://apptrackr-client.vercel.app/).
 
 ### Summary
 
-This app allows users to easily keep track of their job applications. The app requires authentication so a user has to sign up for an account, or, if they would like to simply tour the app and get a feel for how it works, demo login credentials are provided in the Live Demo landing page. Once logged in, a user can see all of their previously saved job applications, filter the applications by status, add and/or edit a job application, and view details of a previously saved job application. A user can also save links to their favorite job boards and other resources within the 'Resources' page, which allows for a more streamlined and efficient job search.
+This app allows users to easily keep track of their job applications. The app requires authentication so a user has to sign up for an account, or, if they would like to simply tour the app and get a feel for how it works, demo login credentials are provided on the Login page. Once logged in, a user can see all of their previously saved job applications, filter the applications by status, add and/or edit a job application, and view details of a previously saved job application. A user can also save links to their favorite job boards and other resources within the 'Resources' page, which allows for a more streamlined and efficient job search.
 
 ## Built With
 

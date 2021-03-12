@@ -60,12 +60,6 @@ exports[`App Component renders the UI as expected 1`] = `
             </a>
              with demo credentials to sample full functionality of the app
           </p>
-          <p>
-            Username: demo
-          </p>
-          <p>
-            Password: Demo1234!
-          </p>
         </div>
       </div>
     </section>

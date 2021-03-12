@@ -13,8 +13,6 @@ function LandingPage() {
                     <p>Save frequently utilized resources for convenient access</p>
                     <p>View a snapshot of the main page below</p> 
                     <p><NavLink to={'/login'} className='landing_login'>Login</NavLink> with demo credentials to sample full functionality of the app</p>
-                    <p>Username: demo</p>
-                    <p>Password: Demo1234!</p>
                 </div>
             </div>
             </section>
