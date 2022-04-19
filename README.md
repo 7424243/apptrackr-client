@@ -46,8 +46,11 @@ This app allows users to easily keep track of their job applications. The app re
 * CSS
 * JavaScript
 
-## Ideas for Future Features
+## Ideas for Future Features / Enhancements
 
-* Connect app with Gmail 
-* Ability to export data to Google Sheets
+- [ ] Utilize Ant Design UI Library for styling the table, buttons, date picker, resource list, icons, etc.
+- [ ] Switch 'Filter' for table to be more user friendly
+- [ ] Re-position 'Edit', 'Save', and 'Delete' buttons for an application item to be more user friendly
+- [ ] Connect app with Gmail 
+- [ ] Ability to export data to Google Sheets
 

@@ -143,7 +143,7 @@ class App extends Component {
           </ApptrackrContext.Provider>
         </div>
         <div className='footer'>
-          <footer >© 2021, by Samantha Sheets</footer>
+          <footer >© {new Date().getFullYear()}, by Samantha Sheets</footer>
         </div>
       </div>
     )
