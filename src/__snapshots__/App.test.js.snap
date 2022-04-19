@@ -173,7 +173,9 @@ exports[`App Component renders the UI as expected 1`] = `
     className="footer"
   >
     <footer>
-      © 2021, by Samantha Sheets
+      © 
+      2022
+      , by Samantha Sheets
     </footer>
   </div>
 </div>
