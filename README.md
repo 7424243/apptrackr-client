@@ -5,6 +5,8 @@ apptrackr is a responsive web application that allows users to keep track of the
 ## Live Demo
 
 Click [here](https://apptrackr-client.vercel.app/).
+**Note: currently, the server and database need to be running *locally* for the fullstack application to work as expected.**
+
 
 ## Screenshots
 
